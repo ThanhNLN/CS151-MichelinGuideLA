@@ -4,7 +4,16 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="31e7b0d4-5bcb-4602-a3ab-bfbb2608b503" name="Changes" comment="" />
+    <list default="true" id="31e7b0d4-5bcb-4602-a3ab-bfbb2608b503" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/diagrams/CS151_UML_Diagrams-Sequence.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/diagrams/CS151_UML_Diagrams-State.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/diagrams/CS151_UML_Diagrams-Use_Case.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/diagrams/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -16,10 +25,10 @@
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
   </component>
-  <component name="ProjectColorInfo"><![CDATA[{
-  "customColor": "",
-  "associatedIndex": 0
-}]]></component>
+  <component name="ProjectColorInfo">{
+  &quot;customColor&quot;: &quot;&quot;,
+  &quot;associatedIndex&quot;: 0
+}</component>
   <component name="ProjectId" id="2YITkQdHfxh3JYLKdMQbaS1pmjS" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
@@ -31,11 +40,16 @@
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "WebServerToolWindowFactoryState": "false",
     "git-widget-placeholder": "irene",
+    "last_opened_file_path": "C:/Users/Irene Chen/OneDrive - sjsu.edu/CS151/CS151-MichelinGuideLA",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
     "node.js.selected.package.tslint": "(autodetect)",
     "nodejs_package_manager_path": "npm",
+    "project.structure.last.edited": "Modules",
+    "project.structure.proportion": "0.15",
+    "project.structure.side.proportion": "0.2",
+    "settings.editor.selected.configurable": "reference.projectsettings.compiler.javacompiler",
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
@@ -48,6 +62,11 @@
       <option name="presentableId" value="Default" />
       <updated>1700212245327</updated>
       <workItem from="1700212266649" duration="390000" />
+      <workItem from="1700216015011" duration="114000" />
+      <workItem from="1700216312573" duration="857000" />
+      <workItem from="1700217230666" duration="8000" />
+      <workItem from="1700246733924" duration="638000" />
+      <workItem from="1700344615125" duration="393000" />
     </task>
     <servers />
   </component>
