@@ -1,12 +1,8 @@
 package edu.sjsu.cs151;
 
-import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
-import javafx.fxml.FXMLLoader;
-import javafx.scene.Scene;
 import javafx.scene.control.Label;
 import javafx.scene.control.ListView;
-import javafx.scene.input.MouseEvent;
 import javafx.stage.Stage;
 
 import java.io.IOException;
@@ -14,7 +10,7 @@ import java.io.IOException;
 public class DetailsController {
 
     @FXML
-    private ListView listView;
+    private ListView<String> listView;
     @FXML
     private Label detailsLabel;
 
@@ -24,13 +20,13 @@ public class DetailsController {
         detailsLabel.setText(details);
     }
 
-    public void handleListViewClick(MouseEvent mouseEvent) {
+    public void handleListViewClick() {
     }
 
-    public void onSelectButtonClick(ActionEvent actionEvent) {
+    public void onSelectButtonClick() {
     }
 
-    public void onBackButtonClick(ActionEvent actionEvent) {
+    public void onBackButtonClick() {
 
         //load the old screen?
         try {

@@ -1,22 +1,19 @@
 package edu.sjsu.cs151;
 
 import javafx.collections.FXCollections;
-import javafx.collections.ListChangeListener;
 import javafx.collections.ObservableList;
-import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
-import javafx.scene.control.Label;
 import javafx.scene.control.ListView;
 import javafx.stage.Stage;
 
 import java.io.IOException;
 
 public class Controller {
-    @FXML
-    private Label appNameTitleText, instructionText;
+//    @FXML
+//    private Label appNameTitleText, instructionText;
     @FXML
     private ListView<String> listView;
 
@@ -27,19 +24,19 @@ public class Controller {
     }
 
     @FXML
-    protected void handleLocation(ActionEvent event) {
+    protected void handleLocation() {
         listView.setVisible(true);
         updateListView("Location");
     }
 
     @FXML
-    protected void handleCuisine(ActionEvent event) {
+    protected void handleCuisine() {
         listView.setVisible(true);
         updateListView("Cuisine");
     }
 
     @FXML
-    protected void handlePrice(ActionEvent event) {
+    protected void handlePrice() {
         listView.setVisible(true);
         updateListView("Price");
     }
