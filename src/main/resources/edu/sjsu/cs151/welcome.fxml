@@ -5,12 +5,48 @@
 <?import javafx.scene.layout.VBox?>
 
 <?import javafx.scene.control.Button?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.text.Font?>
 <VBox alignment="CENTER" spacing="20.0" xmlns:fx="http://javafx.com/fxml"
       fx:controller="edu.sjsu.cs151.Controller">
     <padding>
         <Insets bottom="20.0" left="20.0" right="20.0" top="20.0"/>
     </padding>
 
-    <Label fx:id="welcomeText"/>
-    <Button text="Hello!" onAction="#onHelloButtonClick"/>
+    <Label fx:id="appNameTitleText" text="Michelin Guide LA" textFill="deepskyblue">
+        <font>
+            <Font name="Arial Black" size="30" />
+        </font>
+    </Label>
+
+    <HBox>
+        <VBox spacing="2">
+            <Label fx:id="instructionText" text="Search by: " alignment="BASELINE_LEFT">
+                <font>
+                    <Font name="Arial"/>
+                </font>
+            </Label>
+
+            <HBox spacing="10">
+                <Button text="Location" onAction="#handleLocation"/>
+                <Button text="Cuisine" onAction="#handleCuisine"/>
+                <Button text="Price" onAction="#handlePrice"/>
+            </HBox>
+
+        </VBox>
+
+    </HBox>
+
+
+
+
+    <ListView fx:id="listView" onMouseClicked="#handleListViewClick" visible="false"/>
+
+<!--    <Button text="Select" onAction="#onSelectButtonClick"/>-->
+
+
+
+
+
 </VBox>
