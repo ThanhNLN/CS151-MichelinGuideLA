@@ -1,5 +1,9 @@
 package edu.sjsu.cs151;
 
+import edu.sjsu.cs151.databaseDisplayControls.CuisineDisplay;
+import edu.sjsu.cs151.databaseDisplayControls.LocationDisplay;
+import edu.sjsu.cs151.databaseDisplayControls.PriceDisplay;
+import edu.sjsu.cs151.databaseDisplayControls.SelectionDisplay;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.fxml.FXML;
@@ -12,35 +16,45 @@ import javafx.stage.Stage;
 import java.io.IOException;
 
 public class Controller {
-//    @FXML
-//    private Label appNameTitleText, instructionText;
     @FXML
     private ListView<String> listView;
-
     private Stage primaryStage;
+
+    private SelectionDisplay selectionDisplay;
 
     public void setPrimaryStage(Stage primaryStage){
         this.primaryStage = primaryStage;
     }
 
+    // handle category selections:
+    // Location, Cuisine, Price
     @FXML
     protected void handleLocation() {
-        listView.setVisible(true);
-        updateListView("Location");
+        selectionDisplay = new LocationDisplay();
+        updateListView();
     }
 
     @FXML
     protected void handleCuisine() {
-        listView.setVisible(true);
-        updateListView("Cuisine");
+        selectionDisplay = new CuisineDisplay();
+        updateListView();
     }
 
     @FXML
     protected void handlePrice() {
-        listView.setVisible(true);
-        updateListView("Price");
+        selectionDisplay = new PriceDisplay();
+        updateListView();
     }
 
+    protected void updateListView(){
+        ObservableList<String> items = FXCollections.observableArrayList();
+        selectionDisplay.displaySelection(items);
+        listView.setVisible(true);
+        listView.setItems(items);
+    }
+
+
+    //handle selection of from category list:
     @FXML
     private void handleListViewClick() {
         String selectedOption = listView.getSelectionModel().getSelectedItem();
@@ -49,6 +63,7 @@ public class Controller {
         }
     }
 
+    // TODO: possibly make this more SOLID?
     private void openDetailsScreen(String selectedOption) {
         try {
             FXMLLoader loader = new FXMLLoader(getClass().getResource("DetailsScreen.fxml"));
@@ -68,36 +83,5 @@ public class Controller {
         }
     }
 
-    protected void updateListView(String message){
-        ObservableList<String> items = FXCollections.observableArrayList(message);
-        items.setAll();
 
-
-        //add to items
-        switch (message) {
-            case "Location" -> displayLocations(items);
-            case "Cuisine" -> displayCuisine(items);
-            case "Price" -> displayPrice(items);
-        }
-
-        listView.setItems(items);
-    }
-
-    protected void displayLocations(ObservableList<String> items){
-        for(int i = 1 ; i < 100; i++){
-            items.add("Location "+ i);
-        }
-    }
-
-    protected void displayCuisine(ObservableList<String> items){
-        for(int i = 3 ; i < 100; i++){
-            items.add("Cuisine "+ i);
-        }
-    }
-
-    protected void displayPrice(ObservableList<String> items){
-        for(int i = 4 ; i < 100; i++){
-            items.add("Price "+ i);
-        }
-    }
 }

@@ -14,7 +14,7 @@
         <Insets bottom="20.0" left="20.0" right="20.0" top="20.0"/>
     </padding>
 
-    <Label fx:id="appNameTitleText" text="Michelin Guide LA" textFill="deepskyblue">
+    <Label text="Michelin Guide LA" textFill="deepskyblue">
         <font>
             <Font name="Arial Black" size="30" />
         </font>
@@ -22,7 +22,7 @@
 
     <HBox>
         <VBox spacing="2">
-            <Label fx:id="instructionText" text="Search by: " alignment="BASELINE_LEFT">
+            <Label text="Search by: " alignment="BASELINE_LEFT">
                 <font>
                     <Font name="Arial"/>
                 </font>
@@ -38,15 +38,6 @@
 
     </HBox>
 
-
-
-
     <ListView fx:id="listView" onMouseClicked="#handleListViewClick" visible="false"/>
-
-<!--    <Button text="Select" onAction="#onSelectButtonClick"/>-->
-
-
-
-
 
 </VBox>

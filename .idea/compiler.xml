@@ -7,8 +7,11 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="MichelinGuideLA" />
-        <module name="assignment3" />
+        <module name="CS151-MichelinGuideLA" />
       </profile>
     </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="assignment3" target="21" />
+    </bytecodeTargetLevel>
   </component>
 </project>

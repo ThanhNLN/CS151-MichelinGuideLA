@@ -4,9 +4,21 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="31e7b0d4-5bcb-4602-a3ab-bfbb2608b503" name="Changes" comment="Updated GUI for home screen and details screen: &#10;Allows search in each respective category by clicking location, cuisine, price buttons. On click, list of options is displayed below in scroll list. &#10;Allows selection from scroll list, which then displays the details on new screen. (currently empty details)&#10;(GUI does not use actual data from database yet.)">
+    <list default="true" id="31e7b0d4-5bcb-4602-a3ab-bfbb2608b503" name="Changes" comment="cleaned up warnings from previous push">
+      <change afterPath="$PROJECT_DIR$/src/main/java/edu/sjsu/cs151/databaseDisplayControls/CuisineDisplay.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/edu/sjsu/cs151/databaseDisplayControls/DetailsDisplay.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/edu/sjsu/cs151/databaseDisplayControls/LocationDisplay.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/edu/sjsu/cs151/databaseDisplayControls/PriceDisplay.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/edu/sjsu/cs151/databaseDisplayControls/SelectionDisplay.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/edu/sjsu/cs151/Controller.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/edu/sjsu/cs151/Controller.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/edu/sjsu/cs151/DetailsController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/edu/sjsu/cs151/DetailsController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/module-info.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/module-info.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/edu/sjsu/cs151/DetailsScreen.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/edu/sjsu/cs151/DetailsScreen.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/edu/sjsu/cs151/welcome.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/edu/sjsu/cs151/welcome.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/edu/sjsu/cs151/welcome.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/edu/sjsu/cs151/welcome.fxml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -16,11 +28,17 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
+        <option value="Interface" />
         <option value="Class" />
       </list>
     </option>
   </component>
   <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="main" />
+      </map>
+    </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="MarkdownSettingsMigration">
@@ -35,29 +53,37 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "git-widget-placeholder": "irene",
-    "last_opened_file_path": "C:/Users/Irene Chen/OneDrive - sjsu.edu/CS151/CS151-MichelinGuideLA/src/main/resources/edu/sjsu/cs151",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "project.structure.last.edited": "Modules",
-    "project.structure.proportion": "0.15",
-    "project.structure.side.proportion": "0.2",
-    "settings.editor.selected.configurable": "reference.projectsettings.compiler.javacompiler",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;irene&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/Irene Chen/OneDrive - sjsu.edu/CS151/cs151-assignment4&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;reference.projectsettings.compiler.javacompiler&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\Irene Chen\OneDrive - sjsu.edu\CS151\CS151-MichelinGuideLA\src\main\resources\edu\sjsu\cs151" />
       <recent name="C:\Users\Irene Chen\OneDrive - sjsu.edu\CS151\CS151-MichelinGuideLA" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\Irene Chen\OneDrive - sjsu.edu\CS151\CS151-MichelinGuideLA\src\main\java\edu.sjsu.cs151.appControls" />
+    </key>
+    <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
+      <recent name="edu.sjsu.cs151" />
+      <recent name="edu.sjsu.cs151.databaseDisplayControls" />
+      <recent name="edu.sjsu.cs151.appControls" />
     </key>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
@@ -74,6 +100,8 @@
       <workItem from="1700217230666" duration="8000" />
       <workItem from="1700246733924" duration="638000" />
       <workItem from="1700344615125" duration="10008000" />
+      <workItem from="1700512646284" duration="472000" />
+      <workItem from="1700635347177" duration="4077000" />
     </task>
     <task id="LOCAL-00001" summary="Added sequence, state, and use case diagrams. Need to update links after push">
       <option name="closed" value="true" />
