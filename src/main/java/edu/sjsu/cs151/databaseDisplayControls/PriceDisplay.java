@@ -7,7 +7,7 @@ public class PriceDisplay implements SelectionDisplay {
     public void displaySelection(ObservableList<String> items) {
         /**
          * TODO: get the options from database and add it to the ObservableList
-         * Prices: $, $$, $$$, ?
+         * Prices: $, $$, $$$, ??
          */
 
         // temporary tester for the list display

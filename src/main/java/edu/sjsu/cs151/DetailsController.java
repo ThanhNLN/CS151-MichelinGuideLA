@@ -1,7 +1,6 @@
 package edu.sjsu.cs151;
 
 import edu.sjsu.cs151.databaseDisplayControls.DetailsDisplay;
-import edu.sjsu.cs151.databaseDisplayControls.LocationDisplay;
 import edu.sjsu.cs151.databaseDisplayControls.SelectionDisplay;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
@@ -21,7 +20,7 @@ public class DetailsController {
 
     private Stage stage;
 
-    private SelectionDisplay selectionDisplay;
+    //private SelectionDisplay selectionDisplay;
 
     public void setStage(Stage primaryStage) {
         this.stage = primaryStage;
@@ -31,7 +30,7 @@ public class DetailsController {
         detailsLabel.setText(details);
 
         // TODO: fix this selectionDisplay, only temporary to test
-        selectionDisplay = new DetailsDisplay();
+        SelectionDisplay selectionDisplay = new DetailsDisplay();
 
         ObservableList<String> items = FXCollections.observableArrayList();
         selectionDisplay.displaySelection(items);
