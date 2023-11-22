@@ -5,7 +5,7 @@ import javafx.collections.ObservableList;
 public class PriceDisplay implements SelectionDisplay {
     @Override
     public void displaySelection(ObservableList<String> items) {
-        /**
+        /*
          * TODO: get the options from database and add it to the ObservableList
          * Prices: $, $$, $$$, ??
          */
