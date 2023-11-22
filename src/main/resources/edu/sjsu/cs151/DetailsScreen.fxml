@@ -24,7 +24,6 @@
 
     <HBox spacing="10">
         <Button text="Back" onAction="#onBackButtonClick"/>
-        <Button text="Select" onAction="#onSelectButtonClick"/>
     </HBox>
 
 
