@@ -18,13 +18,12 @@ import java.io.IOException;
 import java.sql.SQLException;
 
 public class Controller {
-    public Button locationButton, cuisineButton, priceButton;
+//    @FXML
+//    private Button locationButton, cuisineButton, priceButton;
     @FXML
     private ListView<String> controllerListView;
     private Stage primaryStage;
-
     private String category = "";
-
     private SelectionDisplay selectionDisplay;
 
     public void setPrimaryStage(Stage primaryStage){
@@ -88,6 +87,7 @@ public class Controller {
 
     protected void updateListView(){
         ObservableList<String> items = FXCollections.observableArrayList();
+
         try {
             category = selectionDisplay.displaySelection(items);
         } catch (SQLException e) {
@@ -119,20 +119,23 @@ public class Controller {
     private void handleListViewClick() {
         String selectedOption = controllerListView.getSelectionModel().getSelectedItem();
         if (selectedOption != null) {
-            openDetailsScreen(selectedOption);
+            openDetailsScreen(category, selectedOption, null);
         }
     }
 
     // TODO: possibly make this more SOLID?
-    private void openDetailsScreen(String selectedOption) {
+    public void openDetailsScreen(String category, String selectedOption, String selectedRestaurant) {
         try {
+            this.category = category;
+
             FXMLLoader loader = new FXMLLoader(getClass().getResource("DetailsScreen.fxml"));
             Parent root = loader.load();
 
             DetailsController detailsController = loader.getController();
             detailsController.setDetails(category, selectedOption);
             detailsController.setStage(primaryStage);
-            detailsController.setSelectionDisplay(selectionDisplay);
+            detailsController.setSavedSelectionDisplay(selectionDisplay);
+            detailsController.updateRestaurantListView(selectedRestaurant);
 
             Scene scene = new Scene(root, primaryStage.getScene().getWidth(), primaryStage.getScene().getHeight());
             primaryStage.setScene(scene);

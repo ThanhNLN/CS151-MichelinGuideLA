@@ -5,6 +5,9 @@ import edu.sjsu.cs151.databaseDisplayControls.SelectionDisplay;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
+import javafx.scene.Parent;
+import javafx.scene.Scene;
 import javafx.scene.control.Label;
 import javafx.scene.control.ListView;
 import javafx.stage.Stage;
@@ -23,13 +26,15 @@ public class DetailsController {
 
 
     private Stage stage;
-    private SelectionDisplay selectionDisplay;
+
+    private SelectionDisplay savedSelectionDisplay;
 
     public void setStage(Stage primaryStage) {
         this.stage = primaryStage;
     }
-    public void setSelectionDisplay(SelectionDisplay selectionDisplay) {
-        this.selectionDisplay = selectionDisplay;
+
+    public void setSavedSelectionDisplay(SelectionDisplay selectionDisplay){
+        this.savedSelectionDisplay = selectionDisplay;
     }
 
     public void setDetails(String category, String details){
@@ -37,7 +42,6 @@ public class DetailsController {
         detailsLabel.setText(details);
         this.category = category;
 
-        // TODO: fix this selectionDisplay
         SelectionDisplay selectionDisplay = new DetailsDisplay();
 
         ObservableList<String> items = FXCollections.observableArrayList();
@@ -52,20 +56,72 @@ public class DetailsController {
         detailsListView.setItems(items);
     }
 
-    public void handleListViewClick() {
-        // TODO: handle selection to take to new screen, displaying the restaurant details?
+    @FXML
+    private void handleListViewClick() {
+        String selectedOption = detailsListView.getSelectionModel().getSelectedItem();
+        if (selectedOption != null){
+            openRestaurantDetailsScreen(selectedOption);
+        }
 
     }
 
-    public void onBackButtonClick() {
+    @FXML
+    private void onBackButtonClick() {
         // TODO: fix it so it highlights the previous button selection on the old screen?
         try {
-            App.homeScreenRememberSelection(stage, selectionDisplay, category, detailsLabel.getText());
+            setDetails(category, detailsLabel.getText());
+
+            Controller controller = App.homeScreen(stage);
+            controller.setSelectionDisplay(savedSelectionDisplay);
+
+            App.homeScreenRememberSelection(stage, savedSelectionDisplay, category, detailsLabel.getText());
+
         } catch (IOException e){
             //e.printStackTrace();
         }
 
 
+    }
+
+    public void updateRestaurantListView(String item){
+        detailsListView.getSelectionModel().select(item);
+        //System.out.println(item);
+
+        if(detailsListView.getSelectionModel().getSelectedIndex() > detailsListView.getItems().size() * 3 / 4){
+            detailsListView.scrollTo(detailsListView.getSelectionModel().getSelectedIndex()+2);
+        } else if (detailsListView.getSelectionModel().getSelectedIndex() < detailsListView.getItems().size() /4){
+            detailsListView.scrollTo(detailsListView.getSelectionModel().getSelectedIndex()-2);
+        } else {
+            detailsListView.scrollTo(item);
+        }
+
+    }
+
+    private void openRestaurantDetailsScreen(String selectedOption){
+        try{
+            FXMLLoader loader = new FXMLLoader(getClass().getResource("RestaurantScreen.fxml"));
+            Parent root = loader.load();
+
+            //detailsLabel.setText(selectedOption);
+
+            RestaurantController restaurantController = loader.getController();
+            restaurantController.setDetails(selectedOption);
+            restaurantController.setStage(stage);
+            restaurantController.setCategory(category);
+            restaurantController.setSelectedFromCategory(detailsLabel.getText());
+            restaurantController.setSavedSelectionDisplay(savedSelectionDisplay);
+
+            restaurantController.setSelectedRestaurant(selectedOption);
+
+            Scene scene = new Scene(root, stage.getScene().getWidth(), stage.getScene().getHeight());
+            stage.setScene(scene);
+            stage.show();
+
+            //TODO: finish this code
+
+        } catch (IOException e){
+            //e.printStackTrace();
+        }
     }
 
 
