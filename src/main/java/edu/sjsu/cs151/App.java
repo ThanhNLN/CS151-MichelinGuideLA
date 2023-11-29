@@ -45,6 +45,8 @@ public class App extends Application {
     public static void main(String[] args) throws SQLException, IOException, ParseException {
         JDBC jdbc = new JDBC();
         jdbc.createDatabase();
+        jdbc.jsonToDatabase();
         launch();
+        jdbc.disconnect();
     }
 }
