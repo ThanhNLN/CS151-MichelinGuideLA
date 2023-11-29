@@ -50,7 +50,7 @@ public class RestaurantController {
 
         observableList.add(selectedRestaurant);
 
-        System.out.println(observableList.get(0));
+        //System.out.println(observableList.get(0));
 
         RestaurantDisplay restaurantDisplay = new RestaurantDisplay();
 
