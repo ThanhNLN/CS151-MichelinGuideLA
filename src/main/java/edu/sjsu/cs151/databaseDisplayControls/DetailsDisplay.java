@@ -10,16 +10,8 @@ import java.sql.Statement;
 public class DetailsDisplay implements SelectionDisplay{
     @Override
     public String displaySelection(ObservableList<String> items) throws SQLException {
-        // TODO: get the options from database and add it to the ObservableList
+        // get the options from database and add it to the ObservableList
         // Display the appropriate details
-        // may need to make this an interface, and then create each detail display for cuisine, location, price?
-
-
-//        System.out.println("---------------------------");
-//        for(String s : items){
-//            System.out.println(s);
-//        }
-//        System.out.println("---------------------------");
 
         // String original options:
         // "location"

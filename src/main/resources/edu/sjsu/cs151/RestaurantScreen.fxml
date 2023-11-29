@@ -19,7 +19,27 @@
         </font>
     </Label>
 
-<!--    <ListView fx:id="detailsListView" onMouseClicked="#handleListViewClick"/>-->
+    <HBox>
+        <Label text="Name: "/>
+        <Label fx:id="restaurantName"/>
+    </HBox>
+
+    <HBox>
+        <Label text="Cuisine: "/>
+        <Label fx:id="cuisine"/>
+    </HBox>
+    <HBox>
+        <Label text="Cost: "/>
+        <Label fx:id="cost"/>
+    </HBox>
+    <HBox>
+        <Label text="Address: "/>
+        <Label fx:id="address"/>
+    </HBox>
+    <HBox>
+        <Label text="URL: "/>
+        <Label fx:id="url"/>
+    </HBox>
 
     <HBox spacing="10">
         <Button text="Back" onAction="#onBackButtonClick"/>
