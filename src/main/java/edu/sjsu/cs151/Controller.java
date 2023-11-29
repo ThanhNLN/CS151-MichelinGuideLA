@@ -19,7 +19,7 @@ import java.io.IOException;
 public class Controller {
     public Button locationButton, cuisineButton, priceButton;
     @FXML
-    private ListView<String> listView;
+    private ListView<Restaurant> listView;
     private Stage primaryStage;
 
     private SelectionDisplay selectionDisplay;
@@ -81,13 +81,13 @@ public class Controller {
     }
 
     protected void updateListView(){
-        ObservableList<String> items = FXCollections.observableArrayList();
+        ObservableList<Restaurant> items = FXCollections.observableArrayList();
         selectionDisplay.displaySelection(items);
         listView.setVisible(true);
         listView.setItems(items);
     }
 
-    public void updateListView(String item){
+    public void updateListView(Restaurant item){
         updateListView();
         listView.getSelectionModel().select(item);
 
@@ -106,14 +106,14 @@ public class Controller {
     //handle selection of from category list:
     @FXML
     private void handleListViewClick() {
-        String selectedOption = listView.getSelectionModel().getSelectedItem();
+        Restaurant selectedOption = listView.getSelectionModel().getSelectedItem();
         if (selectedOption != null) {
             openDetailsScreen(selectedOption);
         }
     }
 
     // TODO: possibly make this more SOLID?
-    private void openDetailsScreen(String selectedOption) {
+    private void openDetailsScreen(Restaurant selectedOption) {
         try {
             FXMLLoader loader = new FXMLLoader(getClass().getResource("DetailsScreen.fxml"));
             Parent root = loader.load();
@@ -124,12 +124,11 @@ public class Controller {
             detailsController.setSelectionDisplay(selectionDisplay);
 
             Scene scene = new Scene(root, primaryStage.getScene().getWidth(), primaryStage.getScene().getHeight());
-            //primaryStage.setTitle();
             primaryStage.setScene(scene);
             primaryStage.show();
 
         } catch (IOException e) {
-            e.printStackTrace();
+            //e.printStackTrace();
         }
     }
 
