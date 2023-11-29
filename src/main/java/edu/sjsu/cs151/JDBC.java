@@ -9,58 +9,100 @@ import java.io.FileReader;
 import java.io.IOException;
 
 public class JDBC {
- 
+
+    // instance variables
+    private static final String DATABASE_URL = "jdbc:mysql://localhost:3306/";
+    private static final String USER = "root";
+    private static final String PASSWORD = "password";
     public static Connection conn = null;
+    private Statement statement = null;
+    private PreparedStatement prepareStatement = null;
+    private ResultSet rs = null;
 
-    public void makeConnection() throws SQLException {
+    // default constructor
+    JDBC(){}
 
+    // getters
+    public Connection getConn() {
+        return conn;
+    }
+
+    public Statement getStatement() {
+        return statement;
+    }
+
+    public PreparedStatement getPrepareStatement() {
+        return prepareStatement;
+    }
+
+    public ResultSet getRs() {
+        return rs;
+    }
+
+    // setters
+    public void setConn(Connection conn) {
+        this.conn = conn;
+    }
+
+    public void setStatement(Statement statement) {
+        this.statement = statement;
+    }
+
+    public void setPrepareStatement(PreparedStatement prepareStatement) {
+        this.prepareStatement = prepareStatement;
+    }
+
+    public void setRs(ResultSet rs) {
+        this.rs = rs;
+    }
+
+    public void connect() throws SQLException {
+        // Method connects to database
+        // Register JDBC driver
         try {
-            Class.forName("com.mysql.cj.jdbc.Driver"); // Register JDBC driver
+            Class.forName("com.mysql.cj.jdbc.Driver");
         } catch (ClassNotFoundException e) {
             e.printStackTrace();
         }
 
-        // Open a connection 
-        conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/", "root", "password");
+        // Open a connection
+        conn = DriverManager.getConnection(DATABASE_URL, USER, PASSWORD);
     }
-    
+
     public void createDatabase() throws SQLException, IOException, ParseException {
-        JSONParser parser = new JSONParser();
-
-        makeConnection();
-
-
+        // Method creates databases and tables
+        connect();
 
         // Execute a query
-        Statement statement = conn.createStatement();
-        statement.executeUpdate("DROP SCHEMA IF EXISTS student");
-        statement.executeUpdate("CREATE SCHEMA student");
-        statement.executeUpdate("USE student");
-        //statement.executeUpdate()
+//        Statement statement = conn.createStatement();
+        this.statement = conn.createStatement();
+        this.statement.executeUpdate("DROP SCHEMA IF EXISTS student");
+        this.statement.executeUpdate("CREATE SCHEMA student");
+        this.statement.executeUpdate("USE student");
 
         String createLocationTable = "create table LOCATIONS "
                 + "(LOCATION_ID int NOT NULL UNIQUE PRIMARY KEY AUTO_INCREMENT, "
                 + "location varchar(255) UNIQUE"
                 + ")";
 
-        statement.executeUpdate("DROP TABLE IF EXISTS LOCATIONS");
-        statement.executeUpdate(createLocationTable);
+        this.statement.executeUpdate("DROP TABLE IF EXISTS LOCATIONS");
+        this.statement.executeUpdate(createLocationTable);
 
         String createCostTable = "create table COSTS "
                 + "(COST_ID int NOT NULL UNIQUE PRIMARY KEY AUTO_INCREMENT, "
                 + "cost varchar(255) UNIQUE"
                 + ")";
 
-        statement.executeUpdate("DROP TABLE IF EXISTS COSTS");
-        statement.executeUpdate(createCostTable);
+        this.statement.executeUpdate("DROP TABLE IF EXISTS COSTS");
+        this.statement.executeUpdate(createCostTable);
 
         String createCuisineTable = "create table CUISINES "
                 + "(CUISINE_ID int NOT NULL UNIQUE PRIMARY KEY AUTO_INCREMENT, "
                 + "cuisine varchar(255) UNIQUE"
                 + ")";
 
-        statement.executeUpdate("DROP TABLE IF EXISTS CUISINES");
-        statement.executeUpdate(createCuisineTable);
+        this.statement.executeUpdate("DROP TABLE IF EXISTS CUISINES");
+        this.statement.executeUpdate(createCuisineTable);
 
         String createLADatabase = "CREATE TABLE LADATABASE "
                 + "(RESTAURANT_ID int NOT NULL UNIQUE PRIMARY KEY AUTO_INCREMENT, "
@@ -74,87 +116,82 @@ public class JDBC {
                 + "FOREIGN KEY (COST_ID) REFERENCES COSTS (COST_ID), "
                 + "FOREIGN KEY (CUISINE_ID) REFERENCES CUISINES (CUISINE_ID)"
                 + ")";
-//        statement.executeUpdate("USE student");
 
-        statement.executeUpdate("DROP TABLE IF EXISTS LADATABASE");
-        statement.executeUpdate(createLADatabase);
+        this.statement.executeUpdate("DROP TABLE IF EXISTS LADATABASE");
+        this.statement.executeUpdate(createLADatabase);
+    }
+
+    public void jsonToDatabase() throws IOException, SQLException, ParseException {
+        // Create method to parse JSON file into database
+        JSONParser parser = new JSONParser();
 
         Object obj = parser.parse(new FileReader("LosAngelesData.json"));
 
+        // Casts obj to JSONArray
         JSONArray jsonArray = (JSONArray) obj;
 
+//        ResultSet rs = null;
+
+        // Iterates jsonArray to insert data into database
         for (Object jsonElement : jsonArray) {
             JSONObject jsonObject = (JSONObject) jsonElement;
 
-            PreparedStatement locationStatement = conn.prepareStatement("insert IGNORE into LOCATIONS(location) values (?)");
-
-            PreparedStatement costStatement = conn.prepareStatement("insert IGNORE into COSTS (cost) values (?)");
-            PreparedStatement cuisineStatement = conn.prepareStatement("insert IGNORE into CUISINES (cuisine) values (?)");
-            PreparedStatement databaseStatement = conn.prepareStatement("insert into LADATABASE (name, url, LOCATION_ID, COST_ID, CUISINE_ID, address) values (?, ?, ?, ?, ?, ?)");
-
-            String name = (String) jsonObject.get("name");
-            // Parameters start with 1
- 
-//            System.out.println(name);
-            databaseStatement.setString(1, name);
-
-            String url = (String) jsonObject.get("url");
-//            System.out.println(url);
-            databaseStatement.setString(2, url);
-
-
-            String address = (String) jsonObject.get("address");
- 
-//            System.out.println(address);
-            databaseStatement.setString(6, address);
-
+            // Inserts locations into locations table
+            //PreparedStatement locationStatement = conn.prepareStatement("insert IGNORE into LOCATIONS(location) values (?)");
+            this.prepareStatement = conn.prepareStatement("insert IGNORE into LOCATIONS(location) values (?)");
 
             String location = (String) jsonObject.get("location");
- 
-//            System.out.println(location);
-            locationStatement.setString(1, location);
-            locationStatement.execute();
+            this.prepareStatement.setString(1, location);
+            this.prepareStatement.execute();
 
+            // Inserts costs into costs table
+            this.prepareStatement = conn.prepareStatement("insert IGNORE into COSTS (cost) values (?)");
             String cost = Long.toString((long) jsonObject.get("cost"));
- 
-//            System.out.println(cost);
-            costStatement.setString(1, cost);
-            costStatement.execute();
+            this.prepareStatement.setString(1, cost);
+            this.prepareStatement.execute();
 
+            // Inserts cuisines into cuisines table
+            this.prepareStatement = conn.prepareStatement("insert IGNORE into CUISINES (cuisine) values (?)");
             String cuisine = (String) jsonObject.get("cuisine");
- 
-//            System.out.println(cuisine);
-            cuisineStatement.setString(1, cuisine);
-            cuisineStatement.execute();
+            this.prepareStatement.setString(1, cuisine);
+            this.prepareStatement.execute();
 
+            // Inserts data into Los Angeles database
+            this.prepareStatement = conn.prepareStatement("insert into LADATABASE "
+                    + "(name, url, LOCATION_ID, COST_ID, CUISINE_ID, address) values (?, ?, ?, ?, ?, ?)");
 
-            ResultSet rs = statement.executeQuery("SELECT LOCATION_ID FROM LOCATIONS WHERE location=" + "'" + location + "'");
-            if (rs.next()) {
-                int locationID = rs.getInt("LOCATION_ID");
- 
-//                System.out.println("Location ID:" + locationID);
-                databaseStatement.setInt(3, locationID);
+            String name = (String) jsonObject.get("name");
+            this.prepareStatement.setString(1, name);
+
+            String url = (String) jsonObject.get("url");
+            this.prepareStatement.setString(2, url);
+
+            this.rs = this.statement.executeQuery("SELECT LOCATION_ID FROM LOCATIONS WHERE location=" + "'" + location + "'");
+            if (this.rs.next()) {
+                int locationID = this.rs.getInt("LOCATION_ID");
+                this.prepareStatement.setInt(3, locationID);
             }
 
-
-            rs = statement.executeQuery("SELECT COST_ID FROM COSTS WHERE cost=" + "'" + cost + "'");
-            if (rs.next()) {
-                int costID = rs.getInt("COST_ID");
- 
-//                System.out.println("Cost ID:" + costID);
-                databaseStatement.setInt(4, costID);
+            this.rs = this.statement.executeQuery("SELECT COST_ID FROM COSTS WHERE cost=" + "'" + cost + "'");
+            if (this.rs.next()) {
+                int costID = this.rs.getInt("COST_ID");
+                this.prepareStatement.setInt(4, costID);
             }
 
-            rs = statement.executeQuery("SELECT CUISINE_ID FROM CUISINES WHERE cuisine=" + "'" + cuisine + "'");
-            if (rs.next()) {
-                int cuisineID = rs.getInt("CUISINE_ID");
- 
-//                System.out.println("Cuisine ID:" + cuisineID);
-                databaseStatement.setInt(5, cuisineID);
+            this.rs = this.statement.executeQuery("SELECT CUISINE_ID FROM CUISINES WHERE cuisine=" + "'" + cuisine + "'");
+            if (this.rs.next()) {
+                int cuisineID = this.rs.getInt("CUISINE_ID");
+                this.prepareStatement.setInt(5, cuisineID);
             }
-            databaseStatement.execute();
 
+            String address = (String) jsonObject.get("address");
+            this.prepareStatement.setString(6, address);
+
+            this.prepareStatement.execute();
         }
-        statement.close();
+    }
+    public void disconnect() throws SQLException {
+        this.rs.close();
+        this.statement.close();
     }
 }

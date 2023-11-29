@@ -35,6 +35,7 @@ public class DetailsDisplay implements SelectionDisplay{
         //create a statement
         Statement statement = JDBC.conn.createStatement();
 
+
         //get the cuisines from cuisine list
         ResultSet rs = statement.executeQuery("SELECT " + columnID + " FROM " + table + " WHERE " + columnName + "='" + selection + "'");
 
