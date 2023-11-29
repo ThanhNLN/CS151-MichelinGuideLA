@@ -19,11 +19,13 @@ public class DetailsController {
     private Label detailsLabel;
 
     private Stage stage;
-
-    //private SelectionDisplay selectionDisplay;
+    private SelectionDisplay selectionDisplay;
 
     public void setStage(Stage primaryStage) {
         this.stage = primaryStage;
+    }
+    public void setSelectionDisplay(SelectionDisplay selectionDisplay) {
+        this.selectionDisplay = selectionDisplay;
     }
 
     public void setDetails(String details){
@@ -46,15 +48,16 @@ public class DetailsController {
     public void onBackButtonClick() {
 
         //load the old screen?
-        // TODO: fix it so it shows the previous selection on the old screen?
+        // TODO: fix it so it highlights the previous button selection on the old screen?
         // * select category, and highlight last chosen item?
         try {
-            App.homeScreen(stage);
+            App.homeScreenRememberSelection(stage, selectionDisplay, detailsLabel.getText());
         } catch (IOException e){
             e.printStackTrace();
         }
 
 
     }
+
 
 }
