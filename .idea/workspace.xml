@@ -4,8 +4,15 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="31e7b0d4-5bcb-4602-a3ab-bfbb2608b503" name="Changes" comment="Update files to use Restaurant object to display in GUI (instead of Strings). Restaurant file empty (untested if it works yet)">
+    <list default="true" id="31e7b0d4-5bcb-4602-a3ab-bfbb2608b503" name="Changes" comment="cleaned up code (hopefully more SOLID :) ) and tested a little more for ObservableLists">
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/mysql_connector_j_8_2_0.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/sqldialects.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/LosAngelesData.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/edu/sjsu/cs151/App.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/edu/sjsu/cs151/App.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/edu/sjsu/cs151/JDBC.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/edu/sjsu/cs151/JDBC.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/module-info.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/module-info.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -44,18 +51,19 @@
   "keyToString": {
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "WebServerToolWindowFactoryState": "false",
-    "git-widget-placeholder": "irene",
-    "last_opened_file_path": "C:/Users/SJ/OneDrive - sjsu.edu/CS151/CS151-MichelinGuideLA",
+    "git-widget-placeholder": "anniebluu",
+    "last_opened_file_path": "C:/Users/Irene Chen/OneDrive - sjsu.edu/CS151/cs151-assignment4",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
     "node.js.selected.package.tslint": "(autodetect)",
     "nodejs_package_manager_path": "npm",
-    "project.structure.last.edited": "Modules",
+    "project.structure.last.edited": "Problems",
     "project.structure.proportion": "0.15",
     "project.structure.side.proportion": "0.2",
-    "settings.editor.selected.configurable": "org.jetbrains.plugins.github.ui.GithubSettingsConfigurable",
+    "settings.editor.selected.configurable": "reference.projectsettings.compiler.javacompiler",
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
@@ -65,7 +73,6 @@
       <recent name="C:\Users\Irene Chen\OneDrive - sjsu.edu\CS151\CS151-MichelinGuideLA" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
-      <recent name="C:\Users\SJ\OneDrive - sjsu.edu\CS151\CS151-MichelinGuideLA\diagrams" />
       <recent name="C:\Users\Irene Chen\OneDrive - sjsu.edu\CS151\CS151-MichelinGuideLA\src\main\java\edu.sjsu.cs151.appControls" />
     </key>
     <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
@@ -90,7 +97,9 @@
       <workItem from="1700344615125" duration="10008000" />
       <workItem from="1700512646284" duration="472000" />
       <workItem from="1700635347177" duration="4423000" />
-      <workItem from="1701205987178" duration="10472000" />
+      <workItem from="1700879218777" duration="91000" />
+      <workItem from="1701073852331" duration="4256000" />
+      <workItem from="1701192574090" duration="21258000" />
     </task>
     <task id="LOCAL-00001" summary="Added sequence, state, and use case diagrams. Need to update links after push">
       <option name="closed" value="true" />
@@ -124,55 +133,7 @@
       <option name="project" value="LOCAL" />
       <updated>1700639677658</updated>
     </task>
-    <task id="LOCAL-00005" summary="update use case diagram">
-      <option name="closed" value="true" />
-      <created>1701206368546</created>
-      <option name="number" value="00005" />
-      <option name="presentableId" value="LOCAL-00005" />
-      <option name="project" value="LOCAL" />
-      <updated>1701206368546</updated>
-    </task>
-    <task id="LOCAL-00006" summary="update state diagram">
-      <option name="closed" value="true" />
-      <created>1701206475560</created>
-      <option name="number" value="00006" />
-      <option name="presentableId" value="LOCAL-00006" />
-      <option name="project" value="LOCAL" />
-      <updated>1701206475560</updated>
-    </task>
-    <task id="LOCAL-00007" summary="updated diagram README.md - class diagram still needed">
-      <option name="closed" value="true" />
-      <created>1701206758797</created>
-      <option name="number" value="00007" />
-      <option name="presentableId" value="LOCAL-00007" />
-      <option name="project" value="LOCAL" />
-      <updated>1701206758797</updated>
-    </task>
-    <task id="LOCAL-00008" summary="fixed back button to show previous selection highlighted, but not the correct highlighted button yet">
-      <option name="closed" value="true" />
-      <created>1701220224242</created>
-      <option name="number" value="00008" />
-      <option name="presentableId" value="LOCAL-00008" />
-      <option name="project" value="LOCAL" />
-      <updated>1701220224242</updated>
-    </task>
-    <task id="LOCAL-00009" summary="fixed back button to show previous selection highlighted, but not the correct highlighted button yet">
-      <option name="closed" value="true" />
-      <created>1701220390922</created>
-      <option name="number" value="00009" />
-      <option name="presentableId" value="LOCAL-00009" />
-      <option name="project" value="LOCAL" />
-      <updated>1701220390922</updated>
-    </task>
-    <task id="LOCAL-00010" summary="Update files to use Restaurant object to display in GUI (instead of Strings). Restaurant file empty (untested if it works yet)">
-      <option name="closed" value="true" />
-      <created>1701227037250</created>
-      <option name="number" value="00010" />
-      <option name="presentableId" value="LOCAL-00010" />
-      <option name="project" value="LOCAL" />
-      <updated>1701227037250</updated>
-    </task>
-    <option name="localTasksCounter" value="11" />
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -194,11 +155,16 @@
     <MESSAGE value="updated diagram README.md links" />
     <MESSAGE value="Updated GUI for home screen and details screen: &#10;Allows search in each respective category by clicking location, cuisine, price buttons. On click, list of options is displayed below in scroll list. &#10;Allows selection from scroll list, which then displays the details on new screen. (currently empty details)&#10;(GUI does not use actual data from database yet.)" />
     <MESSAGE value="cleaned up code (hopefully more SOLID :) ) and tested a little more for ObservableLists" />
-    <MESSAGE value="update use case diagram" />
-    <MESSAGE value="update state diagram" />
-    <MESSAGE value="updated diagram README.md - class diagram still needed" />
-    <MESSAGE value="fixed back button to show previous selection highlighted, but not the correct highlighted button yet" />
-    <MESSAGE value="Update files to use Restaurant object to display in GUI (instead of Strings). Restaurant file empty (untested if it works yet)" />
-    <option name="LAST_COMMIT_MESSAGE" value="Update files to use Restaurant object to display in GUI (instead of Strings). Restaurant file empty (untested if it works yet)" />
+    <option name="LAST_COMMIT_MESSAGE" value="cleaned up code (hopefully more SOLID :) ) and tested a little more for ObservableLists" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <breakpoint enabled="true" type="java-exception">
+          <properties class="java.sql.SQLException" package="java.sql" />
+          <option name="timeStamp" value="1" />
+        </breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>
