@@ -21,14 +21,14 @@ public class RestaurantController {
     private String category;
     private String selectedFromCategory;
 
-    private Restaurant restaurant;
+//    private Restaurant restaurant;
 
     private ObservableList<String> observableList = FXCollections.observableArrayList();
 
     private String selectedRestaurant; //add to list
     private SelectionDisplay savedSelectionDisplay;
 
-    private RestaurantDisplay restaurantDisplay;
+//    private RestaurantDisplay restaurantDisplay;
 
     public void setSavedSelectionDisplay(SelectionDisplay selectionDisplay){
         this.savedSelectionDisplay = selectionDisplay;
@@ -52,10 +52,10 @@ public class RestaurantController {
 
         System.out.println(observableList.get(0));
 
-        restaurantDisplay = new RestaurantDisplay();
+        RestaurantDisplay restaurantDisplay = new RestaurantDisplay();
 
         try {
-            restaurant = restaurantDisplay.displaySelection(observableList);
+            Restaurant restaurant = restaurantDisplay.displaySelection(observableList);
             restaurantName.setText(restaurant.getName());
             cuisine.setText(restaurant.getCuisine());
             cost.setText(restaurant.getCost());
@@ -75,7 +75,6 @@ public class RestaurantController {
 
     @FXML
     private void onBackButtonClick() {
-        // TODO: finish this
 
         Controller controller;
         try {

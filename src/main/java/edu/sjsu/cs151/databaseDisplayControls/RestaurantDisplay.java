@@ -12,8 +12,6 @@ public class RestaurantDisplay{
 
     public Restaurant displaySelection(ObservableList<String> items) throws SQLException {
 
-        //TODO: finish this display, using Restaurant class?
-
         String restaurantName = items.get(0);
 
         Restaurant restaurant = null;
@@ -22,11 +20,12 @@ public class RestaurantDisplay{
         Statement statement = JDBC.conn.createStatement();
 
 
+        //TODO: fix ' problem
         ResultSet rs = statement.executeQuery("SELECT ladatabase.name, ladatabase.url, ladatabase.address, locations.location, costs.cost, cuisines.cuisine FROM (ladatabase " +
                 "JOIN locations ON ladatabase.LOCATION_ID=locations.LOCATION_ID " +
                 "JOIN costs ON ladatabase.COST_ID=costs.COST_ID " +
                 "JOIN cuisines ON ladatabase.CUISINE_ID=cuisines.CUISINE_ID) " +
-                "WHERE name=\'" + restaurantName + "\'");
+                "WHERE name='" + restaurantName + "'");
         
         if (rs.next()){
 //            restaurant = new Restaurant(rs.getString("name"),

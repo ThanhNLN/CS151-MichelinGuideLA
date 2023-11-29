@@ -4,13 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="31e7b0d4-5bcb-4602-a3ab-bfbb2608b503" name="Changes" comment="test gitignore 2">
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/edu/sjsu/cs151/DetailsController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/edu/sjsu/cs151/DetailsController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/edu/sjsu/cs151/Restaurant.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/edu/sjsu/cs151/Restaurant.java" afterDir="false" />
+    <list default="true" id="31e7b0d4-5bcb-4602-a3ab-bfbb2608b503" name="Changes" comment="displays restaurant info">
       <change beforePath="$PROJECT_DIR$/src/main/java/edu/sjsu/cs151/RestaurantController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/edu/sjsu/cs151/RestaurantController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/edu/sjsu/cs151/databaseDisplayControls/DetailsDisplay.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/edu/sjsu/cs151/databaseDisplayControls/DetailsDisplay.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/edu/sjsu/cs151/databaseDisplayControls/RestaurantDisplay.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/edu/sjsu/cs151/databaseDisplayControls/RestaurantDisplay.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/edu/sjsu/cs151/RestaurantScreen.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/edu/sjsu/cs151/RestaurantScreen.fxml" afterDir="false" />
     </list>
@@ -159,7 +154,15 @@
       <option name="project" value="LOCAL" />
       <updated>1701253450387</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="displays restaurant info">
+      <option name="closed" value="true" />
+      <created>1701264094178</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1701264094178</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -183,7 +186,8 @@
     <MESSAGE value="cleaned up code (hopefully more SOLID :) ) and tested a little more for ObservableLists" />
     <MESSAGE value="Working database" />
     <MESSAGE value="test gitignore 2" />
-    <option name="LAST_COMMIT_MESSAGE" value="test gitignore 2" />
+    <MESSAGE value="displays restaurant info" />
+    <option name="LAST_COMMIT_MESSAGE" value="displays restaurant info" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

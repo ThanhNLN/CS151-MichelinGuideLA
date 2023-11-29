@@ -41,8 +41,6 @@
         <Label fx:id="url"/>
     </HBox>
 
-<!--    <ListView fx:id="detailsListView" onMouseClicked="#handleListViewClick"/>-->
-
     <HBox spacing="10">
         <Button text="Back" onAction="#onBackButtonClick"/>
     </HBox>
