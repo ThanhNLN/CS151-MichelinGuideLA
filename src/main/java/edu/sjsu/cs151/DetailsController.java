@@ -24,6 +24,9 @@ public class DetailsController {
     public void setStage(Stage primaryStage) {
         this.stage = primaryStage;
     }
+    public void setSelectionDisplay(SelectionDisplay selectionDisplay) {
+        this.selectionDisplay = selectionDisplay;
+    }
 
     public void setDetails(String details){
         detailsLabel.setText(details);
@@ -56,7 +59,5 @@ public class DetailsController {
 
     }
 
-    public void setSelectionDisplay(SelectionDisplay selectionDisplay) {
-        this.selectionDisplay = selectionDisplay;
-    }
+
 }

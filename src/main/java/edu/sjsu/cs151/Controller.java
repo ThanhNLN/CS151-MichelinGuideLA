@@ -32,33 +32,33 @@ public class Controller {
         this.selectionDisplay = selectionDisplay;
     }
 
-    public void setCuisineButton(Button cuisineButton) {
-        this.cuisineButton = cuisineButton;
-    }
+//    public void setCuisineButton(Button cuisineButton) {
+//        this.cuisineButton = cuisineButton;
+//    }
 
-    public void setLocationButton(Button locationButton) {
-        this.locationButton = locationButton;
-    }
+//    public void setLocationButton(Button locationButton) {
+//        this.locationButton = locationButton;
+//    }
 
-    public void setPriceButton(Button priceButton) {
-        this.priceButton = priceButton;
-    }
+//    public void setPriceButton(Button priceButton) {
+//        this.priceButton = priceButton;
+//    }
 
-    public Button getCuisineButton() {
-        return cuisineButton;
-    }
+//    public Button getCuisineButton() {
+//        return cuisineButton;
+//    }
 
-    public Button getLocationButton() {
-        return locationButton;
-    }
+//    public Button getLocationButton() {
+//        return locationButton;
+//    }
 
-    public Button getPriceButton() {
-        return priceButton;
-    }
+//    public Button getPriceButton() {
+//        return priceButton;
+//    }
 
-    public SelectionDisplay getSelectionDisplay() {
-        return selectionDisplay;
-    }
+//    public SelectionDisplay getSelectionDisplay() {
+//        return selectionDisplay;
+//    }
 
     // handle category selections:
     // Location, Cuisine, Price
