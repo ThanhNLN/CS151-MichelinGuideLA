@@ -7,11 +7,11 @@ public class Restaurant {
     private String cuisine;
     private String address;
 
-    public Restaurant(String name, String url, String location, String cusine, String address) {
+    public Restaurant(String name, String url, String location, String cuisine, String address) {
         this.name = name;
         this.url = url;
         this.location = location;
-        this.cuisine = cusine;
+        this.cuisine = cuisine;
         this.address = address;
     }
 
@@ -61,7 +61,7 @@ public class Restaurant {
                 "name='" + name + '\'' +
                 ", url='" + url + '\'' +
                 ", location='" + location + '\'' +
-                ", cusine='" + cuisine + '\'' +
+                ", cuisine='" + cuisine + '\'' +
                 ", address='" + address + '\'' +
                 '}';
     }
