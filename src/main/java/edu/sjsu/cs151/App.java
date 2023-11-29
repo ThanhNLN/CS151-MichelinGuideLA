@@ -4,8 +4,11 @@ import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
+import org.json.simple.parser.ParseException;
 
 import java.io.IOException;
+import java.sql.SQLException;
+
 
 public class App extends Application {
     @Override
@@ -25,7 +28,9 @@ public class App extends Application {
         stage.show();
     }
 
-    public static void main(String[] args) {
+    public static void main(String[] args) throws SQLException, IOException, ParseException {
+        JDBC jdbc = new JDBC();
+        jdbc.createDatabase();
         launch();
     }
 }
