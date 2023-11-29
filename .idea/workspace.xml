@@ -4,11 +4,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="31e7b0d4-5bcb-4602-a3ab-bfbb2608b503" name="Changes" comment="update use case diagram">
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_11_22_23__12_02_AM__Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_11_22_23__12_02_AM__Changes_.xml" afterDir="false" />
+    <list default="true" id="31e7b0d4-5bcb-4602-a3ab-bfbb2608b503" name="Changes" comment="updated diagram README.md - class diagram still needed">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/diagrams/CS151_UML_Diagrams-Use_Case.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/diagrams/CS151_UML_Diagrams-Use_Case.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/edu/sjsu/cs151/App.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/edu/sjsu/cs151/App.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/edu/sjsu/cs151/Controller.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/edu/sjsu/cs151/Controller.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/edu/sjsu/cs151/DetailsController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/edu/sjsu/cs151/DetailsController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/edu/sjsu/cs151/welcome.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/edu/sjsu/cs151/welcome.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/edu/sjsu/cs151/welcome.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/edu/sjsu/cs151/welcome.fxml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -93,7 +95,7 @@
       <workItem from="1700344615125" duration="10008000" />
       <workItem from="1700512646284" duration="472000" />
       <workItem from="1700635347177" duration="4423000" />
-      <workItem from="1701205987178" duration="303000" />
+      <workItem from="1701205987178" duration="6052000" />
     </task>
     <task id="LOCAL-00001" summary="Added sequence, state, and use case diagrams. Need to update links after push">
       <option name="closed" value="true" />
@@ -127,7 +129,31 @@
       <option name="project" value="LOCAL" />
       <updated>1700639677658</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="update use case diagram">
+      <option name="closed" value="true" />
+      <created>1701206368546</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1701206368546</updated>
+    </task>
+    <task id="LOCAL-00006" summary="update state diagram">
+      <option name="closed" value="true" />
+      <created>1701206475560</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1701206475560</updated>
+    </task>
+    <task id="LOCAL-00007" summary="updated diagram README.md - class diagram still needed">
+      <option name="closed" value="true" />
+      <created>1701206758797</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1701206758797</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -150,6 +176,8 @@
     <MESSAGE value="Updated GUI for home screen and details screen: &#10;Allows search in each respective category by clicking location, cuisine, price buttons. On click, list of options is displayed below in scroll list. &#10;Allows selection from scroll list, which then displays the details on new screen. (currently empty details)&#10;(GUI does not use actual data from database yet.)" />
     <MESSAGE value="cleaned up code (hopefully more SOLID :) ) and tested a little more for ObservableLists" />
     <MESSAGE value="update use case diagram" />
-    <option name="LAST_COMMIT_MESSAGE" value="update use case diagram" />
+    <MESSAGE value="update state diagram" />
+    <MESSAGE value="updated diagram README.md - class diagram still needed" />
+    <option name="LAST_COMMIT_MESSAGE" value="updated diagram README.md - class diagram still needed" />
   </component>
 </project>

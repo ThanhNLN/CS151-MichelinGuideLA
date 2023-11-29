@@ -29,9 +29,9 @@
             </Label>
 
             <HBox spacing="10">
-                <Button text="Location" onAction="#handleLocation"/>
-                <Button text="Cuisine" onAction="#handleCuisine"/>
-                <Button text="Price" onAction="#handlePrice"/>
+                <Button fx:id="locationButton" text="Location" onAction="#handleLocation"/>
+                <Button fx:id="cuisineButton" text="Cuisine" onAction="#handleCuisine"/>
+                <Button fx:id="priceButton" text="Price" onAction="#handlePrice"/>
             </HBox>
 
         </VBox>
