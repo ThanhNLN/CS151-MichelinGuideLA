@@ -1,21 +1,16 @@
 package edu.sjsu.cs151;
 
-
+import java.sql.*;
 import org.json.simple.JSONArray;
 import org.json.simple.JSONObject;
 import org.json.simple.parser.JSONParser;
-
-
 import org.json.simple.parser.ParseException;
-
 import java.io.FileReader;
 import java.io.IOException;
-import java.sql.*;
 
 public class JDBC {
-    public void makeConnection() throws ClassNotFoundException, SQLException, IOException, ParseException {
+    public void createDatabase() throws SQLException, IOException, ParseException {
         JSONParser parser = new JSONParser();
-
 
         try {
             Class.forName("com.mysql.cj.jdbc.Driver"); // Register JDBC driver
