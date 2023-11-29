@@ -1,7 +1,6 @@
 package edu.sjsu.cs151;
 
 import edu.sjsu.cs151.databaseDisplayControls.SelectionDisplay;
-import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.Label;
 import javafx.stage.Stage;
