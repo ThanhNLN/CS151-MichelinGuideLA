@@ -4,7 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="31e7b0d4-5bcb-4602-a3ab-bfbb2608b503" name="Changes" comment="fixed back button to show previous selection highlighted, but not the correct highlighted button yet">
+    <list default="true" id="31e7b0d4-5bcb-4602-a3ab-bfbb2608b503" name="Changes" comment="Working database">
+      <change beforePath="$PROJECT_DIR$/src/main/java/edu/sjsu/cs151/JDBC.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/edu/sjsu/cs151/JDBC.java" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/src/main/java/edu/sjsu/cs151/Restaurant.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/edu/sjsu/cs151/App.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/edu/sjsu/cs151/App.java" afterDir="false" />
@@ -55,18 +56,20 @@
   "keyToString": {
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
+
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "WebServerToolWindowFactoryState": "false",
-    "git-widget-placeholder": "irene",
-    "last_opened_file_path": "C:/Users/SJ/OneDrive - sjsu.edu/CS151/CS151-MichelinGuideLA",
+    "git-widget-placeholder": "anniebluu",
+    "last_opened_file_path": "C:/Users/Irene Chen/OneDrive - sjsu.edu/CS151/cs151-assignment4",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
     "node.js.selected.package.tslint": "(autodetect)",
     "nodejs_package_manager_path": "npm",
-    "project.structure.last.edited": "Modules",
+    "project.structure.last.edited": "Problems",
     "project.structure.proportion": "0.15",
     "project.structure.side.proportion": "0.2",
-    "settings.editor.selected.configurable": "org.jetbrains.plugins.github.ui.GithubSettingsConfigurable",
+    "settings.editor.selected.configurable": "reference.projectsettings.compiler.javacompiler",
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
@@ -101,7 +104,10 @@
       <workItem from="1700344615125" duration="10008000" />
       <workItem from="1700512646284" duration="472000" />
       <workItem from="1700635347177" duration="4423000" />
-      <workItem from="1701205987178" duration="8931000" />
+      <workItem from="1700879218777" duration="91000" />
+      <workItem from="1701073852331" duration="4256000" />
+      <workItem from="1701192574090" duration="21665000" />
+
     </task>
     <task id="LOCAL-00001" summary="Added sequence, state, and use case diagrams. Need to update links after push">
       <option name="closed" value="true" />
@@ -135,47 +141,16 @@
       <option name="project" value="LOCAL" />
       <updated>1700639677658</updated>
     </task>
-    <task id="LOCAL-00005" summary="update use case diagram">
+
+    <task id="LOCAL-00005" summary="Working database">
       <option name="closed" value="true" />
-      <created>1701206368546</created>
+      <created>1701240798167</created>
       <option name="number" value="00005" />
       <option name="presentableId" value="LOCAL-00005" />
       <option name="project" value="LOCAL" />
-      <updated>1701206368546</updated>
+      <updated>1701240798167</updated>
     </task>
-    <task id="LOCAL-00006" summary="update state diagram">
-      <option name="closed" value="true" />
-      <created>1701206475560</created>
-      <option name="number" value="00006" />
-      <option name="presentableId" value="LOCAL-00006" />
-      <option name="project" value="LOCAL" />
-      <updated>1701206475560</updated>
-    </task>
-    <task id="LOCAL-00007" summary="updated diagram README.md - class diagram still needed">
-      <option name="closed" value="true" />
-      <created>1701206758797</created>
-      <option name="number" value="00007" />
-      <option name="presentableId" value="LOCAL-00007" />
-      <option name="project" value="LOCAL" />
-      <updated>1701206758797</updated>
-    </task>
-    <task id="LOCAL-00008" summary="fixed back button to show previous selection highlighted, but not the correct highlighted button yet">
-      <option name="closed" value="true" />
-      <created>1701220224242</created>
-      <option name="number" value="00008" />
-      <option name="presentableId" value="LOCAL-00008" />
-      <option name="project" value="LOCAL" />
-      <updated>1701220224242</updated>
-    </task>
-    <task id="LOCAL-00009" summary="fixed back button to show previous selection highlighted, but not the correct highlighted button yet">
-      <option name="closed" value="true" />
-      <created>1701220390922</created>
-      <option name="number" value="00009" />
-      <option name="presentableId" value="LOCAL-00009" />
-      <option name="project" value="LOCAL" />
-      <updated>1701220390922</updated>
-    </task>
-    <option name="localTasksCounter" value="10" />
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -197,10 +172,17 @@
     <MESSAGE value="updated diagram README.md links" />
     <MESSAGE value="Updated GUI for home screen and details screen: &#10;Allows search in each respective category by clicking location, cuisine, price buttons. On click, list of options is displayed below in scroll list. &#10;Allows selection from scroll list, which then displays the details on new screen. (currently empty details)&#10;(GUI does not use actual data from database yet.)" />
     <MESSAGE value="cleaned up code (hopefully more SOLID :) ) and tested a little more for ObservableLists" />
-    <MESSAGE value="update use case diagram" />
-    <MESSAGE value="update state diagram" />
-    <MESSAGE value="updated diagram README.md - class diagram still needed" />
-    <MESSAGE value="fixed back button to show previous selection highlighted, but not the correct highlighted button yet" />
-    <option name="LAST_COMMIT_MESSAGE" value="fixed back button to show previous selection highlighted, but not the correct highlighted button yet" />
+    <MESSAGE value="Working database" />
+    <option name="LAST_COMMIT_MESSAGE" value="Working database" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <breakpoint enabled="true" type="java-exception">
+          <properties class="java.sql.SQLException" package="java.sql" />
+          <option name="timeStamp" value="1" />
+        </breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>
