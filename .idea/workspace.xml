@@ -4,10 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="31e7b0d4-5bcb-4602-a3ab-bfbb2608b503" name="Changes" comment="displays restaurant info">
-      <change beforePath="$PROJECT_DIR$/src/main/java/edu/sjsu/cs151/RestaurantController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/edu/sjsu/cs151/RestaurantController.java" afterDir="false" />
+    <list default="true" id="31e7b0d4-5bcb-4602-a3ab-bfbb2608b503" name="Changes" comment="displays restaurant info (except when there is ')">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/edu/sjsu/cs151/databaseDisplayControls/RestaurantDisplay.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/edu/sjsu/cs151/databaseDisplayControls/RestaurantDisplay.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/edu/sjsu/cs151/RestaurantScreen.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/edu/sjsu/cs151/RestaurantScreen.fxml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -105,6 +104,7 @@
       <workItem from="1700635347177" duration="4423000" />
       <workItem from="1700879218777" duration="91000" />
       <workItem from="1701073852331" duration="4256000" />
+      <workItem from="1701281772775" duration="312000" />
     </task>
     <task id="LOCAL-00001" summary="Added sequence, state, and use case diagrams. Need to update links after push">
       <option name="closed" value="true" />
@@ -162,7 +162,15 @@
       <option name="project" value="LOCAL" />
       <updated>1701264094178</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="displays restaurant info (except when there is ')">
+      <option name="closed" value="true" />
+      <created>1701264320762</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1701264320762</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -187,7 +195,8 @@
     <MESSAGE value="Working database" />
     <MESSAGE value="test gitignore 2" />
     <MESSAGE value="displays restaurant info" />
-    <option name="LAST_COMMIT_MESSAGE" value="displays restaurant info" />
+    <MESSAGE value="displays restaurant info (except when there is ')" />
+    <option name="LAST_COMMIT_MESSAGE" value="displays restaurant info (except when there is ')" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
