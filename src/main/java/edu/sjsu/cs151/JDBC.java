@@ -186,11 +186,11 @@ public class JDBC {
 
             String address = (String) jsonObject.get("address");
             this.prepareStatement.setString(6, address);
-
             this.prepareStatement.execute();
         }
     }
     public void disconnect() throws SQLException {
+        // Method closes connection to database
         this.rs.close();
         this.statement.close();
     }
