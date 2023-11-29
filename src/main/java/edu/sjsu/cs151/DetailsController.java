@@ -102,8 +102,6 @@ public class DetailsController {
             FXMLLoader loader = new FXMLLoader(getClass().getResource("RestaurantScreen.fxml"));
             Parent root = loader.load();
 
-            //detailsLabel.setText(selectedOption);
-
             RestaurantController restaurantController = loader.getController();
             restaurantController.setDetails(selectedOption);
             restaurantController.setStage(stage);
@@ -111,13 +109,10 @@ public class DetailsController {
             restaurantController.setSelectedFromCategory(detailsLabel.getText());
             restaurantController.setSavedSelectionDisplay(savedSelectionDisplay);
 
-            restaurantController.setSelectedRestaurant(selectedOption);
 
             Scene scene = new Scene(root, stage.getScene().getWidth(), stage.getScene().getHeight());
             stage.setScene(scene);
             stage.show();
-
-            //TODO: finish this code
 
         } catch (IOException e){
             //e.printStackTrace();
