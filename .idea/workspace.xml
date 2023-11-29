@@ -59,8 +59,9 @@
 
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "WebServerToolWindowFactoryState": "false",
-    "git-widget-placeholder": "anniebluu",
-    "last_opened_file_path": "C:/Users/Irene Chen/OneDrive - sjsu.edu/CS151/cs151-assignment4",
+    "git-widget-placeholder": "irene",
+    "last_opened_file_path": "C:/Users/SJ/Downloads/mysql-connector-j-8.2.0/mysql-connector-j-8.2.0/mysql-connector-j-8.2.0.jar",
+
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -68,7 +69,7 @@
     "nodejs_package_manager_path": "npm",
     "project.structure.last.edited": "Problems",
     "project.structure.proportion": "0.15",
-    "project.structure.side.proportion": "0.2",
+    "project.structure.side.proportion": "0.1150748",
     "settings.editor.selected.configurable": "reference.projectsettings.compiler.javacompiler",
     "vue.rearranger.settings.migration": "true"
   }
@@ -88,6 +89,15 @@
       <recent name="edu.sjsu.cs151.appControls" />
     </key>
   </component>
+  <component name="RunManager">
+    <configuration name="App" type="Application" factoryName="Application">
+      <option name="MAIN_CLASS_NAME" value="edu.sjsu.cs151.App" />
+      <module name="CS151-MichelinGuideLA" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+  </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
@@ -106,8 +116,6 @@
       <workItem from="1700635347177" duration="4423000" />
       <workItem from="1700879218777" duration="91000" />
       <workItem from="1701073852331" duration="4256000" />
-      <workItem from="1701192574090" duration="21665000" />
-
     </task>
     <task id="LOCAL-00001" summary="Added sequence, state, and use case diagrams. Need to update links after push">
       <option name="closed" value="true" />
@@ -141,7 +149,6 @@
       <option name="project" value="LOCAL" />
       <updated>1700639677658</updated>
     </task>
-
     <task id="LOCAL-00005" summary="Working database">
       <option name="closed" value="true" />
       <created>1701240798167</created>

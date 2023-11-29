@@ -9,8 +9,10 @@ import java.io.FileReader;
 import java.io.IOException;
 
 public class JDBC {
-    public void createDatabase() throws SQLException, IOException, ParseException {
-        JSONParser parser = new JSONParser();
+ 
+    public static Connection conn = null;
+
+    public void makeConnection() throws SQLException {
 
         try {
             Class.forName("com.mysql.cj.jdbc.Driver"); // Register JDBC driver
@@ -18,8 +20,16 @@ public class JDBC {
             e.printStackTrace();
         }
 
-        // Open a connection
-        Connection conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/", "root", "password");
+        // Open a connection 
+        conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/", "root", "password");
+    }
+    
+    public void createDatabase() throws SQLException, IOException, ParseException {
+        JSONParser parser = new JSONParser();
+
+        makeConnection();
+
+
 
         // Execute a query
         Statement statement = conn.createStatement();
@@ -84,31 +94,36 @@ public class JDBC {
 
             String name = (String) jsonObject.get("name");
             // Parameters start with 1
-            System.out.println(name);
+ 
+//            System.out.println(name);
             databaseStatement.setString(1, name);
 
             String url = (String) jsonObject.get("url");
-            System.out.println(url);
+//            System.out.println(url);
             databaseStatement.setString(2, url);
 
 
             String address = (String) jsonObject.get("address");
-            System.out.println(address);
+ 
+//            System.out.println(address);
             databaseStatement.setString(6, address);
 
 
             String location = (String) jsonObject.get("location");
-            System.out.println(location);
+ 
+//            System.out.println(location);
             locationStatement.setString(1, location);
             locationStatement.execute();
 
             String cost = Long.toString((long) jsonObject.get("cost"));
-            System.out.println(cost);
+ 
+//            System.out.println(cost);
             costStatement.setString(1, cost);
             costStatement.execute();
 
             String cuisine = (String) jsonObject.get("cuisine");
-            System.out.println(cuisine);
+ 
+//            System.out.println(cuisine);
             cuisineStatement.setString(1, cuisine);
             cuisineStatement.execute();
 
@@ -116,7 +131,8 @@ public class JDBC {
             ResultSet rs = statement.executeQuery("SELECT LOCATION_ID FROM LOCATIONS WHERE location=" + "'" + location + "'");
             if (rs.next()) {
                 int locationID = rs.getInt("LOCATION_ID");
-                System.out.println("Location ID:" + locationID);
+ 
+//                System.out.println("Location ID:" + locationID);
                 databaseStatement.setInt(3, locationID);
             }
 
@@ -124,14 +140,16 @@ public class JDBC {
             rs = statement.executeQuery("SELECT COST_ID FROM COSTS WHERE cost=" + "'" + cost + "'");
             if (rs.next()) {
                 int costID = rs.getInt("COST_ID");
-                System.out.println("Cost ID:" + costID);
+ 
+//                System.out.println("Cost ID:" + costID);
                 databaseStatement.setInt(4, costID);
             }
 
             rs = statement.executeQuery("SELECT CUISINE_ID FROM CUISINES WHERE cuisine=" + "'" + cuisine + "'");
             if (rs.next()) {
                 int cuisineID = rs.getInt("CUISINE_ID");
-                System.out.println("Cuisine ID:" + cuisineID);
+ 
+//                System.out.println("Cuisine ID:" + cuisineID);
                 databaseStatement.setInt(5, cuisineID);
             }
             databaseStatement.execute();
