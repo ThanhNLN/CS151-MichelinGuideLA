@@ -4,7 +4,21 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="31e7b0d4-5bcb-4602-a3ab-bfbb2608b503" name="Changes" comment="Working database" />
+    <list default="true" id="31e7b0d4-5bcb-4602-a3ab-bfbb2608b503" name="Changes" comment="Working database">
+      <change beforePath="$PROJECT_DIR$/src/main/java/edu/sjsu/cs151/JDBC.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/edu/sjsu/cs151/JDBC.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/edu/sjsu/cs151/Restaurant.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/edu/sjsu/cs151/App.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/edu/sjsu/cs151/App.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/edu/sjsu/cs151/Controller.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/edu/sjsu/cs151/Controller.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/edu/sjsu/cs151/DetailsController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/edu/sjsu/cs151/DetailsController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/edu/sjsu/cs151/databaseDisplayControls/CuisineDisplay.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/edu/sjsu/cs151/databaseDisplayControls/CuisineDisplay.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/edu/sjsu/cs151/databaseDisplayControls/DetailsDisplay.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/edu/sjsu/cs151/databaseDisplayControls/DetailsDisplay.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/edu/sjsu/cs151/databaseDisplayControls/LocationDisplay.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/edu/sjsu/cs151/databaseDisplayControls/LocationDisplay.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/edu/sjsu/cs151/databaseDisplayControls/PriceDisplay.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/edu/sjsu/cs151/databaseDisplayControls/PriceDisplay.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/edu/sjsu/cs151/databaseDisplayControls/SelectionDisplay.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/edu/sjsu/cs151/databaseDisplayControls/SelectionDisplay.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/edu/sjsu/cs151/welcome.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/edu/sjsu/cs151/welcome.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/edu/sjsu/cs151/welcome.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/edu/sjsu/cs151/welcome.fxml" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -42,16 +56,18 @@
   "keyToString": {
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
+
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "WebServerToolWindowFactoryState": "false",
     "git-widget-placeholder": "irene",
     "last_opened_file_path": "C:/Users/SJ/Downloads/mysql-connector-j-8.2.0/mysql-connector-j-8.2.0/mysql-connector-j-8.2.0.jar",
+
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
     "node.js.selected.package.tslint": "(autodetect)",
     "nodejs_package_manager_path": "npm",
-    "project.structure.last.edited": "Modules",
+    "project.structure.last.edited": "Problems",
     "project.structure.proportion": "0.15",
     "project.structure.side.proportion": "0.1150748",
     "settings.editor.selected.configurable": "reference.projectsettings.compiler.javacompiler",
@@ -100,7 +116,6 @@
       <workItem from="1700635347177" duration="4423000" />
       <workItem from="1700879218777" duration="91000" />
       <workItem from="1701073852331" duration="4256000" />
-      <workItem from="1701192574090" duration="21665000" />
     </task>
     <task id="LOCAL-00001" summary="Added sequence, state, and use case diagrams. Need to update links after push">
       <option name="closed" value="true" />
