@@ -14,6 +14,9 @@ public class RestaurantDisplay{
 
         String restaurantName = items.get(0);
 
+        //restaurantName = "[" + restaurantName + "]";
+        restaurantName = restaurantName.replaceAll("'", "''");
+
         Restaurant restaurant = null;
 
         //create a statement
