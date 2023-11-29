@@ -10,15 +10,17 @@ import javafx.scene.control.ListView;
 import javafx.stage.Stage;
 
 import java.io.IOException;
+import java.sql.SQLException;
 
 public class DetailsController {
 
     @FXML
-    private ListView<Restaurant> listView;
+    private ListView<String> detailsListView;
     @FXML
     private Label detailsLabel;
 
-    private Restaurant selection;
+    private String category;
+
 
     private Stage stage;
     private SelectionDisplay selectionDisplay;
@@ -30,17 +32,24 @@ public class DetailsController {
         this.selectionDisplay = selectionDisplay;
     }
 
-    public void setDetails(Restaurant details){
-        selection = details;
-        detailsLabel.setText("details.getname?");
+    public void setDetails(String category, String details){
+
+        detailsLabel.setText(details);
+        this.category = category;
 
         // TODO: fix this selectionDisplay
         SelectionDisplay selectionDisplay = new DetailsDisplay();
 
-        ObservableList<Restaurant> items = FXCollections.observableArrayList();
-        selectionDisplay.displaySelection(items);
-        //listView.setVisible(true);
-        listView.setItems(items);
+        ObservableList<String> items = FXCollections.observableArrayList();
+        items.add(category);
+        items.add(details);
+
+        try {
+            selectionDisplay.displaySelection(items);
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+        detailsListView.setItems(items);
     }
 
     public void handleListViewClick() {
@@ -49,12 +58,9 @@ public class DetailsController {
     }
 
     public void onBackButtonClick() {
-
-        //load the old screen?
         // TODO: fix it so it highlights the previous button selection on the old screen?
-        // * select category, and highlight last chosen item?
         try {
-            App.homeScreenRememberSelection(stage, selectionDisplay, selection);
+            App.homeScreenRememberSelection(stage, selectionDisplay, category, detailsLabel.getText());
         } catch (IOException e){
             //e.printStackTrace();
         }

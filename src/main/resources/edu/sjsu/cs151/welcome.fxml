@@ -41,6 +41,6 @@
 
     </HBox>
 
-    <ListView fx:id="listView" onMouseClicked="#handleListViewClick" visible="false"/>
+    <ListView fx:id="controllerListView" onMouseClicked="#handleListViewClick" visible="false"/>
 
 </VBox>

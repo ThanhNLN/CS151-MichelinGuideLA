@@ -15,12 +15,15 @@ import javafx.scene.control.ListView;
 import javafx.stage.Stage;
 
 import java.io.IOException;
+import java.sql.SQLException;
 
 public class Controller {
     public Button locationButton, cuisineButton, priceButton;
     @FXML
-    private ListView<Restaurant> listView;
+    private ListView<String> controllerListView;
     private Stage primaryStage;
+
+    private String category = "";
 
     private SelectionDisplay selectionDisplay;
 
@@ -65,38 +68,46 @@ public class Controller {
     @FXML
     protected void handleLocation() {
         selectionDisplay = new LocationDisplay();
+//        category = "location";
         updateListView();
     }
 
     @FXML
     protected void handleCuisine() {
         selectionDisplay = new CuisineDisplay();
+//        category = "cuisine";
         updateListView();
     }
 
     @FXML
     protected void handlePrice() {
         selectionDisplay = new PriceDisplay();
+//        category = "cost";
         updateListView();
     }
 
     protected void updateListView(){
-        ObservableList<Restaurant> items = FXCollections.observableArrayList();
-        selectionDisplay.displaySelection(items);
-        listView.setVisible(true);
-        listView.setItems(items);
+        ObservableList<String> items = FXCollections.observableArrayList();
+        try {
+            category = selectionDisplay.displaySelection(items);
+        } catch (SQLException e) {
+            //e.printStackTrace();
+        }
+        controllerListView.setVisible(true);
+        controllerListView.setItems(items);
     }
 
-    public void updateListView(Restaurant item){
+    public void updateListView(String category, String item){
+        this.category = category;
         updateListView();
-        listView.getSelectionModel().select(item);
+        controllerListView.getSelectionModel().select(item);
 
-        if(listView.getSelectionModel().getSelectedIndex() > listView.getItems().size() * 3 / 4){
-            listView.scrollTo(listView.getSelectionModel().getSelectedIndex()+2);
-        } else if (listView.getSelectionModel().getSelectedIndex() < listView.getItems().size() /4){
-            listView.scrollTo(listView.getSelectionModel().getSelectedIndex()-2);
+        if(controllerListView.getSelectionModel().getSelectedIndex() > controllerListView.getItems().size() * 3 / 4){
+            controllerListView.scrollTo(controllerListView.getSelectionModel().getSelectedIndex()+2);
+        } else if (controllerListView.getSelectionModel().getSelectedIndex() < controllerListView.getItems().size() /4){
+            controllerListView.scrollTo(controllerListView.getSelectionModel().getSelectedIndex()-2);
         } else {
-            listView.scrollTo(item);
+            controllerListView.scrollTo(item);
         }
 
 
@@ -106,20 +117,20 @@ public class Controller {
     //handle selection of from category list:
     @FXML
     private void handleListViewClick() {
-        Restaurant selectedOption = listView.getSelectionModel().getSelectedItem();
+        String selectedOption = controllerListView.getSelectionModel().getSelectedItem();
         if (selectedOption != null) {
             openDetailsScreen(selectedOption);
         }
     }
 
     // TODO: possibly make this more SOLID?
-    private void openDetailsScreen(Restaurant selectedOption) {
+    private void openDetailsScreen(String selectedOption) {
         try {
             FXMLLoader loader = new FXMLLoader(getClass().getResource("DetailsScreen.fxml"));
             Parent root = loader.load();
 
             DetailsController detailsController = loader.getController();
-            detailsController.setDetails(selectedOption);
+            detailsController.setDetails(category, selectedOption);
             detailsController.setStage(primaryStage);
             detailsController.setSelectionDisplay(selectionDisplay);
 

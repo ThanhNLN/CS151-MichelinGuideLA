@@ -35,11 +35,11 @@ public class App extends Application {
     }
 
     // home screen set up, with remembered selection
-    public static void homeScreenRememberSelection(Stage stage, SelectionDisplay selectionDisplay, Restaurant selection) throws IOException{
+    public static void homeScreenRememberSelection(Stage stage, SelectionDisplay selectionDisplay, String category, String selection) throws IOException{
         Controller controller = homeScreen(stage);
 
         controller.setSelectionDisplay(selectionDisplay);
-        controller.updateListView(selection);
+        controller.updateListView(category, selection);
     }
 
     public static void main(String[] args) throws SQLException, IOException, ParseException {
