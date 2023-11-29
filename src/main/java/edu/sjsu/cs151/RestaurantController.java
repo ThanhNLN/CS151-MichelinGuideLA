@@ -45,10 +45,10 @@ public class RestaurantController {
     }
 
     @FXML
-    private void onBackButtonClick(ActionEvent actionEvent) {
+    private void onBackButtonClick() {
         // TODO: finish this
 
-        Controller controller = null;
+        Controller controller;
         try {
             controller = App.homeScreen(stage);
         } catch (IOException e) {

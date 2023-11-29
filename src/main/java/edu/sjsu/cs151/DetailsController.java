@@ -51,7 +51,7 @@ public class DetailsController {
         try {
             selectionDisplay.displaySelection(items);
         } catch (SQLException e) {
-            e.printStackTrace();
+            //e.printStackTrace();
         }
         detailsListView.setItems(items);
     }
