@@ -14,9 +14,11 @@ import java.io.IOException;
 public class DetailsController {
 
     @FXML
-    private ListView<String> listView;
+    private ListView<Restaurant> listView;
     @FXML
     private Label detailsLabel;
+
+    private Restaurant selection;
 
     private Stage stage;
     private SelectionDisplay selectionDisplay;
@@ -28,13 +30,14 @@ public class DetailsController {
         this.selectionDisplay = selectionDisplay;
     }
 
-    public void setDetails(String details){
-        detailsLabel.setText(details);
+    public void setDetails(Restaurant details){
+        selection = details;
+        detailsLabel.setText("details.getname?");
 
-        // TODO: fix this selectionDisplay, only temporary to test
+        // TODO: fix this selectionDisplay
         SelectionDisplay selectionDisplay = new DetailsDisplay();
 
-        ObservableList<String> items = FXCollections.observableArrayList();
+        ObservableList<Restaurant> items = FXCollections.observableArrayList();
         selectionDisplay.displaySelection(items);
         //listView.setVisible(true);
         listView.setItems(items);
@@ -51,9 +54,9 @@ public class DetailsController {
         // TODO: fix it so it highlights the previous button selection on the old screen?
         // * select category, and highlight last chosen item?
         try {
-            App.homeScreenRememberSelection(stage, selectionDisplay, detailsLabel.getText());
+            App.homeScreenRememberSelection(stage, selectionDisplay, selection);
         } catch (IOException e){
-            e.printStackTrace();
+            //e.printStackTrace();
         }
 
 

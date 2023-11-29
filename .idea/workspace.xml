@@ -4,11 +4,17 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="31e7b0d4-5bcb-4602-a3ab-bfbb2608b503" name="Changes" comment="updated diagram README.md - class diagram still needed">
+    <list default="true" id="31e7b0d4-5bcb-4602-a3ab-bfbb2608b503" name="Changes" comment="fixed back button to show previous selection highlighted, but not the correct highlighted button yet">
+      <change afterPath="$PROJECT_DIR$/src/main/java/edu/sjsu/cs151/Restaurant.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/edu/sjsu/cs151/App.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/edu/sjsu/cs151/App.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/edu/sjsu/cs151/Controller.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/edu/sjsu/cs151/Controller.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/edu/sjsu/cs151/DetailsController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/edu/sjsu/cs151/DetailsController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/edu/sjsu/cs151/databaseDisplayControls/CuisineDisplay.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/edu/sjsu/cs151/databaseDisplayControls/CuisineDisplay.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/edu/sjsu/cs151/databaseDisplayControls/DetailsDisplay.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/edu/sjsu/cs151/databaseDisplayControls/DetailsDisplay.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/edu/sjsu/cs151/databaseDisplayControls/LocationDisplay.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/edu/sjsu/cs151/databaseDisplayControls/LocationDisplay.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/edu/sjsu/cs151/databaseDisplayControls/PriceDisplay.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/edu/sjsu/cs151/databaseDisplayControls/PriceDisplay.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/edu/sjsu/cs151/databaseDisplayControls/SelectionDisplay.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/edu/sjsu/cs151/databaseDisplayControls/SelectionDisplay.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/edu/sjsu/cs151/welcome.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/edu/sjsu/cs151/welcome.fxml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/edu/sjsu/cs151/welcome.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/edu/sjsu/cs151/welcome.fxml" afterDir="false" />
     </list>
@@ -95,7 +101,7 @@
       <workItem from="1700344615125" duration="10008000" />
       <workItem from="1700512646284" duration="472000" />
       <workItem from="1700635347177" duration="4423000" />
-      <workItem from="1701205987178" duration="6052000" />
+      <workItem from="1701205987178" duration="8931000" />
     </task>
     <task id="LOCAL-00001" summary="Added sequence, state, and use case diagrams. Need to update links after push">
       <option name="closed" value="true" />
@@ -153,7 +159,23 @@
       <option name="project" value="LOCAL" />
       <updated>1701206758797</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="fixed back button to show previous selection highlighted, but not the correct highlighted button yet">
+      <option name="closed" value="true" />
+      <created>1701220224242</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1701220224242</updated>
+    </task>
+    <task id="LOCAL-00009" summary="fixed back button to show previous selection highlighted, but not the correct highlighted button yet">
+      <option name="closed" value="true" />
+      <created>1701220390922</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1701220390922</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -178,6 +200,7 @@
     <MESSAGE value="update use case diagram" />
     <MESSAGE value="update state diagram" />
     <MESSAGE value="updated diagram README.md - class diagram still needed" />
-    <option name="LAST_COMMIT_MESSAGE" value="updated diagram README.md - class diagram still needed" />
+    <MESSAGE value="fixed back button to show previous selection highlighted, but not the correct highlighted button yet" />
+    <option name="LAST_COMMIT_MESSAGE" value="fixed back button to show previous selection highlighted, but not the correct highlighted button yet" />
   </component>
 </project>
