@@ -1,0 +1,222 @@
+Index: src/main/java/edu/sjsu/cs151/JDBC.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>package edu.sjsu.cs151;\n\nimport java.sql.*;\nimport org.json.simple.JSONArray;\nimport org.json.simple.JSONObject;\nimport org.json.simple.parser.JSONParser;\nimport org.json.simple.parser.ParseException;\nimport java.io.FileReader;\nimport java.io.IOException;\n\npublic class JDBC {\n    public void createDatabase() throws SQLException, IOException, ParseException {\n        JSONParser parser = new JSONParser();\n\n        try {\n            Class.forName(\"com.mysql.cj.jdbc.Driver\"); // Register JDBC driver\n        } catch (ClassNotFoundException e) {\n            e.printStackTrace();\n        }\n\n        // Open a connection\n        Connection conn = DriverManager.getConnection(\"jdbc:mysql://localhost:3306/\", \"root\", \"password\");\n\n        // Execute a query\n        Statement statement = conn.createStatement();\n        statement.executeUpdate(\"DROP SCHEMA IF EXISTS student\");\n        statement.executeUpdate(\"CREATE SCHEMA student\");\n        statement.executeUpdate(\"USE student\");\n        //statement.executeUpdate()\n\n        String createLocationTable = \"create table LOCATIONS \"\n                + \"(LOCATION_ID int NOT NULL UNIQUE PRIMARY KEY AUTO_INCREMENT, \"\n                + \"location varchar(255) UNIQUE\"\n                + \")\";\n\n        statement.executeUpdate(\"DROP TABLE IF EXISTS LOCATIONS\");\n        statement.executeUpdate(createLocationTable);\n\n        String createCostTable = \"create table COSTS \"\n                + \"(COST_ID int NOT NULL UNIQUE PRIMARY KEY AUTO_INCREMENT, \"\n                + \"cost varchar(255) UNIQUE\"\n                + \")\";\n\n        statement.executeUpdate(\"DROP TABLE IF EXISTS COSTS\");\n        statement.executeUpdate(createCostTable);\n\n        String createCuisineTable = \"create table CUISINES \"\n                + \"(CUISINE_ID int NOT NULL UNIQUE PRIMARY KEY AUTO_INCREMENT, \"\n                + \"cuisine varchar(255) UNIQUE\"\n                + \")\";\n\n        statement.executeUpdate(\"DROP TABLE IF EXISTS CUISINES\");\n        statement.executeUpdate(createCuisineTable);\n\n        String createLADatabase = \"CREATE TABLE LADATABASE \"\n                + \"(RESTAURANT_ID int NOT NULL UNIQUE PRIMARY KEY AUTO_INCREMENT, \"\n                + \"name varchar(255), \"\n                + \"url varchar(255), \"\n                + \"LOCATION_ID int, \"\n                + \"COST_ID int, \"\n                + \"CUISINE_ID int, \"\n                + \"address varchar(255), \"\n                + \"FOREIGN KEY (LOCATION_ID) REFERENCES LOCATIONS (LOCATION_ID), \"\n                + \"FOREIGN KEY (COST_ID) REFERENCES COSTS (COST_ID), \"\n                + \"FOREIGN KEY (CUISINE_ID) REFERENCES CUISINES (CUISINE_ID)\"\n                + \")\";\n//        statement.executeUpdate(\"USE student\");\n\n        statement.executeUpdate(\"DROP TABLE IF EXISTS LADATABASE\");\n        statement.executeUpdate(createLADatabase);\n\n        Object obj = parser.parse(new FileReader(\"LosAngelesData.json\"));\n\n        JSONArray jsonArray = (JSONArray) obj;\n\n        for (Object jsonElement : jsonArray) {\n            JSONObject jsonObject = (JSONObject) jsonElement;\n\n            PreparedStatement locationStatement = conn.prepareStatement(\"insert IGNORE into LOCATIONS(location) values (?)\");\n\n            PreparedStatement costStatement = conn.prepareStatement(\"insert IGNORE into COSTS (cost) values (?)\");\n            PreparedStatement cuisineStatement = conn.prepareStatement(\"insert IGNORE into CUISINES (cuisine) values (?)\");\n            PreparedStatement databaseStatement = conn.prepareStatement(\"insert into LADATABASE (name, url, LOCATION_ID, COST_ID, CUISINE_ID, address) values (?, ?, ?, ?, ?, ?)\");\n\n            String name = (String) jsonObject.get(\"name\");\n            // Parameters start with 1\n            System.out.println(name);\n            databaseStatement.setString(1, name);\n\n            String url = (String) jsonObject.get(\"url\");\n            System.out.println(url);\n            databaseStatement.setString(2, url);\n\n\n            String address = (String) jsonObject.get(\"address\");\n            System.out.println(address);\n            databaseStatement.setString(6, address);\n\n\n            String location = (String) jsonObject.get(\"location\");\n            System.out.println(location);\n            locationStatement.setString(1, location);\n            locationStatement.execute();\n\n            String cost = Long.toString((long) jsonObject.get(\"cost\"));\n            System.out.println(cost);\n            costStatement.setString(1, cost);\n            costStatement.execute();\n\n            String cuisine = (String) jsonObject.get(\"cuisine\");\n            System.out.println(cuisine);\n            cuisineStatement.setString(1, cuisine);\n            cuisineStatement.execute();\n\n\n            ResultSet rs = statement.executeQuery(\"SELECT LOCATION_ID FROM LOCATIONS WHERE location=\" + \"'\" + location + \"'\");\n            if (rs.next()) {\n                int locationID = rs.getInt(\"LOCATION_ID\");\n                System.out.println(\"Location ID:\" + locationID);\n                databaseStatement.setInt(3, locationID);\n            }\n\n\n            rs = statement.executeQuery(\"SELECT COST_ID FROM COSTS WHERE cost=\" + \"'\" + cost + \"'\");\n            if (rs.next()) {\n                int costID = rs.getInt(\"COST_ID\");\n                System.out.println(\"Cost ID:\" + costID);\n                databaseStatement.setInt(4, costID);\n            }\n\n            rs = statement.executeQuery(\"SELECT CUISINE_ID FROM CUISINES WHERE cuisine=\" + \"'\" + cuisine + \"'\");\n            if (rs.next()) {\n                int cuisineID = rs.getInt(\"CUISINE_ID\");\n                System.out.println(\"Cuisine ID:\" + cuisineID);\n                databaseStatement.setInt(5, cuisineID);\n            }\n            databaseStatement.execute();\n\n        }\n        statement.close();\n    }\n}
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/main/java/edu/sjsu/cs151/JDBC.java b/src/main/java/edu/sjsu/cs151/JDBC.java
+--- a/src/main/java/edu/sjsu/cs151/JDBC.java	(revision a881a62b51de7c45eb4fdc8f5db317089d749d6c)
++++ b/src/main/java/edu/sjsu/cs151/JDBC.java	(date 1701254291873)
+@@ -23,50 +23,48 @@
+ 
+         // Execute a query
+         Statement statement = conn.createStatement();
+-        statement.executeUpdate("DROP SCHEMA IF EXISTS student");
++        statement.executeUpdate("DROP DATABASE IF EXISTS student");
+         statement.executeUpdate("CREATE SCHEMA student");
+         statement.executeUpdate("USE student");
+-        //statement.executeUpdate()
+ 
+-        String createLocationTable = "create table LOCATIONS "
+-                + "(LOCATION_ID int NOT NULL UNIQUE PRIMARY KEY AUTO_INCREMENT, "
+-                + "location varchar(255) UNIQUE"
++        String createLocationTable = "CREATE TABLE locations "
++                + "(location_id INT NOT NULL UNIQUE PRIMARY KEY AUTO_INCREMENT, "
++                + "location VARCHAR(255) UNIQUE"
+                 + ")";
+ 
+-        statement.executeUpdate("DROP TABLE IF EXISTS LOCATIONS");
++        statement.executeUpdate("DROP TABLE IF EXISTS locations");
+         statement.executeUpdate(createLocationTable);
+ 
+-        String createCostTable = "create table COSTS "
+-                + "(COST_ID int NOT NULL UNIQUE PRIMARY KEY AUTO_INCREMENT, "
+-                + "cost varchar(255) UNIQUE"
++        String createCostTable = "CREATE TABLE costs "
++                + "(cost_id INT NOT NULL UNIQUE PRIMARY KEY AUTO_INCREMENT, "
++                + "cost VARCHAR(255) UNIQUE"
+                 + ")";
+ 
+-        statement.executeUpdate("DROP TABLE IF EXISTS COSTS");
++        statement.executeUpdate("DROP TABLE IF EXISTS costs");
+         statement.executeUpdate(createCostTable);
+ 
+-        String createCuisineTable = "create table CUISINES "
+-                + "(CUISINE_ID int NOT NULL UNIQUE PRIMARY KEY AUTO_INCREMENT, "
+-                + "cuisine varchar(255) UNIQUE"
++        String createCuisineTable = "CREATE TABLE cuisines "
++                + "(cuisine_id INT NOT NULL UNIQUE PRIMARY KEY AUTO_INCREMENT, "
++                + "cuisine VARCHAR(255) UNIQUE"
+                 + ")";
+ 
+-        statement.executeUpdate("DROP TABLE IF EXISTS CUISINES");
++        statement.executeUpdate("DROP TABLE IF EXISTS cuisines");
+         statement.executeUpdate(createCuisineTable);
+ 
+-        String createLADatabase = "CREATE TABLE LADATABASE "
+-                + "(RESTAURANT_ID int NOT NULL UNIQUE PRIMARY KEY AUTO_INCREMENT, "
+-                + "name varchar(255), "
+-                + "url varchar(255), "
+-                + "LOCATION_ID int, "
+-                + "COST_ID int, "
+-                + "CUISINE_ID int, "
+-                + "address varchar(255), "
+-                + "FOREIGN KEY (LOCATION_ID) REFERENCES LOCATIONS (LOCATION_ID), "
+-                + "FOREIGN KEY (COST_ID) REFERENCES COSTS (COST_ID), "
+-                + "FOREIGN KEY (CUISINE_ID) REFERENCES CUISINES (CUISINE_ID)"
++        String createLADatabase = "CREATE TABLE LosAngelesDB "
++                + "(restaurant_id INT NOT NULL UNIQUE PRIMARY KEY AUTO_INCREMENT, "
++                + "name VARCHAR(255), "
++                + "url VARCHAR(255), "
++                + "location_id INT, "
++                + "cost_id INT, "
++                + "cuisine_id INT, "
++                + "address VARCHAR(255), "
++                + "FOREIGN KEY (location_id) REFERENCES locations (location_id), "
++                + "FOREIGN KEY (cost_id) REFERENCES costs (cost_id), "
++                + "FOREIGN KEY (cuisine_id) REFERENCES cuisines (cuisine_id)"
+                 + ")";
+-//        statement.executeUpdate("USE student");
+ 
+-        statement.executeUpdate("DROP TABLE IF EXISTS LADATABASE");
++        statement.executeUpdate("DROP TABLE IF EXISTS LosAngelesDB");
+         statement.executeUpdate(createLADatabase);
+ 
+         Object obj = parser.parse(new FileReader("LosAngelesData.json"));
+@@ -76,14 +74,13 @@
+         for (Object jsonElement : jsonArray) {
+             JSONObject jsonObject = (JSONObject) jsonElement;
+ 
+-            PreparedStatement locationStatement = conn.prepareStatement("insert IGNORE into LOCATIONS(location) values (?)");
++            PreparedStatement locationStatement = conn.prepareStatement("INSERT IGNORE INTO locations (location) values (?)");
+ 
+-            PreparedStatement costStatement = conn.prepareStatement("insert IGNORE into COSTS (cost) values (?)");
+-            PreparedStatement cuisineStatement = conn.prepareStatement("insert IGNORE into CUISINES (cuisine) values (?)");
+-            PreparedStatement databaseStatement = conn.prepareStatement("insert into LADATABASE (name, url, LOCATION_ID, COST_ID, CUISINE_ID, address) values (?, ?, ?, ?, ?, ?)");
++            PreparedStatement costStatement = conn.prepareStatement("INSERT IGNORE INTO costs (cost) values (?)");
++            PreparedStatement cuisineStatement = conn.prepareStatement("INSERT IGNORE INTO cuisines (cuisine) values (?)");
++            PreparedStatement databaseStatement = conn.prepareStatement("INSERT INTO LosAngelesDB (name, url, location_id, cost_id, cuisine_id, address) values (?, ?, ?, ?, ?, ?)");
+ 
+             String name = (String) jsonObject.get("name");
+-            // Parameters start with 1
+             System.out.println(name);
+             databaseStatement.setString(1, name);
+ 
+@@ -113,25 +110,25 @@
+             cuisineStatement.execute();
+ 
+ 
+-            ResultSet rs = statement.executeQuery("SELECT LOCATION_ID FROM LOCATIONS WHERE location=" + "'" + location + "'");
++            ResultSet rs = statement.executeQuery("SELECT location_id FROM locations WHERE location=" + "'" + location + "'");
+             if (rs.next()) {
+-                int locationID = rs.getInt("LOCATION_ID");
+-                System.out.println("Location ID:" + locationID);
++                int locationID = rs.getInt("location_id");
++                System.out.println("Location ID: " + locationID);
+                 databaseStatement.setInt(3, locationID);
+             }
+ 
+ 
+-            rs = statement.executeQuery("SELECT COST_ID FROM COSTS WHERE cost=" + "'" + cost + "'");
++            rs = statement.executeQuery("SELECT cost_id FROM costs WHERE cost=" + "'" + cost + "'");
+             if (rs.next()) {
+-                int costID = rs.getInt("COST_ID");
+-                System.out.println("Cost ID:" + costID);
++                int costID = rs.getInt("cost_id");
++                System.out.println("Cost ID: " + costID);
+                 databaseStatement.setInt(4, costID);
+             }
+ 
+-            rs = statement.executeQuery("SELECT CUISINE_ID FROM CUISINES WHERE cuisine=" + "'" + cuisine + "'");
++            rs = statement.executeQuery("SELECT cuisine_id FROM cuisines WHERE cuisine=" + "'" + cuisine + "'");
+             if (rs.next()) {
+-                int cuisineID = rs.getInt("CUISINE_ID");
+-                System.out.println("Cuisine ID:" + cuisineID);
++                int cuisineID = rs.getInt("cuisine_id");
++                System.out.println("Cuisine ID: " + cuisineID);
+                 databaseStatement.setInt(5, cuisineID);
+             }
+             databaseStatement.execute();
+Index: .idea/workspace.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<project version=\"4\">\n  <component name=\"AutoImportSettings\">\n    <option name=\"autoReloadType\" value=\"SELECTIVE\" />\n  </component>\n  <component name=\"ChangeListManager\">\n    <list default=\"true\" id=\"31e7b0d4-5bcb-4602-a3ab-bfbb2608b503\" name=\"Changes\" comment=\"Working database\">\n      <change beforePath=\"$PROJECT_DIR$/src/main/java/edu/sjsu/cs151/App.java\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/src/main/java/edu/sjsu/cs151/App.java\" afterDir=\"false\" />\n      <change beforePath=\"$PROJECT_DIR$/src/main/java/edu/sjsu/cs151/JDBC.java\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/src/main/java/edu/sjsu/cs151/JDBC.java\" afterDir=\"false\" />\n    </list>\n    <option name=\"SHOW_DIALOG\" value=\"false\" />\n    <option name=\"HIGHLIGHT_CONFLICTS\" value=\"true\" />\n    <option name=\"HIGHLIGHT_NON_ACTIVE_CHANGELIST\" value=\"false\" />\n    <option name=\"LAST_RESOLUTION\" value=\"IGNORE\" />\n  </component>\n  <component name=\"FileTemplateManagerImpl\">\n    <option name=\"RECENT_TEMPLATES\">\n      <list>\n        <option value=\"Interface\" />\n        <option value=\"Class\" />\n      </list>\n    </option>\n  </component>\n  <component name=\"Git.Settings\">\n    <option name=\"RECENT_BRANCH_BY_REPOSITORY\">\n      <map>\n        <entry key=\"$PROJECT_DIR$\" value=\"main\" />\n      </map>\n    </option>\n    <option name=\"RECENT_GIT_ROOT_PATH\" value=\"$PROJECT_DIR$\" />\n  </component>\n  <component name=\"MarkdownSettingsMigration\">\n    <option name=\"stateVersion\" value=\"1\" />\n  </component>\n  <component name=\"ProjectColorInfo\">{\n  &quot;customColor&quot;: &quot;&quot;,\n  &quot;associatedIndex&quot;: 0\n}</component>\n  <component name=\"ProjectId\" id=\"2YITkQdHfxh3JYLKdMQbaS1pmjS\" />\n  <component name=\"ProjectViewState\">\n    <option name=\"hideEmptyMiddlePackages\" value=\"true\" />\n    <option name=\"showLibraryContents\" value=\"true\" />\n  </component>\n  <component name=\"PropertiesComponent\"><![CDATA[{\n  \"keyToString\": {\n    \"RunOnceActivity.OpenProjectViewOnStart\": \"true\",\n    \"RunOnceActivity.ShowReadmeOnStart\": \"true\",\n    \"SHARE_PROJECT_CONFIGURATION_FILES\": \"true\",\n    \"WebServerToolWindowFactoryState\": \"false\",\n    \"git-widget-placeholder\": \"anniebluu\",\n    \"last_opened_file_path\": \"C:/Users/Irene Chen/OneDrive - sjsu.edu/CS151/cs151-assignment4\",\n    \"node.js.detected.package.eslint\": \"true\",\n    \"node.js.detected.package.tslint\": \"true\",\n    \"node.js.selected.package.eslint\": \"(autodetect)\",\n    \"node.js.selected.package.tslint\": \"(autodetect)\",\n    \"nodejs_package_manager_path\": \"npm\",\n    \"project.structure.last.edited\": \"Problems\",\n    \"project.structure.proportion\": \"0.15\",\n    \"project.structure.side.proportion\": \"0.2\",\n    \"settings.editor.selected.configurable\": \"reference.projectsettings.compiler.javacompiler\",\n    \"vue.rearranger.settings.migration\": \"true\"\n  }\n}]]></component>\n  <component name=\"RecentsManager\">\n    <key name=\"CopyFile.RECENT_KEYS\">\n      <recent name=\"C:\\Users\\Irene Chen\\OneDrive - sjsu.edu\\CS151\\CS151-MichelinGuideLA\\src\\main\\resources\\edu\\sjsu\\cs151\" />\n      <recent name=\"C:\\Users\\Irene Chen\\OneDrive - sjsu.edu\\CS151\\CS151-MichelinGuideLA\" />\n    </key>\n    <key name=\"MoveFile.RECENT_KEYS\">\n      <recent name=\"C:\\Users\\Irene Chen\\OneDrive - sjsu.edu\\CS151\\CS151-MichelinGuideLA\\src\\main\\java\\edu.sjsu.cs151.appControls\" />\n    </key>\n    <key name=\"MoveClassesOrPackagesDialog.RECENTS_KEY\">\n      <recent name=\"edu.sjsu.cs151\" />\n      <recent name=\"edu.sjsu.cs151.databaseDisplayControls\" />\n      <recent name=\"edu.sjsu.cs151.appControls\" />\n    </key>\n  </component>\n  <component name=\"SpellCheckerSettings\" RuntimeDictionaries=\"0\" Folders=\"0\" CustomDictionaries=\"0\" DefaultDictionary=\"application-level\" UseSingleDictionary=\"true\" transferred=\"true\" />\n  <component name=\"TaskManager\">\n    <task active=\"true\" id=\"Default\" summary=\"Default task\">\n      <changelist id=\"31e7b0d4-5bcb-4602-a3ab-bfbb2608b503\" name=\"Changes\" comment=\"\" />\n      <created>1700212245327</created>\n      <option name=\"number\" value=\"Default\" />\n      <option name=\"presentableId\" value=\"Default\" />\n      <updated>1700212245327</updated>\n      <workItem from=\"1700212266649\" duration=\"390000\" />\n      <workItem from=\"1700216015011\" duration=\"114000\" />\n      <workItem from=\"1700216312573\" duration=\"857000\" />\n      <workItem from=\"1700217230666\" duration=\"8000\" />\n      <workItem from=\"1700246733924\" duration=\"638000\" />\n      <workItem from=\"1700344615125\" duration=\"10008000\" />\n      <workItem from=\"1700512646284\" duration=\"472000\" />\n      <workItem from=\"1700635347177\" duration=\"4423000\" />\n      <workItem from=\"1700879218777\" duration=\"91000\" />\n      <workItem from=\"1701073852331\" duration=\"4256000\" />\n      <workItem from=\"1701192574090\" duration=\"21665000\" />\n    </task>\n    <task id=\"LOCAL-00001\" summary=\"Added sequence, state, and use case diagrams. Need to update links after push\">\n      <option name=\"closed\" value=\"true\" />\n      <created>1700345132873</created>\n      <option name=\"number\" value=\"00001\" />\n      <option name=\"presentableId\" value=\"LOCAL-00001\" />\n      <option name=\"project\" value=\"LOCAL\" />\n      <updated>1700345132873</updated>\n    </task>\n    <task id=\"LOCAL-00002\" summary=\"updated diagram README.md links\">\n      <option name=\"closed\" value=\"true\" />\n      <created>1700346011251</created>\n      <option name=\"number\" value=\"00002\" />\n      <option name=\"presentableId\" value=\"LOCAL-00002\" />\n      <option name=\"project\" value=\"LOCAL\" />\n      <updated>1700346011251</updated>\n    </task>\n    <task id=\"LOCAL-00003\" summary=\"Updated GUI for home screen and details screen: &#10;Allows search in each respective category by clicking location, cuisine, price buttons. On click, list of options is displayed below in scroll list. &#10;Allows selection from scroll list, which then displays the details on new screen. (currently empty details)&#10;(GUI does not use actual data from database yet.)\">\n      <option name=\"closed\" value=\"true\" />\n      <created>1700358200282</created>\n      <option name=\"number\" value=\"00003\" />\n      <option name=\"presentableId\" value=\"LOCAL-00003\" />\n      <option name=\"project\" value=\"LOCAL\" />\n      <updated>1700358200282</updated>\n    </task>\n    <task id=\"LOCAL-00004\" summary=\"cleaned up code (hopefully more SOLID :) ) and tested a little more for ObservableLists\">\n      <option name=\"closed\" value=\"true\" />\n      <created>1700639677658</created>\n      <option name=\"number\" value=\"00004\" />\n      <option name=\"presentableId\" value=\"LOCAL-00004\" />\n      <option name=\"project\" value=\"LOCAL\" />\n      <updated>1700639677658</updated>\n    </task>\n    <task id=\"LOCAL-00005\" summary=\"Working database\">\n      <option name=\"closed\" value=\"true\" />\n      <created>1701240798167</created>\n      <option name=\"number\" value=\"00005\" />\n      <option name=\"presentableId\" value=\"LOCAL-00005\" />\n      <option name=\"project\" value=\"LOCAL\" />\n      <updated>1701240798167</updated>\n    </task>\n    <option name=\"localTasksCounter\" value=\"6\" />\n    <servers />\n  </component>\n  <component name=\"TypeScriptGeneratedFilesManager\">\n    <option name=\"version\" value=\"3\" />\n  </component>\n  <component name=\"Vcs.Log.Tabs.Properties\">\n    <option name=\"TAB_STATES\">\n      <map>\n        <entry key=\"MAIN\">\n          <value>\n            <State />\n          </value>\n        </entry>\n      </map>\n    </option>\n  </component>\n  <component name=\"VcsManagerConfiguration\">\n    <MESSAGE value=\"Added sequence, state, and use case diagrams. Need to update links after push\" />\n    <MESSAGE value=\"updated diagram README.md links\" />\n    <MESSAGE value=\"Updated GUI for home screen and details screen: &#10;Allows search in each respective category by clicking location, cuisine, price buttons. On click, list of options is displayed below in scroll list. &#10;Allows selection from scroll list, which then displays the details on new screen. (currently empty details)&#10;(GUI does not use actual data from database yet.)\" />\n    <MESSAGE value=\"cleaned up code (hopefully more SOLID :) ) and tested a little more for ObservableLists\" />\n    <MESSAGE value=\"Working database\" />\n    <option name=\"LAST_COMMIT_MESSAGE\" value=\"Working database\" />\n  </component>\n  <component name=\"XDebuggerManager\">\n    <breakpoint-manager>\n      <breakpoints>\n        <breakpoint enabled=\"true\" type=\"java-exception\">\n          <properties class=\"java.sql.SQLException\" package=\"java.sql\" />\n          <option name=\"timeStamp\" value=\"1\" />\n        </breakpoint>\n      </breakpoints>\n    </breakpoint-manager>\n  </component>\n</project>
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/.idea/workspace.xml b/.idea/workspace.xml
+--- a/.idea/workspace.xml	(revision a881a62b51de7c45eb4fdc8f5db317089d749d6c)
++++ b/.idea/workspace.xml	(date 1701254627325)
+@@ -4,8 +4,8 @@
+     <option name="autoReloadType" value="SELECTIVE" />
+   </component>
+   <component name="ChangeListManager">
+-    <list default="true" id="31e7b0d4-5bcb-4602-a3ab-bfbb2608b503" name="Changes" comment="Working database">
+-      <change beforePath="$PROJECT_DIR$/src/main/java/edu/sjsu/cs151/App.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/edu/sjsu/cs151/App.java" afterDir="false" />
++    <list default="true" id="31e7b0d4-5bcb-4602-a3ab-bfbb2608b503" name="Changes" comment="Created JDBC object in App.java">
++      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+       <change beforePath="$PROJECT_DIR$/src/main/java/edu/sjsu/cs151/JDBC.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/edu/sjsu/cs151/JDBC.java" afterDir="false" />
+     </list>
+     <option name="SHOW_DIALOG" value="false" />
+@@ -54,7 +54,7 @@
+     "node.js.selected.package.eslint": "(autodetect)",
+     "node.js.selected.package.tslint": "(autodetect)",
+     "nodejs_package_manager_path": "npm",
+-    "project.structure.last.edited": "Problems",
++    "project.structure.last.edited": "Libraries",
+     "project.structure.proportion": "0.15",
+     "project.structure.side.proportion": "0.2",
+     "settings.editor.selected.configurable": "reference.projectsettings.compiler.javacompiler",
+@@ -74,6 +74,15 @@
+       <recent name="edu.sjsu.cs151.databaseDisplayControls" />
+       <recent name="edu.sjsu.cs151.appControls" />
+     </key>
++  </component>
++  <component name="RunManager">
++    <configuration name="App" type="Application" factoryName="Application">
++      <option name="MAIN_CLASS_NAME" value="edu.sjsu.cs151.App" />
++      <module name="CS151-MichelinGuideLA" />
++      <method v="2">
++        <option name="Make" enabled="true" />
++      </method>
++    </configuration>
+   </component>
+   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+   <component name="TaskManager">
+@@ -93,7 +102,7 @@
+       <workItem from="1700635347177" duration="4423000" />
+       <workItem from="1700879218777" duration="91000" />
+       <workItem from="1701073852331" duration="4256000" />
+-      <workItem from="1701192574090" duration="21665000" />
++      <workItem from="1701192574090" duration="27591000" />
+     </task>
+     <task id="LOCAL-00001" summary="Added sequence, state, and use case diagrams. Need to update links after push">
+       <option name="closed" value="true" />
+@@ -135,7 +144,15 @@
+       <option name="project" value="LOCAL" />
+       <updated>1701240798167</updated>
+     </task>
+-    <option name="localTasksCounter" value="6" />
++    <task id="LOCAL-00006" summary="Created JDBC object in App.java">
++      <option name="closed" value="true" />
++      <created>1701241216539</created>
++      <option name="number" value="00006" />
++      <option name="presentableId" value="LOCAL-00006" />
++      <option name="project" value="LOCAL" />
++      <updated>1701241216539</updated>
++    </task>
++    <option name="localTasksCounter" value="7" />
+     <servers />
+   </component>
+   <component name="TypeScriptGeneratedFilesManager">
+@@ -158,7 +175,8 @@
+     <MESSAGE value="Updated GUI for home screen and details screen: &#10;Allows search in each respective category by clicking location, cuisine, price buttons. On click, list of options is displayed below in scroll list. &#10;Allows selection from scroll list, which then displays the details on new screen. (currently empty details)&#10;(GUI does not use actual data from database yet.)" />
+     <MESSAGE value="cleaned up code (hopefully more SOLID :) ) and tested a little more for ObservableLists" />
+     <MESSAGE value="Working database" />
+-    <option name="LAST_COMMIT_MESSAGE" value="Working database" />
++    <MESSAGE value="Created JDBC object in App.java" />
++    <option name="LAST_COMMIT_MESSAGE" value="Created JDBC object in App.java" />
+   </component>
+   <component name="XDebuggerManager">
+     <breakpoint-manager>

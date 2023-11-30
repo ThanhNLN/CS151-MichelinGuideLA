@@ -1,0 +1,101 @@
+Index: .idea/workspace.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<project version=\"4\">\n  <component name=\"AutoImportSettings\">\n    <option name=\"autoReloadType\" value=\"SELECTIVE\" />\n  </component>\n  <component name=\"ChangeListManager\">\n    <list default=\"true\" id=\"31e7b0d4-5bcb-4602-a3ab-bfbb2608b503\" name=\"Changes\" comment=\"displays restaurant info\">\n      <change beforePath=\"$PROJECT_DIR$/src/main/java/edu/sjsu/cs151/RestaurantController.java\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/src/main/java/edu/sjsu/cs151/RestaurantController.java\" afterDir=\"false\" />\n      <change beforePath=\"$PROJECT_DIR$/src/main/java/edu/sjsu/cs151/databaseDisplayControls/RestaurantDisplay.java\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/src/main/java/edu/sjsu/cs151/databaseDisplayControls/RestaurantDisplay.java\" afterDir=\"false\" />\n      <change beforePath=\"$PROJECT_DIR$/src/main/resources/edu/sjsu/cs151/RestaurantScreen.fxml\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/src/main/resources/edu/sjsu/cs151/RestaurantScreen.fxml\" afterDir=\"false\" />\n    </list>\n    <option name=\"SHOW_DIALOG\" value=\"false\" />\n    <option name=\"HIGHLIGHT_CONFLICTS\" value=\"true\" />\n    <option name=\"HIGHLIGHT_NON_ACTIVE_CHANGELIST\" value=\"false\" />\n    <option name=\"LAST_RESOLUTION\" value=\"IGNORE\" />\n  </component>\n  <component name=\"FileTemplateManagerImpl\">\n    <option name=\"RECENT_TEMPLATES\">\n      <list>\n        <option value=\"Interface\" />\n        <option value=\"Class\" />\n      </list>\n    </option>\n  </component>\n  <component name=\"Git.Settings\">\n    <option name=\"RECENT_BRANCH_BY_REPOSITORY\">\n      <map>\n        <entry key=\"$PROJECT_DIR$\" value=\"main\" />\n      </map>\n    </option>\n    <option name=\"RECENT_GIT_ROOT_PATH\" value=\"$PROJECT_DIR$\" />\n  </component>\n  <component name=\"MarkdownSettingsMigration\">\n    <option name=\"stateVersion\" value=\"1\" />\n  </component>\n  <component name=\"ProjectColorInfo\">{\n  &quot;customColor&quot;: &quot;&quot;,\n  &quot;associatedIndex&quot;: 0\n}</component>\n  <component name=\"ProjectId\" id=\"2YITkQdHfxh3JYLKdMQbaS1pmjS\" />\n  <component name=\"ProjectViewState\">\n    <option name=\"hideEmptyMiddlePackages\" value=\"true\" />\n    <option name=\"showLibraryContents\" value=\"true\" />\n  </component>\n  <component name=\"PropertiesComponent\">{\n  &quot;keyToString&quot;: {\n    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,\n    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,\n    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,\n    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,\n    &quot;git-widget-placeholder&quot;: &quot;irene&quot;,\n    &quot;last_opened_file_path&quot;: &quot;C:/Users/SJ/OneDrive - sjsu.edu/CS151/CS151-MichelinGuideLA/src/main/resources/edu/sjsu/cs151&quot;,\n    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,\n    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,\n    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,\n    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,\n    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,\n    &quot;project.structure.last.edited&quot;: &quot;Problems&quot;,\n    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,\n    &quot;project.structure.side.proportion&quot;: &quot;0.1150748&quot;,\n    &quot;settings.editor.selected.configurable&quot;: &quot;reference.projectsettings.compiler.javacompiler&quot;,\n    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;\n  }\n}</component>\n  <component name=\"RecentsManager\">\n    <key name=\"CopyFile.RECENT_KEYS\">\n      <recent name=\"C:\\Users\\SJ\\OneDrive - sjsu.edu\\CS151\\CS151-MichelinGuideLA\\src\\main\\resources\\edu\\sjsu\\cs151\" />\n      <recent name=\"C:\\Users\\Irene Chen\\OneDrive - sjsu.edu\\CS151\\CS151-MichelinGuideLA\\src\\main\\resources\\edu\\sjsu\\cs151\" />\n      <recent name=\"C:\\Users\\Irene Chen\\OneDrive - sjsu.edu\\CS151\\CS151-MichelinGuideLA\" />\n    </key>\n    <key name=\"MoveFile.RECENT_KEYS\">\n      <recent name=\"C:\\Users\\SJ\\OneDrive - sjsu.edu\\CS151\\CS151-MichelinGuideLA\\diagrams\" />\n      <recent name=\"C:\\Users\\Irene Chen\\OneDrive - sjsu.edu\\CS151\\CS151-MichelinGuideLA\\src\\main\\java\\edu.sjsu.cs151.appControls\" />\n    </key>\n    <key name=\"MoveClassesOrPackagesDialog.RECENTS_KEY\">\n      <recent name=\"edu.sjsu.cs151\" />\n      <recent name=\"edu.sjsu.cs151.databaseDisplayControls\" />\n      <recent name=\"edu.sjsu.cs151.appControls\" />\n    </key>\n  </component>\n  <component name=\"RunManager\">\n    <configuration name=\"App\" type=\"Application\" factoryName=\"Application\">\n      <option name=\"MAIN_CLASS_NAME\" value=\"edu.sjsu.cs151.App\" />\n      <module name=\"CS151-MichelinGuideLA\" />\n      <method v=\"2\">\n        <option name=\"Make\" enabled=\"true\" />\n      </method>\n    </configuration>\n  </component>\n  <component name=\"SpellCheckerSettings\" RuntimeDictionaries=\"0\" Folders=\"0\" CustomDictionaries=\"0\" DefaultDictionary=\"application-level\" UseSingleDictionary=\"true\" transferred=\"true\" />\n  <component name=\"TaskManager\">\n    <task active=\"true\" id=\"Default\" summary=\"Default task\">\n      <changelist id=\"31e7b0d4-5bcb-4602-a3ab-bfbb2608b503\" name=\"Changes\" comment=\"\" />\n      <created>1700212245327</created>\n      <option name=\"number\" value=\"Default\" />\n      <option name=\"presentableId\" value=\"Default\" />\n      <updated>1700212245327</updated>\n      <workItem from=\"1700212266649\" duration=\"390000\" />\n      <workItem from=\"1700216015011\" duration=\"114000\" />\n      <workItem from=\"1700216312573\" duration=\"857000\" />\n      <workItem from=\"1700217230666\" duration=\"8000\" />\n      <workItem from=\"1700246733924\" duration=\"638000\" />\n      <workItem from=\"1700344615125\" duration=\"10008000\" />\n      <workItem from=\"1700512646284\" duration=\"472000\" />\n      <workItem from=\"1700635347177\" duration=\"4423000\" />\n      <workItem from=\"1700879218777\" duration=\"91000\" />\n      <workItem from=\"1701073852331\" duration=\"4256000\" />\n    </task>\n    <task id=\"LOCAL-00001\" summary=\"Added sequence, state, and use case diagrams. Need to update links after push\">\n      <option name=\"closed\" value=\"true\" />\n      <created>1700345132873</created>\n      <option name=\"number\" value=\"00001\" />\n      <option name=\"presentableId\" value=\"LOCAL-00001\" />\n      <option name=\"project\" value=\"LOCAL\" />\n      <updated>1700345132873</updated>\n    </task>\n    <task id=\"LOCAL-00002\" summary=\"updated diagram README.md links\">\n      <option name=\"closed\" value=\"true\" />\n      <created>1700346011251</created>\n      <option name=\"number\" value=\"00002\" />\n      <option name=\"presentableId\" value=\"LOCAL-00002\" />\n      <option name=\"project\" value=\"LOCAL\" />\n      <updated>1700346011251</updated>\n    </task>\n    <task id=\"LOCAL-00003\" summary=\"Updated GUI for home screen and details screen: &#10;Allows search in each respective category by clicking location, cuisine, price buttons. On click, list of options is displayed below in scroll list. &#10;Allows selection from scroll list, which then displays the details on new screen. (currently empty details)&#10;(GUI does not use actual data from database yet.)\">\n      <option name=\"closed\" value=\"true\" />\n      <created>1700358200282</created>\n      <option name=\"number\" value=\"00003\" />\n      <option name=\"presentableId\" value=\"LOCAL-00003\" />\n      <option name=\"project\" value=\"LOCAL\" />\n      <updated>1700358200282</updated>\n    </task>\n    <task id=\"LOCAL-00004\" summary=\"cleaned up code (hopefully more SOLID :) ) and tested a little more for ObservableLists\">\n      <option name=\"closed\" value=\"true\" />\n      <created>1700639677658</created>\n      <option name=\"number\" value=\"00004\" />\n      <option name=\"presentableId\" value=\"LOCAL-00004\" />\n      <option name=\"project\" value=\"LOCAL\" />\n      <updated>1700639677658</updated>\n    </task>\n    <task id=\"LOCAL-00005\" summary=\"Working database\">\n      <option name=\"closed\" value=\"true\" />\n      <created>1701240798167</created>\n      <option name=\"number\" value=\"00005\" />\n      <option name=\"presentableId\" value=\"LOCAL-00005\" />\n      <option name=\"project\" value=\"LOCAL\" />\n      <updated>1701240798167</updated>\n    </task>\n    <task id=\"LOCAL-00006\" summary=\"test gitignore 2\">\n      <option name=\"closed\" value=\"true\" />\n      <created>1701253450387</created>\n      <option name=\"number\" value=\"00006\" />\n      <option name=\"presentableId\" value=\"LOCAL-00006\" />\n      <option name=\"project\" value=\"LOCAL\" />\n      <updated>1701253450387</updated>\n    </task>\n    <task id=\"LOCAL-00007\" summary=\"displays restaurant info\">\n      <option name=\"closed\" value=\"true\" />\n      <created>1701264094178</created>\n      <option name=\"number\" value=\"00007\" />\n      <option name=\"presentableId\" value=\"LOCAL-00007\" />\n      <option name=\"project\" value=\"LOCAL\" />\n      <updated>1701264094178</updated>\n    </task>\n    <option name=\"localTasksCounter\" value=\"8\" />\n    <servers />\n  </component>\n  <component name=\"TypeScriptGeneratedFilesManager\">\n    <option name=\"version\" value=\"3\" />\n  </component>\n  <component name=\"Vcs.Log.Tabs.Properties\">\n    <option name=\"TAB_STATES\">\n      <map>\n        <entry key=\"MAIN\">\n          <value>\n            <State />\n          </value>\n        </entry>\n      </map>\n    </option>\n  </component>\n  <component name=\"VcsManagerConfiguration\">\n    <MESSAGE value=\"Added sequence, state, and use case diagrams. Need to update links after push\" />\n    <MESSAGE value=\"updated diagram README.md links\" />\n    <MESSAGE value=\"Updated GUI for home screen and details screen: &#10;Allows search in each respective category by clicking location, cuisine, price buttons. On click, list of options is displayed below in scroll list. &#10;Allows selection from scroll list, which then displays the details on new screen. (currently empty details)&#10;(GUI does not use actual data from database yet.)\" />\n    <MESSAGE value=\"cleaned up code (hopefully more SOLID :) ) and tested a little more for ObservableLists\" />\n    <MESSAGE value=\"Working database\" />\n    <MESSAGE value=\"test gitignore 2\" />\n    <MESSAGE value=\"displays restaurant info\" />\n    <option name=\"LAST_COMMIT_MESSAGE\" value=\"displays restaurant info\" />\n  </component>\n  <component name=\"XDebuggerManager\">\n    <breakpoint-manager>\n      <breakpoints>\n        <breakpoint enabled=\"true\" type=\"java-exception\">\n          <properties class=\"java.sql.SQLException\" package=\"java.sql\" />\n          <option name=\"timeStamp\" value=\"1\" />\n        </breakpoint>\n      </breakpoints>\n    </breakpoint-manager>\n  </component>\n</project>
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/.idea/workspace.xml b/.idea/workspace.xml
+--- a/.idea/workspace.xml	(revision 48140bba3d54e4e3ce1517a24d9bda3ca3cf7ae7)
++++ b/.idea/workspace.xml	(date 1701282372056)
+@@ -4,10 +4,13 @@
+     <option name="autoReloadType" value="SELECTIVE" />
+   </component>
+   <component name="ChangeListManager">
+-    <list default="true" id="31e7b0d4-5bcb-4602-a3ab-bfbb2608b503" name="Changes" comment="displays restaurant info">
+-      <change beforePath="$PROJECT_DIR$/src/main/java/edu/sjsu/cs151/RestaurantController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/edu/sjsu/cs151/RestaurantController.java" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/src/main/java/edu/sjsu/cs151/databaseDisplayControls/RestaurantDisplay.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/edu/sjsu/cs151/databaseDisplayControls/RestaurantDisplay.java" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/src/main/resources/edu/sjsu/cs151/RestaurantScreen.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/edu/sjsu/cs151/RestaurantScreen.fxml" afterDir="false" />
++    <list default="true" id="31e7b0d4-5bcb-4602-a3ab-bfbb2608b503" name="Changes" comment="test gitignore 2">
++      <change afterPath="$PROJECT_DIR$/src/main/java/edu/sjsu/cs151/RestaurantController.java" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/src/main/java/edu/sjsu/cs151/databaseDisplayControls/RestaurantDisplay.java" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/src/main/resources/edu/sjsu/cs151/RestaurantScreen.fxml" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/src/main/java/edu/sjsu/cs151/Controller.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/edu/sjsu/cs151/Controller.java" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/src/main/java/edu/sjsu/cs151/DetailsController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/edu/sjsu/cs151/DetailsController.java" afterDir="false" />
+     </list>
+     <option name="SHOW_DIALOG" value="false" />
+     <option name="HIGHLIGHT_CONFLICTS" value="true" />
+@@ -42,26 +45,26 @@
+     <option name="hideEmptyMiddlePackages" value="true" />
+     <option name="showLibraryContents" value="true" />
+   </component>
+-  <component name="PropertiesComponent">{
+-  &quot;keyToString&quot;: {
+-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+-    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+-    &quot;git-widget-placeholder&quot;: &quot;irene&quot;,
+-    &quot;last_opened_file_path&quot;: &quot;C:/Users/SJ/OneDrive - sjsu.edu/CS151/CS151-MichelinGuideLA/src/main/resources/edu/sjsu/cs151&quot;,
+-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+-    &quot;project.structure.last.edited&quot;: &quot;Problems&quot;,
+-    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
+-    &quot;project.structure.side.proportion&quot;: &quot;0.1150748&quot;,
+-    &quot;settings.editor.selected.configurable&quot;: &quot;reference.projectsettings.compiler.javacompiler&quot;,
+-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
++  <component name="PropertiesComponent"><![CDATA[{
++  "keyToString": {
++    "RunOnceActivity.OpenProjectViewOnStart": "true",
++    "RunOnceActivity.ShowReadmeOnStart": "true",
++    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
++    "WebServerToolWindowFactoryState": "false",
++    "git-widget-placeholder": "irene",
++    "last_opened_file_path": "C:/Users/SJ/OneDrive - sjsu.edu/CS151/CS151-MichelinGuideLA/src/main/resources/edu/sjsu/cs151",
++    "node.js.detected.package.eslint": "true",
++    "node.js.detected.package.tslint": "true",
++    "node.js.selected.package.eslint": "(autodetect)",
++    "node.js.selected.package.tslint": "(autodetect)",
++    "nodejs_package_manager_path": "npm",
++    "project.structure.last.edited": "Problems",
++    "project.structure.proportion": "0.15",
++    "project.structure.side.proportion": "0.1150748",
++    "settings.editor.selected.configurable": "reference.projectsettings.compiler.javacompiler",
++    "vue.rearranger.settings.migration": "true"
+   }
+-}</component>
++}]]></component>
+   <component name="RecentsManager">
+     <key name="CopyFile.RECENT_KEYS">
+       <recent name="C:\Users\SJ\OneDrive - sjsu.edu\CS151\CS151-MichelinGuideLA\src\main\resources\edu\sjsu\cs151" />
+@@ -154,15 +157,7 @@
+       <option name="project" value="LOCAL" />
+       <updated>1701253450387</updated>
+     </task>
+-    <task id="LOCAL-00007" summary="displays restaurant info">
+-      <option name="closed" value="true" />
+-      <created>1701264094178</created>
+-      <option name="number" value="00007" />
+-      <option name="presentableId" value="LOCAL-00007" />
+-      <option name="project" value="LOCAL" />
+-      <updated>1701264094178</updated>
+-    </task>
+-    <option name="localTasksCounter" value="8" />
++    <option name="localTasksCounter" value="7" />
+     <servers />
+   </component>
+   <component name="TypeScriptGeneratedFilesManager">
+@@ -186,8 +181,7 @@
+     <MESSAGE value="cleaned up code (hopefully more SOLID :) ) and tested a little more for ObservableLists" />
+     <MESSAGE value="Working database" />
+     <MESSAGE value="test gitignore 2" />
+-    <MESSAGE value="displays restaurant info" />
+-    <option name="LAST_COMMIT_MESSAGE" value="displays restaurant info" />
++    <option name="LAST_COMMIT_MESSAGE" value="test gitignore 2" />
+   </component>
+   <component name="XDebuggerManager">
+     <breakpoint-manager>
