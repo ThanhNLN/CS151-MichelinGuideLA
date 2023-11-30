@@ -22,7 +22,7 @@ public class App extends Application {
     // home screen set up
     public static Controller homeScreen(Stage stage) throws IOException {
         FXMLLoader fxmlLoader = new FXMLLoader(App.class.getResource("welcome.fxml"));
-        Scene scene = new Scene(fxmlLoader.load(), 520, 440);
+        Scene scene = new Scene(fxmlLoader.load(), 520, 340);
 
         Controller controller = fxmlLoader.getController();
         controller.setPrimaryStage(stage);

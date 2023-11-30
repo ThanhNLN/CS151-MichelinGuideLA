@@ -1,0 +1,131 @@
+Index: .idea/workspace.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><?xml version=\"1.0\" encoding=\"UTF-8\"?>\r\n<project version=\"4\">\r\n  <component name=\"AutoImportSettings\">\r\n    <option name=\"autoReloadType\" value=\"SELECTIVE\" />\r\n  </component>\r\n  <component name=\"ChangeListManager\">\r\n    <list default=\"true\" id=\"31e7b0d4-5bcb-4602-a3ab-bfbb2608b503\" name=\"Changes\" comment=\"fixed back button to show previous selection highlighted, but not the correct highlighted button yet\">\r\n      <change afterPath=\"$PROJECT_DIR$/src/main/java/edu/sjsu/cs151/Restaurant.java\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/.idea/workspace.xml\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/.idea/workspace.xml\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/src/main/java/edu/sjsu/cs151/App.java\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/src/main/java/edu/sjsu/cs151/App.java\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/src/main/java/edu/sjsu/cs151/Controller.java\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/src/main/java/edu/sjsu/cs151/Controller.java\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/src/main/java/edu/sjsu/cs151/DetailsController.java\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/src/main/java/edu/sjsu/cs151/DetailsController.java\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/src/main/java/edu/sjsu/cs151/databaseDisplayControls/CuisineDisplay.java\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/src/main/java/edu/sjsu/cs151/databaseDisplayControls/CuisineDisplay.java\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/src/main/java/edu/sjsu/cs151/databaseDisplayControls/DetailsDisplay.java\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/src/main/java/edu/sjsu/cs151/databaseDisplayControls/DetailsDisplay.java\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/src/main/java/edu/sjsu/cs151/databaseDisplayControls/LocationDisplay.java\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/src/main/java/edu/sjsu/cs151/databaseDisplayControls/LocationDisplay.java\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/src/main/java/edu/sjsu/cs151/databaseDisplayControls/PriceDisplay.java\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/src/main/java/edu/sjsu/cs151/databaseDisplayControls/PriceDisplay.java\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/src/main/java/edu/sjsu/cs151/databaseDisplayControls/SelectionDisplay.java\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/src/main/java/edu/sjsu/cs151/databaseDisplayControls/SelectionDisplay.java\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/src/main/resources/edu/sjsu/cs151/welcome.fxml\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/src/main/resources/edu/sjsu/cs151/welcome.fxml\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/target/classes/edu/sjsu/cs151/welcome.fxml\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/target/classes/edu/sjsu/cs151/welcome.fxml\" afterDir=\"false\" />\r\n    </list>\r\n    <option name=\"SHOW_DIALOG\" value=\"false\" />\r\n    <option name=\"HIGHLIGHT_CONFLICTS\" value=\"true\" />\r\n    <option name=\"HIGHLIGHT_NON_ACTIVE_CHANGELIST\" value=\"false\" />\r\n    <option name=\"LAST_RESOLUTION\" value=\"IGNORE\" />\r\n  </component>\r\n  <component name=\"FileTemplateManagerImpl\">\r\n    <option name=\"RECENT_TEMPLATES\">\r\n      <list>\r\n        <option value=\"Interface\" />\r\n        <option value=\"Class\" />\r\n      </list>\r\n    </option>\r\n  </component>\r\n  <component name=\"Git.Settings\">\r\n    <option name=\"RECENT_BRANCH_BY_REPOSITORY\">\r\n      <map>\r\n        <entry key=\"$PROJECT_DIR$\" value=\"main\" />\r\n      </map>\r\n    </option>\r\n    <option name=\"RECENT_GIT_ROOT_PATH\" value=\"$PROJECT_DIR$\" />\r\n  </component>\r\n  <component name=\"MarkdownSettingsMigration\">\r\n    <option name=\"stateVersion\" value=\"1\" />\r\n  </component>\r\n  <component name=\"ProjectColorInfo\">{\r\n  &quot;customColor&quot;: &quot;&quot;,\r\n  &quot;associatedIndex&quot;: 0\r\n}</component>\r\n  <component name=\"ProjectId\" id=\"2YITkQdHfxh3JYLKdMQbaS1pmjS\" />\r\n  <component name=\"ProjectViewState\">\r\n    <option name=\"hideEmptyMiddlePackages\" value=\"true\" />\r\n    <option name=\"showLibraryContents\" value=\"true\" />\r\n  </component>\r\n  <component name=\"PropertiesComponent\"><![CDATA[{\r\n  \"keyToString\": {\r\n    \"RunOnceActivity.OpenProjectViewOnStart\": \"true\",\r\n    \"RunOnceActivity.ShowReadmeOnStart\": \"true\",\r\n    \"WebServerToolWindowFactoryState\": \"false\",\r\n    \"git-widget-placeholder\": \"irene\",\r\n    \"last_opened_file_path\": \"C:/Users/SJ/OneDrive - sjsu.edu/CS151/CS151-MichelinGuideLA\",\r\n    \"node.js.detected.package.eslint\": \"true\",\r\n    \"node.js.detected.package.tslint\": \"true\",\r\n    \"node.js.selected.package.eslint\": \"(autodetect)\",\r\n    \"node.js.selected.package.tslint\": \"(autodetect)\",\r\n    \"nodejs_package_manager_path\": \"npm\",\r\n    \"project.structure.last.edited\": \"Modules\",\r\n    \"project.structure.proportion\": \"0.15\",\r\n    \"project.structure.side.proportion\": \"0.2\",\r\n    \"settings.editor.selected.configurable\": \"org.jetbrains.plugins.github.ui.GithubSettingsConfigurable\",\r\n    \"vue.rearranger.settings.migration\": \"true\"\r\n  }\r\n}]]></component>\r\n  <component name=\"RecentsManager\">\r\n    <key name=\"CopyFile.RECENT_KEYS\">\r\n      <recent name=\"C:\\Users\\Irene Chen\\OneDrive - sjsu.edu\\CS151\\CS151-MichelinGuideLA\\src\\main\\resources\\edu\\sjsu\\cs151\" />\r\n      <recent name=\"C:\\Users\\Irene Chen\\OneDrive - sjsu.edu\\CS151\\CS151-MichelinGuideLA\" />\r\n    </key>\r\n    <key name=\"MoveFile.RECENT_KEYS\">\r\n      <recent name=\"C:\\Users\\SJ\\OneDrive - sjsu.edu\\CS151\\CS151-MichelinGuideLA\\diagrams\" />\r\n      <recent name=\"C:\\Users\\Irene Chen\\OneDrive - sjsu.edu\\CS151\\CS151-MichelinGuideLA\\src\\main\\java\\edu.sjsu.cs151.appControls\" />\r\n    </key>\r\n    <key name=\"MoveClassesOrPackagesDialog.RECENTS_KEY\">\r\n      <recent name=\"edu.sjsu.cs151\" />\r\n      <recent name=\"edu.sjsu.cs151.databaseDisplayControls\" />\r\n      <recent name=\"edu.sjsu.cs151.appControls\" />\r\n    </key>\r\n  </component>\r\n  <component name=\"SpellCheckerSettings\" RuntimeDictionaries=\"0\" Folders=\"0\" CustomDictionaries=\"0\" DefaultDictionary=\"application-level\" UseSingleDictionary=\"true\" transferred=\"true\" />\r\n  <component name=\"TaskManager\">\r\n    <task active=\"true\" id=\"Default\" summary=\"Default task\">\r\n      <changelist id=\"31e7b0d4-5bcb-4602-a3ab-bfbb2608b503\" name=\"Changes\" comment=\"\" />\r\n      <created>1700212245327</created>\r\n      <option name=\"number\" value=\"Default\" />\r\n      <option name=\"presentableId\" value=\"Default\" />\r\n      <updated>1700212245327</updated>\r\n      <workItem from=\"1700212266649\" duration=\"390000\" />\r\n      <workItem from=\"1700216015011\" duration=\"114000\" />\r\n      <workItem from=\"1700216312573\" duration=\"857000\" />\r\n      <workItem from=\"1700217230666\" duration=\"8000\" />\r\n      <workItem from=\"1700246733924\" duration=\"638000\" />\r\n      <workItem from=\"1700344615125\" duration=\"10008000\" />\r\n      <workItem from=\"1700512646284\" duration=\"472000\" />\r\n      <workItem from=\"1700635347177\" duration=\"4423000\" />\r\n      <workItem from=\"1701205987178\" duration=\"8931000\" />\r\n    </task>\r\n    <task id=\"LOCAL-00001\" summary=\"Added sequence, state, and use case diagrams. Need to update links after push\">\r\n      <option name=\"closed\" value=\"true\" />\r\n      <created>1700345132873</created>\r\n      <option name=\"number\" value=\"00001\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00001\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1700345132873</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00002\" summary=\"updated diagram README.md links\">\r\n      <option name=\"closed\" value=\"true\" />\r\n      <created>1700346011251</created>\r\n      <option name=\"number\" value=\"00002\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00002\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1700346011251</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00003\" summary=\"Updated GUI for home screen and details screen: &#10;Allows search in each respective category by clicking location, cuisine, price buttons. On click, list of options is displayed below in scroll list. &#10;Allows selection from scroll list, which then displays the details on new screen. (currently empty details)&#10;(GUI does not use actual data from database yet.)\">\r\n      <option name=\"closed\" value=\"true\" />\r\n      <created>1700358200282</created>\r\n      <option name=\"number\" value=\"00003\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00003\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1700358200282</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00004\" summary=\"cleaned up code (hopefully more SOLID :) ) and tested a little more for ObservableLists\">\r\n      <option name=\"closed\" value=\"true\" />\r\n      <created>1700639677658</created>\r\n      <option name=\"number\" value=\"00004\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00004\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1700639677658</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00005\" summary=\"update use case diagram\">\r\n      <option name=\"closed\" value=\"true\" />\r\n      <created>1701206368546</created>\r\n      <option name=\"number\" value=\"00005\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00005\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1701206368546</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00006\" summary=\"update state diagram\">\r\n      <option name=\"closed\" value=\"true\" />\r\n      <created>1701206475560</created>\r\n      <option name=\"number\" value=\"00006\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00006\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1701206475560</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00007\" summary=\"updated diagram README.md - class diagram still needed\">\r\n      <option name=\"closed\" value=\"true\" />\r\n      <created>1701206758797</created>\r\n      <option name=\"number\" value=\"00007\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00007\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1701206758797</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00008\" summary=\"fixed back button to show previous selection highlighted, but not the correct highlighted button yet\">\r\n      <option name=\"closed\" value=\"true\" />\r\n      <created>1701220224242</created>\r\n      <option name=\"number\" value=\"00008\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00008\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1701220224242</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00009\" summary=\"fixed back button to show previous selection highlighted, but not the correct highlighted button yet\">\r\n      <option name=\"closed\" value=\"true\" />\r\n      <created>1701220390922</created>\r\n      <option name=\"number\" value=\"00009\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00009\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1701220390922</updated>\r\n    </task>\r\n    <option name=\"localTasksCounter\" value=\"10\" />\r\n    <servers />\r\n  </component>\r\n  <component name=\"TypeScriptGeneratedFilesManager\">\r\n    <option name=\"version\" value=\"3\" />\r\n  </component>\r\n  <component name=\"Vcs.Log.Tabs.Properties\">\r\n    <option name=\"TAB_STATES\">\r\n      <map>\r\n        <entry key=\"MAIN\">\r\n          <value>\r\n            <State />\r\n          </value>\r\n        </entry>\r\n      </map>\r\n    </option>\r\n  </component>\r\n  <component name=\"VcsManagerConfiguration\">\r\n    <MESSAGE value=\"Added sequence, state, and use case diagrams. Need to update links after push\" />\r\n    <MESSAGE value=\"updated diagram README.md links\" />\r\n    <MESSAGE value=\"Updated GUI for home screen and details screen: &#10;Allows search in each respective category by clicking location, cuisine, price buttons. On click, list of options is displayed below in scroll list. &#10;Allows selection from scroll list, which then displays the details on new screen. (currently empty details)&#10;(GUI does not use actual data from database yet.)\" />\r\n    <MESSAGE value=\"cleaned up code (hopefully more SOLID :) ) and tested a little more for ObservableLists\" />\r\n    <MESSAGE value=\"update use case diagram\" />\r\n    <MESSAGE value=\"update state diagram\" />\r\n    <MESSAGE value=\"updated diagram README.md - class diagram still needed\" />\r\n    <MESSAGE value=\"fixed back button to show previous selection highlighted, but not the correct highlighted button yet\" />\r\n    <option name=\"LAST_COMMIT_MESSAGE\" value=\"fixed back button to show previous selection highlighted, but not the correct highlighted button yet\" />\r\n  </component>\r\n</project>
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/.idea/workspace.xml b/.idea/workspace.xml
+--- a/.idea/workspace.xml	(revision 101e58eb5305cd6605ab665fcb389394be9c8ecf)
++++ b/.idea/workspace.xml	(date 1701274649619)
+@@ -4,19 +4,10 @@
+     <option name="autoReloadType" value="SELECTIVE" />
+   </component>
+   <component name="ChangeListManager">
+-    <list default="true" id="31e7b0d4-5bcb-4602-a3ab-bfbb2608b503" name="Changes" comment="fixed back button to show previous selection highlighted, but not the correct highlighted button yet">
+-      <change afterPath="$PROJECT_DIR$/src/main/java/edu/sjsu/cs151/Restaurant.java" afterDir="false" />
++    <list default="true" id="31e7b0d4-5bcb-4602-a3ab-bfbb2608b503" name="Changes" comment="update Restaurant class">
++      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_11_22_23__12_02_AM__Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_11_22_23__12_02_AM__Changes_.xml" afterDir="false" />
+       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/src/main/java/edu/sjsu/cs151/App.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/edu/sjsu/cs151/App.java" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/src/main/java/edu/sjsu/cs151/Controller.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/edu/sjsu/cs151/Controller.java" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/src/main/java/edu/sjsu/cs151/DetailsController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/edu/sjsu/cs151/DetailsController.java" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/src/main/java/edu/sjsu/cs151/databaseDisplayControls/CuisineDisplay.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/edu/sjsu/cs151/databaseDisplayControls/CuisineDisplay.java" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/src/main/java/edu/sjsu/cs151/databaseDisplayControls/DetailsDisplay.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/edu/sjsu/cs151/databaseDisplayControls/DetailsDisplay.java" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/src/main/java/edu/sjsu/cs151/databaseDisplayControls/LocationDisplay.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/edu/sjsu/cs151/databaseDisplayControls/LocationDisplay.java" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/src/main/java/edu/sjsu/cs151/databaseDisplayControls/PriceDisplay.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/edu/sjsu/cs151/databaseDisplayControls/PriceDisplay.java" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/src/main/java/edu/sjsu/cs151/databaseDisplayControls/SelectionDisplay.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/edu/sjsu/cs151/databaseDisplayControls/SelectionDisplay.java" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/src/main/resources/edu/sjsu/cs151/welcome.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/edu/sjsu/cs151/welcome.fxml" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/target/classes/edu/sjsu/cs151/welcome.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/edu/sjsu/cs151/welcome.fxml" afterDir="false" />
+     </list>
+     <option name="SHOW_DIALOG" value="false" />
+     <option name="HIGHLIGHT_CONFLICTS" value="true" />
+@@ -51,25 +42,25 @@
+     <option name="hideEmptyMiddlePackages" value="true" />
+     <option name="showLibraryContents" value="true" />
+   </component>
+-  <component name="PropertiesComponent"><![CDATA[{
+-  "keyToString": {
+-    "RunOnceActivity.OpenProjectViewOnStart": "true",
+-    "RunOnceActivity.ShowReadmeOnStart": "true",
+-    "WebServerToolWindowFactoryState": "false",
+-    "git-widget-placeholder": "irene",
+-    "last_opened_file_path": "C:/Users/SJ/OneDrive - sjsu.edu/CS151/CS151-MichelinGuideLA",
+-    "node.js.detected.package.eslint": "true",
+-    "node.js.detected.package.tslint": "true",
+-    "node.js.selected.package.eslint": "(autodetect)",
+-    "node.js.selected.package.tslint": "(autodetect)",
+-    "nodejs_package_manager_path": "npm",
+-    "project.structure.last.edited": "Modules",
+-    "project.structure.proportion": "0.15",
+-    "project.structure.side.proportion": "0.2",
+-    "settings.editor.selected.configurable": "org.jetbrains.plugins.github.ui.GithubSettingsConfigurable",
+-    "vue.rearranger.settings.migration": "true"
++  <component name="PropertiesComponent">{
++  &quot;keyToString&quot;: {
++    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
++    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
++    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
++    &quot;git-widget-placeholder&quot;: &quot;irene&quot;,
++    &quot;last_opened_file_path&quot;: &quot;C:/Users/SJ/OneDrive - sjsu.edu/CS151/CS151-MichelinGuideLA&quot;,
++    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
++    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
++    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
++    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
++    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
++    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
++    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
++    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
++    &quot;settings.editor.selected.configurable&quot;: &quot;org.jetbrains.plugins.github.ui.GithubSettingsConfigurable&quot;,
++    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+   }
+-}]]></component>
++}</component>
+   <component name="RecentsManager">
+     <key name="CopyFile.RECENT_KEYS">
+       <recent name="C:\Users\Irene Chen\OneDrive - sjsu.edu\CS151\CS151-MichelinGuideLA\src\main\resources\edu\sjsu\cs151" />
+@@ -84,6 +75,26 @@
+       <recent name="edu.sjsu.cs151.databaseDisplayControls" />
+       <recent name="edu.sjsu.cs151.appControls" />
+     </key>
++  </component>
++  <component name="RunManager">
++    <configuration name="App" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
++      <option name="MAIN_CLASS_NAME" value="edu.sjsu.cs151.App" />
++      <module name="CS151-MichelinGuideLA" />
++      <extension name="coverage">
++        <pattern>
++          <option name="PATTERN" value="edu.sjsu.cs151.*" />
++          <option name="ENABLED" value="true" />
++        </pattern>
++      </extension>
++      <method v="2">
++        <option name="Make" enabled="true" />
++      </method>
++    </configuration>
++    <recent_temporary>
++      <list>
++        <item itemvalue="Application.App" />
++      </list>
++    </recent_temporary>
+   </component>
+   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+   <component name="TaskManager">
+@@ -175,7 +186,15 @@
+       <option name="project" value="LOCAL" />
+       <updated>1701220390922</updated>
+     </task>
+-    <option name="localTasksCounter" value="10" />
++    <task id="LOCAL-00010" summary="update Restaurant class">
++      <option name="closed" value="true" />
++      <created>1701233304874</created>
++      <option name="number" value="00010" />
++      <option name="presentableId" value="LOCAL-00010" />
++      <option name="project" value="LOCAL" />
++      <updated>1701233304874</updated>
++    </task>
++    <option name="localTasksCounter" value="11" />
+     <servers />
+   </component>
+   <component name="TypeScriptGeneratedFilesManager">
+@@ -201,6 +220,7 @@
+     <MESSAGE value="update state diagram" />
+     <MESSAGE value="updated diagram README.md - class diagram still needed" />
+     <MESSAGE value="fixed back button to show previous selection highlighted, but not the correct highlighted button yet" />
+-    <option name="LAST_COMMIT_MESSAGE" value="fixed back button to show previous selection highlighted, but not the correct highlighted button yet" />
++    <MESSAGE value="update Restaurant class" />
++    <option name="LAST_COMMIT_MESSAGE" value="update Restaurant class" />
+   </component>
+ </project>
+\ No newline at end of file

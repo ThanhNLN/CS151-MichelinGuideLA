@@ -21,7 +21,16 @@ public class PriceDisplay implements SelectionDisplay {
         //get the price from price list
         ResultSet rs = statement.executeQuery("SELECT * FROM COSTS");
         while (rs.next()) {
+//            String cost = rs.getString("cost");
             String cost = rs.getString("cost");
+//            if (rs.getString("cost").equals("1"))
+//                cost = "$";
+//            else if (rs.getString("cost").equals("2"))
+//                cost = "$$";
+//            else if (rs.getString("cost").equals("3"))
+//                cost = "$$$";
+//            else
+//                cost = "$$$$";
             //System.out.println("Cost: " + cost);
             items.add(cost);
         }
