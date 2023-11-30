@@ -106,7 +106,7 @@ public class JDBC {
 
         String createLADatabase = "CREATE TABLE LADATABASE "
                 + "(RESTAURANT_ID int NOT NULL UNIQUE PRIMARY KEY AUTO_INCREMENT, "
-                + "name varchar(255), "
+                + "name varchar(255) UNIQUE, "
                 + "url varchar(255), "
                 + "LOCATION_ID int, "
                 + "COST_ID int, "
