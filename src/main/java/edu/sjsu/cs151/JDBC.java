@@ -158,7 +158,7 @@ public class JDBC {
             this.prepareStatement.execute();
 
             // Inserts data into Los Angeles database
-            this.prepareStatement = conn.prepareStatement("insert into LADATABASE "
+            this.prepareStatement = conn.prepareStatement("insert IGNORE into LADATABASE "
                     + "(name, url, LOCATION_ID, COST_ID, CUISINE_ID, address) values (?, ?, ?, ?, ?, ?)");
 
             String name = (String) jsonObject.get("name");

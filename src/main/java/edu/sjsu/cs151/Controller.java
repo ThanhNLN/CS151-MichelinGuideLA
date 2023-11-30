@@ -33,36 +33,9 @@ public class Controller {
         this.selectionDisplay = selectionDisplay;
     }
 
-//    public void setCuisineButton(Button cuisineButton) {
-//        this.cuisineButton = cuisineButton;
-//    }
-
-//    public void setLocationButton(Button locationButton) {
-//        this.locationButton = locationButton;
-//    }
-
-//    public void setPriceButton(Button priceButton) {
-//        this.priceButton = priceButton;
-//    }
-
-//    public Button getCuisineButton() {
-//        return cuisineButton;
-//    }
-
-//    public Button getLocationButton() {
-//        return locationButton;
-//    }
-
-//    public Button getPriceButton() {
-//        return priceButton;
-//    }
-
-//    public SelectionDisplay getSelectionDisplay() {
-//        return selectionDisplay;
-//    }
-
-    // handle category selections:
-    // Location, Cuisine, Price
+    /** handle category selections:
+     *  Location, Cuisine, Price
+      */
     @FXML
     protected void handleLocation() {
         selectionDisplay = new LocationDisplay();
@@ -103,7 +76,6 @@ public class Controller {
         this.category = category;
         updateListView();
         controllerListView.getSelectionModel().select(item);
-
         if(controllerListView.getSelectionModel().getSelectedIndex() > controllerListView.getItems().size() * 3 / 4){
             controllerListView.scrollTo(controllerListView.getSelectionModel().getSelectedIndex()+2);
         } else if (controllerListView.getSelectionModel().getSelectedIndex() < controllerListView.getItems().size() /4){
@@ -111,12 +83,10 @@ public class Controller {
         } else {
             controllerListView.scrollTo(item);
         }
-
-
     }
 
 
-    //handle selection of from category list:
+    /** handle selection of from category list: */
     @FXML
     private void handleListViewClick() {
         String selectedOption = controllerListView.getSelectionModel().getSelectedItem();
