@@ -4,18 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="31e7b0d4-5bcb-4602-a3ab-bfbb2608b503" name="Changes" comment="displays restaurant info">
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_11_22_23__12_02_AM__Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_11_22_23__12_02_AM__Changes_.xml" afterDir="false" />
+    <list default="true" id="31e7b0d4-5bcb-4602-a3ab-bfbb2608b503" name="Changes" comment="fixed duplicate restaurant in database issue">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/LosAngelesData.json" beforeDir="false" afterPath="$PROJECT_DIR$/LosAngelesData.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/edu/sjsu/cs151/App.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/edu/sjsu/cs151/App.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/edu/sjsu/cs151/Controller.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/edu/sjsu/cs151/Controller.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/edu/sjsu/cs151/DetailsController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/edu/sjsu/cs151/DetailsController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/edu/sjsu/cs151/JDBC.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/edu/sjsu/cs151/JDBC.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/edu/sjsu/cs151/databaseDisplayControls/PriceDisplay.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/edu/sjsu/cs151/databaseDisplayControls/PriceDisplay.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/edu/sjsu/cs151/welcome.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/edu/sjsu/cs151/welcome.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/edu/sjsu/cs151/welcome.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/edu/sjsu/cs151/welcome.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/edu/sjsu/cs151/RestaurantScreen.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/edu/sjsu/cs151/RestaurantScreen.fxml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -57,7 +48,7 @@
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "WebServerToolWindowFactoryState": "false",
     "git-widget-placeholder": "irene",
-    "last_opened_file_path": "C:/Kid2512/Study/SJSU/2023 Fall/CS 146/HW Code/As04_Dynamic",
+    "last_opened_file_path": "C:/Kid2512/Study/SJSU/2023 Fall/CS 151/CS151-MichelinGuideLA/diagrams",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -183,7 +174,23 @@
       <option name="project" value="LOCAL" />
       <updated>1701264094178</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="working restaurant URL hyperlink">
+      <option name="closed" value="true" />
+      <created>1701320215909</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1701320215909</updated>
+    </task>
+    <task id="LOCAL-00009" summary="fixed duplicate restaurant in database issue">
+      <option name="closed" value="true" />
+      <created>1701320630472</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1701320630472</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -208,7 +215,9 @@
     <MESSAGE value="Working database" />
     <MESSAGE value="test gitignore 2" />
     <MESSAGE value="displays restaurant info" />
-    <option name="LAST_COMMIT_MESSAGE" value="displays restaurant info" />
+    <MESSAGE value="working restaurant URL hyperlink" />
+    <MESSAGE value="fixed duplicate restaurant in database issue" />
+    <option name="LAST_COMMIT_MESSAGE" value="fixed duplicate restaurant in database issue" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

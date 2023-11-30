@@ -106,7 +106,7 @@ public class JDBC {
 
         String createLADatabase = "CREATE TABLE LADATABASE "
                 + "(RESTAURANT_ID int NOT NULL UNIQUE PRIMARY KEY AUTO_INCREMENT, "
-                + "name varchar(255), "
+                + "name varchar(255) UNIQUE, "
                 + "url varchar(255), "
                 + "LOCATION_ID int, "
                 + "COST_ID int, "
@@ -158,7 +158,7 @@ public class JDBC {
             this.prepareStatement.execute();
 
             // Inserts data into Los Angeles database
-            this.prepareStatement = conn.prepareStatement("insert into LADATABASE "
+            this.prepareStatement = conn.prepareStatement("insert IGNORE into LADATABASE "
                     + "(name, url, LOCATION_ID, COST_ID, CUISINE_ID, address) values (?, ?, ?, ?, ?, ?)");
 
             String name = (String) jsonObject.get("name");

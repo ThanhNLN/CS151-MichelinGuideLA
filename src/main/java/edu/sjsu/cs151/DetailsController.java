@@ -4,6 +4,7 @@ import edu.sjsu.cs151.databaseDisplayControls.DetailsDisplay;
 import edu.sjsu.cs151.databaseDisplayControls.SelectionDisplay;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
+import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
@@ -21,10 +22,7 @@ public class DetailsController {
     private ListView<String> detailsListView;
     @FXML
     private Label detailsLabel;
-
     private String category;
-
-
     private Stage stage;
 
     private SelectionDisplay savedSelectionDisplay;
@@ -38,17 +36,6 @@ public class DetailsController {
     }
 
     public void setDetails(String category, String details){
-//        if (category.equals("cost")) {
-//            String price = "";
-//            for( int i = 0; i < Integer.valueOf(details); i++)
-//                price += "$";
-//            detailsLabel.setText(price);
-//            System.out.println("price = " + price);
-//        }
-//        else{
-//            detailsLabel.setText(details);
-//            System.out.println("detailsLabel.getText() = " + detailsLabel.getText());
-//        }
         detailsLabel.setText(details);
         this.category = category;
 
@@ -72,7 +59,6 @@ public class DetailsController {
         if (selectedOption != null){
             openRestaurantDetailsScreen(selectedOption);
         }
-
     }
 
     @FXML
@@ -91,7 +77,6 @@ public class DetailsController {
             //e.printStackTrace();
         }
 
-
     }
 
     public void updateRestaurantListView(String item){
@@ -105,7 +90,6 @@ public class DetailsController {
         } else {
             detailsListView.scrollTo(item);
         }
-
     }
 
     private void openRestaurantDetailsScreen(String selectedOption){
@@ -117,21 +101,9 @@ public class DetailsController {
             restaurantController.setDetails(selectedOption);
             restaurantController.setStage(stage);
             restaurantController.setCategory(category);
-//            if (category.equals("cost")) {
-//                String price = "";
-//                for( int i = 0; i < detailsLabel.getText().length(); i++)
-//                    price += "$";
-//                restaurantController.setSelectedFromCategory(price);
-//                System.out.println("price = " + price);
-//            }
-//            else{
-//                restaurantController.setSelectedFromCategory(detailsLabel.getText());
-//                System.out.println("detailsLabel.getText() = " + detailsLabel.getText());
-//            }
 
             restaurantController.setSelectedFromCategory(detailsLabel.getText());
             restaurantController.setSavedSelectionDisplay(savedSelectionDisplay);
-
 
             Scene scene = new Scene(root, stage.getScene().getWidth(), stage.getScene().getHeight());
             stage.setScene(scene);

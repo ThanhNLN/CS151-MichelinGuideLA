@@ -3,7 +3,7 @@
 <?import javafx.geometry.Insets?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.layout.VBox?>
-
+<?import javafx.scene.control.Hyperlink?>
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.layout.HBox?>
 <?import javafx.scene.text.Font?>
@@ -39,6 +39,9 @@
     <HBox>
         <Label text="URL: "/>
         <Label fx:id="url"/>
+    </HBox>
+    <HBox>
+        <Hyperlink fx:id="resHyperlink" onMouseClicked="#handleHyperlinkClick"/>
     </HBox>
 
     <HBox spacing="10">
