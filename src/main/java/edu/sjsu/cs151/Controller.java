@@ -89,10 +89,13 @@ public class Controller {
 
         try {
             category = selectionDisplay.displaySelection(items);
+
         } catch (SQLException e) {
             //e.printStackTrace();
         }
         controllerListView.setVisible(true);
+
+            controllerListView.setItems(items);
         controllerListView.setItems(items);
     }
 
@@ -118,6 +121,8 @@ public class Controller {
     private void handleListViewClick() {
         String selectedOption = controllerListView.getSelectionModel().getSelectedItem();
         if (selectedOption != null) {
+//            if (category.equals("cost"))
+//                selectedOption = Integer.toString(selectedOption.length());
             openDetailsScreen(category, selectedOption, null);
         }
     }

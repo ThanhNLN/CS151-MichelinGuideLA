@@ -38,7 +38,17 @@ public class DetailsController {
     }
 
     public void setDetails(String category, String details){
-
+//        if (category.equals("cost")) {
+//            String price = "";
+//            for( int i = 0; i < Integer.valueOf(details); i++)
+//                price += "$";
+//            detailsLabel.setText(price);
+//            System.out.println("price = " + price);
+//        }
+//        else{
+//            detailsLabel.setText(details);
+//            System.out.println("detailsLabel.getText() = " + detailsLabel.getText());
+//        }
         detailsLabel.setText(details);
         this.category = category;
 
@@ -69,6 +79,7 @@ public class DetailsController {
     private void onBackButtonClick() {
         // TODO: fix it so it highlights the previous button selection on the old screen?
         try {
+
             setDetails(category, detailsLabel.getText());
 
             Controller controller = App.homeScreen(stage);
@@ -106,6 +117,18 @@ public class DetailsController {
             restaurantController.setDetails(selectedOption);
             restaurantController.setStage(stage);
             restaurantController.setCategory(category);
+//            if (category.equals("cost")) {
+//                String price = "";
+//                for( int i = 0; i < detailsLabel.getText().length(); i++)
+//                    price += "$";
+//                restaurantController.setSelectedFromCategory(price);
+//                System.out.println("price = " + price);
+//            }
+//            else{
+//                restaurantController.setSelectedFromCategory(detailsLabel.getText());
+//                System.out.println("detailsLabel.getText() = " + detailsLabel.getText());
+//            }
+
             restaurantController.setSelectedFromCategory(detailsLabel.getText());
             restaurantController.setSavedSelectionDisplay(savedSelectionDisplay);
 

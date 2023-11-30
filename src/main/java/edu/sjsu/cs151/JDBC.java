@@ -146,7 +146,8 @@ public class JDBC {
 
             // Inserts costs into costs table
             this.prepareStatement = conn.prepareStatement("insert IGNORE into COSTS (cost) values (?)");
-            String cost = Long.toString((long) jsonObject.get("cost"));
+//            String cost = Long.toString((long) jsonObject.get("cost"));
+            String cost = (String) jsonObject.get("cost");
             this.prepareStatement.setString(1, cost);
             this.prepareStatement.execute();
 
