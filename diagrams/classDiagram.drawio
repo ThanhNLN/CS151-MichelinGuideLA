@@ -1,0 +1,74 @@
+<mxGraphModel dx="0" dy="0" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="0" pageScale="1" background="none" math="0" shadow="0">
+  <root>
+    <mxCell id="0" />
+    <mxCell id="1" parent="0" />
+    <mxCell id="node10" parent="1" vertex="1" value="&lt;p style=&quot;margin:0px;margin-top:4px;text-align:center;&quot;&gt;&lt;b&gt;App&lt;/b&gt;&lt;/p&gt;&lt;hr size=&quot;1&quot;/&gt;&lt;p style=&quot;margin:0 0 0 4px;line-height:1.6;&quot;&gt;+ main(String[]): void&lt;br/&gt;+ homeScreenRememberSelection(Stage, SelectionDisplay, String, String): void&lt;br/&gt;+ homeScreen(Stage): Controller&lt;br/&gt;+ start(Stage): void&lt;/p&gt;" style="verticalAlign=top;align=left;overflow=fill;fontSize=14;fontFamily=Helvetica;html=1;rounded=0;shadow=0;comic=0;labelBackgroundColor=none;strokeWidth=1;">
+      <mxGeometry x="-92" y="1180" width="402" height="130" as="geometry" />
+    </mxCell>
+    <mxCell id="node2" parent="1" vertex="1" value="&lt;p style=&quot;margin:0px;margin-top:4px;text-align:center;&quot;&gt;&lt;b&gt;Controller&lt;/b&gt;&lt;/p&gt;&lt;hr size=&quot;1&quot;/&gt;&lt;p style=&quot;margin:0 0 0 4px;line-height:1.6;&quot;&gt;- controllerListView: ListView&amp;lt;String&amp;gt;&lt;br/&gt;- primaryStage: Stage&lt;br/&gt;- category: String&lt;br/&gt;- selectionDisplay: SelectionDisplay&lt;/p&gt;&lt;hr size=&quot;1&quot;/&gt;&lt;p style=&quot;margin:0 0 0 4px;line-height:1.6;&quot;&gt;- handleListViewClick(): void&lt;br/&gt;+ updateListView(String, String): void&lt;br/&gt;# handlePrice(): void&lt;br/&gt;# updateListView(): void&lt;br/&gt;+ openDetailsScreen(String, String, String): void&lt;br/&gt;+ setPrimaryStage(Stage): void&lt;br/&gt;# handleCuisine(): void&lt;br/&gt;# handleLocation(): void&lt;br/&gt;+ setSelectionDisplay(SelectionDisplay): void&lt;/p&gt;" style="verticalAlign=top;align=left;overflow=fill;fontSize=14;fontFamily=Helvetica;html=1;rounded=0;shadow=0;comic=0;labelBackgroundColor=none;strokeWidth=1;">
+      <mxGeometry x="821" y="-15" width="290" height="319" as="geometry" />
+    </mxCell>
+    <mxCell id="node1" parent="1" vertex="1" value="&lt;p style=&quot;margin:0px;margin-top:4px;text-align:center;&quot;&gt;&lt;b&gt;CuisineDisplay&lt;/b&gt;&lt;/p&gt;&lt;hr size=&quot;1&quot;/&gt;&lt;p style=&quot;margin:0 0 0 4px;line-height:1.6;&quot;&gt;+ displaySelection(ObservableList&amp;lt;String&amp;gt;): String&lt;/p&gt;" style="verticalAlign=top;align=left;overflow=fill;fontSize=14;fontFamily=Helvetica;html=1;rounded=0;shadow=0;comic=0;labelBackgroundColor=none;strokeWidth=1;">
+      <mxGeometry x="880" y="1081" width="304" height="58" as="geometry" />
+    </mxCell>
+    <mxCell id="node6" parent="1" vertex="1" value="&lt;p style=&quot;margin:0px;margin-top:4px;text-align:center;&quot;&gt;&lt;b&gt;DetailsController&lt;/b&gt;&lt;/p&gt;&lt;hr size=&quot;1&quot;/&gt;&lt;p style=&quot;margin:0 0 0 4px;line-height:1.6;&quot;&gt;- category: String&lt;br/&gt;- detailsLabel: Label&lt;br/&gt;- savedSelectionDisplay: SelectionDisplay&lt;br/&gt;- stage: Stage&lt;br/&gt;- detailsListView: ListView&amp;lt;String&amp;gt;&lt;/p&gt;&lt;hr size=&quot;1&quot;/&gt;&lt;p style=&quot;margin:0 0 0 4px;line-height:1.6;&quot;&gt;+ setStage(Stage): void&lt;br/&gt;+ setSavedSelectionDisplay(SelectionDisplay): void&lt;br/&gt;+ updateRestaurantListView(String): void&lt;br/&gt;- handleListViewClick(): void&lt;br/&gt;+ setDetails(String, String): void&lt;br/&gt;- onBackButtonClick(): void&lt;br/&gt;- openRestaurantDetailsScreen(String): void&lt;/p&gt;" style="verticalAlign=top;align=left;overflow=fill;fontSize=14;fontFamily=Helvetica;html=1;rounded=0;shadow=0;comic=0;labelBackgroundColor=none;strokeWidth=1;">
+      <mxGeometry x="-92" y="635" width="305" height="297" as="geometry" />
+    </mxCell>
+    <mxCell id="node3" parent="1" vertex="1" value="&lt;p style=&quot;margin:0px;margin-top:4px;text-align:center;&quot;&gt;&lt;b&gt;DetailsDisplay&lt;/b&gt;&lt;/p&gt;&lt;hr size=&quot;1&quot;/&gt;&lt;p style=&quot;margin:0 0 0 4px;line-height:1.6;&quot;&gt;+ displaySelection(ObservableList&amp;lt;String&amp;gt;): String&lt;/p&gt;" style="verticalAlign=top;align=left;overflow=fill;fontSize=14;fontFamily=Helvetica;html=1;rounded=0;shadow=0;comic=0;labelBackgroundColor=none;strokeWidth=1;">
+      <mxGeometry x="556" y="1081" width="304" height="58" as="geometry" />
+    </mxCell>
+    <mxCell id="node8" parent="1" vertex="1" value="&lt;p style=&quot;margin:0px;margin-top:4px;text-align:center;&quot;&gt;&lt;b&gt;JDBC&lt;/b&gt;&lt;/p&gt;&lt;hr size=&quot;1&quot;/&gt;&lt;p style=&quot;margin:0 0 0 4px;line-height:1.6;&quot;&gt;- statement: Statement&lt;br/&gt;- PASSWORD: String&lt;br/&gt;+ conn: Connection&lt;br/&gt;- rs: ResultSet&lt;br/&gt;- prepareStatement: PreparedStatement&lt;br/&gt;- DATABASE_URL: String&lt;br/&gt;- USER: String&lt;/p&gt;&lt;hr size=&quot;1&quot;/&gt;&lt;p style=&quot;margin:0 0 0 4px;line-height:1.6;&quot;&gt;+ setStatement(Statement): void&lt;br/&gt;+ getConn(): Connection&lt;br/&gt;+ getStatement(): Statement&lt;br/&gt;+ getPrepareStatement(): PreparedStatement&lt;br/&gt;+ jsonToDatabase(): void&lt;br/&gt;+ getRs(): ResultSet&lt;br/&gt;+ createDatabase(): void&lt;br/&gt;+ setPrepareStatement(PreparedStatement): void&lt;br/&gt;+ disconnect(): void&lt;br/&gt;+ setConn(Connection): void&lt;br/&gt;+ connect(): void&lt;br/&gt;+ setRs(ResultSet): void&lt;/p&gt;" style="verticalAlign=top;align=left;overflow=fill;fontSize=14;fontFamily=Helvetica;html=1;rounded=0;shadow=0;comic=0;labelBackgroundColor=none;strokeWidth=1;">
+      <mxGeometry x="258" y="-15" width="296" height="451" as="geometry" />
+    </mxCell>
+    <mxCell id="node9" parent="1" vertex="1" value="&lt;p style=&quot;margin:0px;margin-top:4px;text-align:center;&quot;&gt;&lt;b&gt;LocationDisplay&lt;/b&gt;&lt;/p&gt;&lt;hr size=&quot;1&quot;/&gt;&lt;p style=&quot;margin:0 0 0 4px;line-height:1.6;&quot;&gt;+ displaySelection(ObservableList&amp;lt;String&amp;gt;): String&lt;/p&gt;" style="verticalAlign=top;align=left;overflow=fill;fontSize=14;fontFamily=Helvetica;html=1;rounded=0;shadow=0;comic=0;labelBackgroundColor=none;strokeWidth=1;">
+      <mxGeometry x="-92" y="1081" width="304" height="58" as="geometry" />
+    </mxCell>
+    <mxCell id="node4" parent="1" vertex="1" value="&lt;p style=&quot;margin:0px;margin-top:4px;text-align:center;&quot;&gt;&lt;b&gt;PriceDisplay&lt;/b&gt;&lt;/p&gt;&lt;hr size=&quot;1&quot;/&gt;&lt;p style=&quot;margin:0 0 0 4px;line-height:1.6;&quot;&gt;+ displaySelection(ObservableList&amp;lt;String&amp;gt;): String&lt;/p&gt;" style="verticalAlign=top;align=left;overflow=fill;fontSize=14;fontFamily=Helvetica;html=1;rounded=0;shadow=0;comic=0;labelBackgroundColor=none;strokeWidth=1;">
+      <mxGeometry x="232" y="1081" width="304" height="58" as="geometry" />
+    </mxCell>
+    <mxCell id="node7" parent="1" vertex="1" value="&lt;p style=&quot;margin:0px;margin-top:4px;text-align:center;&quot;&gt;&lt;b&gt;Restaurant&lt;/b&gt;&lt;/p&gt;&lt;hr size=&quot;1&quot;/&gt;&lt;p style=&quot;margin:0 0 0 4px;line-height:1.6;&quot;&gt;- name: String&lt;br/&gt;- cuisine: String&lt;br/&gt;- location: String&lt;br/&gt;- address: String&lt;br/&gt;- url: String&lt;br/&gt;- cost: String&lt;/p&gt;&lt;hr size=&quot;1&quot;/&gt;&lt;p style=&quot;margin:0 0 0 4px;line-height:1.6;&quot;&gt;+ getUrl(): String&lt;br/&gt;+ setUrl(String): void&lt;br/&gt;+ setLocation(String): void&lt;br/&gt;+ toString(): String&lt;br/&gt;+ getCuisine(): String&lt;br/&gt;+ getName(): String&lt;br/&gt;+ setName(String): void&lt;br/&gt;+ getAddress(): String&lt;br/&gt;+ getCost(): String&lt;br/&gt;+ setCuisine(String): void&lt;br/&gt;+ getLocation(): String&lt;br/&gt;+ setCost(String): void&lt;br/&gt;+ setAddress(String): void&lt;/p&gt;" style="verticalAlign=top;align=left;overflow=fill;fontSize=14;fontFamily=Helvetica;html=1;rounded=0;shadow=0;comic=0;labelBackgroundColor=none;strokeWidth=1;">
+      <mxGeometry x="599" y="-15" width="177" height="451" as="geometry" />
+    </mxCell>
+    <mxCell id="node5" parent="1" vertex="1" value="&lt;p style=&quot;margin:0px;margin-top:4px;text-align:center;&quot;&gt;&lt;b&gt;RestaurantController&lt;/b&gt;&lt;/p&gt;&lt;hr size=&quot;1&quot;/&gt;&lt;p style=&quot;margin:0 0 0 4px;line-height:1.6;&quot;&gt;- category: String&lt;br/&gt;- detailsLabel: Label&lt;br/&gt;- selectedRestaurant: String&lt;br/&gt;- hostServices: HostServices&lt;br/&gt;- cost: Label&lt;br/&gt;- resHyperlink: Hyperlink&lt;br/&gt;- restaurantName: Label&lt;br/&gt;- observableList: ObservableList&amp;lt;String&amp;gt;&lt;br/&gt;- cuisine: Label&lt;br/&gt;- urlString: String&lt;br/&gt;- address: Label&lt;br/&gt;- url: Label&lt;br/&gt;- selectedFromCategory: String&lt;br/&gt;- savedSelectionDisplay: SelectionDisplay&lt;br/&gt;- stage: Stage&lt;/p&gt;&lt;hr size=&quot;1&quot;/&gt;&lt;p style=&quot;margin:0 0 0 4px;line-height:1.6;&quot;&gt;+ setSavedSelectionDisplay(SelectionDisplay): void&lt;br/&gt;+ setCategory(String): void&lt;br/&gt;+ setHostServices(HostServices): void&lt;br/&gt;- handleHyperlinkClick(String): void&lt;br/&gt;- updateHyperlink(String, String): void&lt;br/&gt;+ setDetails(String): void&lt;br/&gt;- onBackButtonClick(): void&lt;br/&gt;+ setStage(Stage): void&lt;br/&gt;- handleHyperlinkClick(): void&lt;br/&gt;- setResHyperlink(String): void&lt;br/&gt;+ setSelectedFromCategory(String): void&lt;/p&gt;" style="verticalAlign=top;align=left;overflow=fill;fontSize=14;fontFamily=Helvetica;html=1;rounded=0;shadow=0;comic=0;labelBackgroundColor=none;strokeWidth=1;">
+      <mxGeometry x="-92" y="-15" width="305" height="605" as="geometry" />
+    </mxCell>
+    <mxCell id="node0" parent="1" vertex="1" value="&lt;p style=&quot;margin:0px;margin-top:4px;text-align:center;&quot;&gt;&lt;b&gt;RestaurantDisplay&lt;/b&gt;&lt;/p&gt;&lt;hr size=&quot;1&quot;/&gt;&lt;p style=&quot;margin:0 0 0 4px;line-height:1.6;&quot;&gt;+ displaySelection(ObservableList&amp;lt;String&amp;gt;): Restaurant&lt;/p&gt;" style="verticalAlign=top;align=left;overflow=fill;fontSize=14;fontFamily=Helvetica;html=1;rounded=0;shadow=0;comic=0;labelBackgroundColor=none;strokeWidth=1;">
+      <mxGeometry x="355" y="1180" width="329" height="58" as="geometry" />
+    </mxCell>
+    <mxCell id="node11" parent="1" vertex="1" value="&lt;p style=&quot;margin:0px;margin-top:4px;text-align:center;&quot;&gt;&lt;i&gt;&amp;lt;&amp;lt;interface&amp;gt;&amp;gt;&lt;/i&gt;&lt;br/&gt;&lt;b&gt;SelectionDisplay&lt;/b&gt;&lt;/p&gt;&lt;hr size=&quot;1&quot;/&gt;&lt;p style=&quot;margin:0 0 0 4px;line-height:1.6;&quot;&gt;+ displaySelection(ObservableList&amp;lt;String&amp;gt;): String&lt;/p&gt;" style="verticalAlign=top;align=left;overflow=fill;fontSize=14;fontFamily=Helvetica;html=1;rounded=0;shadow=0;comic=0;labelBackgroundColor=none;strokeWidth=1;">
+      <mxGeometry x="394" y="977" width="304" height="68" as="geometry" />
+    </mxCell>
+    <mxCell id="edge1" edge="1" value="" parent="1" source="node1" target="node11" style="html=1;rounded=1;edgeStyle=orthogonalEdgeStyle;dashed=1;startArrow=none;endArrow=block;endSize=12;strokeColor=#008200;exitX=0.500;exitY=0.001;exitDx=0;exitDy=0;entryX=0.500;entryY=1.001;entryDx=0;entryDy=0;">
+      <mxGeometry width="50" height="50" relative="1" as="geometry">
+        <Array as="points">
+          <mxPoint x="1032" y="1056" />
+          <mxPoint x="546" y="1056" />
+        </Array>
+      </mxGeometry>
+    </mxCell>
+    <mxCell id="edge2" edge="1" value="" parent="1" source="node3" target="node11" style="html=1;rounded=1;edgeStyle=orthogonalEdgeStyle;dashed=1;startArrow=none;endArrow=block;endSize=12;strokeColor=#008200;exitX=0.500;exitY=0.001;exitDx=0;exitDy=0;entryX=0.500;entryY=1.001;entryDx=0;entryDy=0;">
+      <mxGeometry width="50" height="50" relative="1" as="geometry">
+        <Array as="points">
+          <mxPoint x="708" y="1056" />
+          <mxPoint x="546" y="1056" />
+        </Array>
+      </mxGeometry>
+    </mxCell>
+    <mxCell id="edge0" edge="1" value="" parent="1" source="node9" target="node11" style="html=1;rounded=1;edgeStyle=orthogonalEdgeStyle;dashed=1;startArrow=none;endArrow=block;endSize=12;strokeColor=#008200;exitX=0.500;exitY=0.001;exitDx=0;exitDy=0;entryX=0.500;entryY=1.001;entryDx=0;entryDy=0;">
+      <mxGeometry width="50" height="50" relative="1" as="geometry">
+        <Array as="points">
+          <mxPoint x="60" y="1056" />
+          <mxPoint x="546" y="1056" />
+        </Array>
+      </mxGeometry>
+    </mxCell>
+    <mxCell id="edge3" edge="1" value="" parent="1" source="node4" target="node11" style="html=1;rounded=1;edgeStyle=orthogonalEdgeStyle;dashed=1;startArrow=none;endArrow=block;endSize=12;strokeColor=#008200;exitX=0.500;exitY=0.001;exitDx=0;exitDy=0;entryX=0.500;entryY=1.001;entryDx=0;entryDy=0;">
+      <mxGeometry width="50" height="50" relative="1" as="geometry">
+        <Array as="points">
+          <mxPoint x="384" y="1056" />
+          <mxPoint x="546" y="1056" />
+        </Array>
+      </mxGeometry>
+    </mxCell>
+  </root>
+</mxGraphModel>

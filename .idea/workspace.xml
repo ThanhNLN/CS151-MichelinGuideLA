@@ -4,7 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="31e7b0d4-5bcb-4602-a3ab-bfbb2608b503" name="Changes" comment="working restaurant URL hyperlink" />
+    <list default="true" id="31e7b0d4-5bcb-4602-a3ab-bfbb2608b503" name="Changes" comment="fixed duplicate restaurant in database issue">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/edu/sjsu/cs151/RestaurantScreen.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/edu/sjsu/cs151/RestaurantScreen.fxml" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -45,7 +48,7 @@
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "WebServerToolWindowFactoryState": "false",
     "git-widget-placeholder": "irene",
-    "last_opened_file_path": "C:/Kid2512/Study/SJSU/2023 Fall/CS 146/HW Code/As04_Dynamic",
+    "last_opened_file_path": "C:/Kid2512/Study/SJSU/2023 Fall/CS 151/CS151-MichelinGuideLA/diagrams",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -179,7 +182,15 @@
       <option name="project" value="LOCAL" />
       <updated>1701320215909</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="fixed duplicate restaurant in database issue">
+      <option name="closed" value="true" />
+      <created>1701320630472</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1701320630472</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -205,7 +216,8 @@
     <MESSAGE value="test gitignore 2" />
     <MESSAGE value="displays restaurant info" />
     <MESSAGE value="working restaurant URL hyperlink" />
-    <option name="LAST_COMMIT_MESSAGE" value="working restaurant URL hyperlink" />
+    <MESSAGE value="fixed duplicate restaurant in database issue" />
+    <option name="LAST_COMMIT_MESSAGE" value="fixed duplicate restaurant in database issue" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
