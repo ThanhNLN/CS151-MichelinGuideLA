@@ -62,9 +62,9 @@ class BackEnd:
             for cities in tag.find('div', class_="card__menu-footer--location flex-fill pl-text"):
                 city = cities.text.strip().split(',')[0]
             for prices in tag.find('div', class_="card__menu-footer--price pl-text"):
-                p = prices.text.strip().split()
-                price = p[0]
-                cuisine = p[-1]
+                p = prices.text.strip().split("·")
+                price = p[0].strip()
+                cuisine = p[-1].strip()
             self.__resList.append({'name': resName, 'url':resURL,'location':city,'cost':price,'cuisine':cuisine})
 
     def checkForNextPage(self, subLink):
