@@ -124,7 +124,7 @@
       "url": "https://guide.michelin.com/us/en/california/us-los-angeles/restaurant/bavel",
       "location": "Los Angeles",
       "cost": "$$$$",
-      "cuisine": "Eastern",
+      "cuisine": "Middle Eastern",
       "address": "500 Mateo St., Los Angeles, 90013, USA"
    },
    {
@@ -284,7 +284,7 @@
       "url": "https://guide.michelin.com/us/en/california/us-los-angeles/restaurant/bavel",
       "location": "Los Angeles",
       "cost": "$$$$",
-      "cuisine": "Eastern",
+      "cuisine": "Middle Eastern",
       "address": "500 Mateo St., Los Angeles, 90013, USA"
    },
    {
@@ -452,7 +452,7 @@
       "url": "https://guide.michelin.com/us/en/california/glendale/restaurant/adana-restaurant",
       "location": "Glendale",
       "cost": "$$",
-      "cuisine": "Eastern",
+      "cuisine": "Middle Eastern",
       "address": "6918 San Fernando Rd., Glendale, 91201, USA"
    },
    {
@@ -604,7 +604,7 @@
       "url": "https://guide.michelin.com/us/en/california/us-los-angeles/restaurant/a-o-c",
       "location": "Los Angeles",
       "cost": "$$$",
-      "cuisine": "Cuisine",
+      "cuisine": "Mediterranean Cuisine",
       "address": "8700 W. 3rd St., Los Angeles, 90048, USA"
    },
    {
@@ -812,7 +812,7 @@
       "url": "https://guide.michelin.com/us/en/california/hollywood/restaurant/republique",
       "location": "Hollywood",
       "cost": "$$$$",
-      "cuisine": "Cuisine",
+      "cuisine": "Mediterranean Cuisine",
       "address": "624 S. La Brea Ave., Hollywood, 90036, USA"
    },
    {
@@ -836,7 +836,7 @@
       "url": "https://guide.michelin.com/us/en/california/us-los-angeles/restaurant/kismet",
       "location": "Los Angeles",
       "cost": "$$",
-      "cuisine": "Eastern",
+      "cuisine": "Middle Eastern",
       "address": "4648 Hollywood Blvd., Los Angeles, 90027, USA"
    },
    {
@@ -1044,7 +1044,7 @@
       "url": "https://guide.michelin.com/us/en/california/santa-monica/restaurant/milo-olive",
       "location": "Santa Monica",
       "cost": "$$$",
-      "cuisine": "table",
+      "cuisine": "Farm to table",
       "address": "2723 Wilshire Blvd., Santa Monica, 90403, USA"
    },
    {
@@ -1164,7 +1164,7 @@
       "url": "https://guide.michelin.com/us/en/california/us-los-angeles/restaurant/dama",
       "location": "Los Angeles",
       "cost": "$$$",
-      "cuisine": "American",
+      "cuisine": "Latin American",
       "address": "612 E. 11th St., Los Angeles, 90015, USA"
    },
    {
@@ -1356,7 +1356,7 @@
       "url": "https://guide.michelin.com/us/en/california/santa-monica/restaurant/melisse",
       "location": "Santa Monica",
       "cost": "$$$$",
-      "cuisine": "French",
+      "cuisine": "Modern French",
       "address": "1104 Wilshire Blvd., Santa Monica, 90401, USA"
    },
    {
