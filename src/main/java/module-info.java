@@ -8,4 +8,5 @@ module edu.sjsu.cs {
 
     opens edu.sjsu.cs151 to javafx.fxml;
     exports edu.sjsu.cs151;
+    exports edu.sjsu.cs151.databaseDisplayControls;
 }

@@ -15,7 +15,7 @@ public class RememberedSelection {
     public RememberedSelection(){
         this.categorySelectionDisplay = new SelectionDisplay() {
             @Override
-            public String displaySelection(ObservableList<String> items) throws SQLException {
+            public String displaySelection(ObservableList<String> items) {
                 return "";
             }
         };
