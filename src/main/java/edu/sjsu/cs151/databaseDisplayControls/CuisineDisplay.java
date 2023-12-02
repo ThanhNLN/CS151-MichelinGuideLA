@@ -12,7 +12,6 @@ public class CuisineDisplay implements SelectionDisplay {
         // get the options from database and add it to the ObservableList
         // Cuisines
 
-
         //create a statement
         Statement statement = JDBC.conn.createStatement();
 
@@ -20,12 +19,9 @@ public class CuisineDisplay implements SelectionDisplay {
         ResultSet rs = statement.executeQuery("SELECT * FROM CUISINES");
         while (rs.next()) {
             String cuisine = rs.getString("cuisine");
-            //System.out.println("Cuisine: " + cuisine);
             items.add(cuisine);
         }
 
-
         return "cuisine";
-
     }
 }

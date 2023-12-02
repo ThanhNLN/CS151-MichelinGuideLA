@@ -9,7 +9,7 @@
 <?import javafx.scene.control.ListView?>
 <?import javafx.scene.text.Font?>
 <VBox alignment="CENTER" spacing="20.0" xmlns:fx="http://javafx.com/fxml"
-      fx:controller="edu.sjsu.cs151.Controller">
+      fx:controller="edu.sjsu.cs151.HomeScreenController">
     <padding>
         <Insets bottom="20.0" left="20.0" right="20.0" top="20.0"/>
     </padding>
@@ -32,15 +32,15 @@
             </Label>
 
             <HBox spacing="10">
-                <Button fx:id="locationButton" text="Location" onAction="#handleLocation" prefHeight="100" prefWidth="150" />
-                <Button fx:id="cuisineButton" text="Cuisine" onAction="#handleCuisine" prefHeight="100" prefWidth="150"/>
-                <Button fx:id="priceButton" text="Price" onAction="#handlePrice" prefHeight="100" prefWidth="150"/>
+                <Button fx:id="locationButton" text="Location" onAction="#handleLocationButtonClick" prefHeight="100" prefWidth="150" />
+                <Button fx:id="cuisineButton" text="Cuisine" onAction="#handleCuisineButtonClick" prefHeight="100" prefWidth="150"/>
+                <Button fx:id="priceButton" text="Price" onAction="#handlePriceButtonClick" prefHeight="100" prefWidth="150"/>
             </HBox>
 
         </VBox>
 
     </HBox>
 
-    <ListView fx:id="controllerListView" onMouseClicked="#handleListViewClick" visible="false"/>
+    <ListView fx:id="controllerListView" onMouseClicked="#handleCategoryItemClick" visible="false"/>
 
 </VBox>

@@ -1,14 +1,14 @@
 package edu.sjsu.cs151;
 
 import edu.sjsu.cs151.databaseDisplayControls.RestaurantDisplay;
-import edu.sjsu.cs151.databaseDisplayControls.SelectionDisplay;
-import javafx.application.Application;
 import javafx.application.HostServices;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
-import javafx.event.ActionEvent;
+
 import java.awt.Desktop;
 import javafx.fxml.FXML;
+import javafx.scene.Parent;
+import javafx.scene.Scene;
 import javafx.scene.control.Label;
 import javafx.stage.Stage;
 import javafx.scene.control.Hyperlink;
@@ -17,79 +17,58 @@ import java.net.URI;
 import java.net.URISyntaxException;
 import java.sql.SQLException;
 
-public class RestaurantController {
+public class RestaurantDetailsController {
 
     @FXML
-    private Label detailsLabel, restaurantName, cuisine, cost, address, url;
+    private Label restaurantNameLabel, cuisine, cost, address;
     @FXML
     private Hyperlink resHyperlink;
     private String urlString;
     private HostServices hostServices;
+    private RememberedSelection rememberedSelection = new RememberedSelection();
     private Stage stage;
 
-    private String category;
-    private String selectedFromCategory;
+    /** set the restaurant details to display */
+    public void setRestaurantDetails(RememberedSelection rememberedSelection) {
+        this.rememberedSelection = rememberedSelection;
 
-//    private Restaurant restaurant;
+        restaurantNameLabel.setText(rememberedSelection.getRestaurantSelection());
 
-    private ObservableList<String> observableList = FXCollections.observableArrayList();
+        ObservableList<String> observableList = FXCollections.observableArrayList();
+        observableList.add(rememberedSelection.getRestaurantSelection()); // to pass in which restaurant details to display
 
-    private String selectedRestaurant; //add to list
-    private SelectionDisplay savedSelectionDisplay;
-
-//    private RestaurantDisplay restaurantDisplay;
-
-    public void setSavedSelectionDisplay(SelectionDisplay selectionDisplay){
-        this.savedSelectionDisplay = selectionDisplay;
-    }
-
-    public void setCategory(String category){
-        this.category = category;
-    }
-
-
-    public void setStage(Stage stage) {
-        this.stage = stage;
-    }
-
-    public void setDetails(String selectedOption) {
-        selectedRestaurant = selectedOption;
-
-        detailsLabel.setText(selectedRestaurant);
-
-        observableList.add(selectedRestaurant);
-
-        //System.out.println(observableList.get(0));
-
-        RestaurantDisplay restaurantDisplay = new RestaurantDisplay();
+        RestaurantDisplay restaurantDisplay = new RestaurantDisplay(); // doesn't inherit from SelectionDisplay :( because we want to return a Restaurant instead of a String
+        // if we want to use interface and return string, we could use string parsing? (possibly not use Restaurant class, or use toString() option)
 
         try {
             Restaurant restaurant = restaurantDisplay.displaySelection(observableList);
-            restaurantName.setText(restaurant.getName());
+            //restaurantName.setText(restaurant.getName()); //name is already at the top (large font)
             cuisine.setText(restaurant.getCuisine());
             cost.setText(restaurant.getCost());
             address.setText(restaurant.getAddress());
-            url.setText(restaurant.getUrl());
+            //url.setText(restaurant.getUrl()); //probably delete this?
             urlString = restaurant.getUrl();
-            setResHyperlink(restaurant.getUrl());
+            setResHyperlink(urlString);
         } catch (SQLException e) {
-            e.printStackTrace();
             //throw new RuntimeException(e);
         }
     }
+
     public void setHostServices(HostServices hostServices) {
         this.hostServices = hostServices;
     }
+
     private void setResHyperlink(String link) {
         // Set default text and link
         updateHyperlink("Visit Restaurant Page for more detail", link);
     }
-    // Method to update hyperlink text and link
+
     // Method to update hyperlink text and link
     private void updateHyperlink(String text, String url) {
         resHyperlink.setText(text);
         resHyperlink.setOnAction(e -> handleHyperlinkClick(url));
     }
+
     @FXML
     private void handleHyperlinkClick() {
         System.out.println("in handle hyperlink");
@@ -98,7 +77,6 @@ public class RestaurantController {
             try {
                 desktop.browse(new URI(urlString));
             } catch (IOException | URISyntaxException e) {
-                e.printStackTrace();
                 //throw new RuntimeException(e);
             }
         }
@@ -112,26 +90,21 @@ public class RestaurantController {
         }
     }
 
-
-    public void setSelectedFromCategory(String selectedFromCategory) {
-        this.selectedFromCategory = selectedFromCategory;
-    }
-
+    /** handles back button to take to previous page containing list of restaurants in a category item */
     @FXML
     private void onBackButtonClick() {
-
-        Controller controller;
-        try {
-            controller = App.homeScreen(stage);
-
-
-        } catch (IOException e) {
-            throw new RuntimeException(e);
-        }
-        controller.setSelectionDisplay(savedSelectionDisplay);
-        controller.openDetailsScreen(category, selectedFromCategory, selectedRestaurant);
-
+        HomeScreenController homeScreenController = new HomeScreenController();
+        homeScreenController.setStage(stage);
+        homeScreenController.openSelectedCategoryItemDetailsScreen(rememberedSelection);
     }
 
+    /** displays the restaurant details */
+    public void displayRestaurantDetailsScreen(Parent root, Stage stage, RememberedSelection rememberedSelection) {
+        this.stage = stage;
+        setRestaurantDetails(rememberedSelection);
 
+        Scene scene = new Scene(root, stage.getScene().getWidth(), stage.getScene().getHeight());
+        stage.setScene(scene);
+        stage.show();
+    }
 }

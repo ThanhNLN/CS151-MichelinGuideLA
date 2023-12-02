@@ -4,16 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="31e7b0d4-5bcb-4602-a3ab-bfbb2608b503" name="Changes" comment="fixed duplicate restaurant in database issue">
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/mysql_connector_j_8_2_0.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/mysql_connector_j_8_2_0.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_11_22_23__12_02_AM__Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_11_22_23__12_02_AM__Changes_.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_11_29_23_08_17__Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_11_29_23_08_17__Changes_.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_11_29_23_12_22__Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_11_29_23_12_22__Changes_.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/LosAngelesData.json" beforeDir="false" afterPath="$PROJECT_DIR$/LosAngelesData.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/webScrape/BackEnd.py" beforeDir="false" afterPath="$PROJECT_DIR$/webScrape/BackEnd.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/webScrape/LosAngelesData.json" beforeDir="false" />
+    <list default="true" id="31e7b0d4-5bcb-4602-a3ab-bfbb2608b503" name="Changes" comment="Added RememberedSelection.java to clean up code, adjusted RestaurantDetailsScreen.fxml, fixed names of class/variables, added more comments">
+      <change beforePath="$PROJECT_DIR$/src/main/java/edu/sjsu/cs151/RememberedSelection.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/edu/sjsu/cs151/RememberedSelection.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/module-info.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/module-info.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -38,6 +31,9 @@
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
+  </component>
+  <component name="ProblemsViewState">
+    <option name="selectedTabId" value="CurrentFile" />
   </component>
   <component name="ProjectColorInfo">{
   &quot;customColor&quot;: &quot;&quot;,
@@ -116,7 +112,7 @@
       <workItem from="1701360294346" duration="1963000" />
       <workItem from="1701398048357" duration="48000" />
       <workItem from="1701418873528" duration="2857000" />
-      <workItem from="1701465746972" duration="659000" />
+      <workItem from="1701465746972" duration="18440000" />
     </task>
     <task id="LOCAL-00001" summary="Added sequence, state, and use case diagrams. Need to update links after push">
       <option name="closed" value="true" />
@@ -190,7 +186,23 @@
       <option name="project" value="LOCAL" />
       <updated>1701320630472</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="updated BackEnd.py to web scrape correct cuisine name &#10;(previously would not get full cuisine name if it was multiple words)">
+      <option name="closed" value="true" />
+      <created>1701466690634</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1701466690634</updated>
+    </task>
+    <task id="LOCAL-00011" summary="Added RememberedSelection.java to clean up code, adjusted RestaurantDetailsScreen.fxml, fixed names of class/variables, added more comments">
+      <option name="closed" value="true" />
+      <created>1701484337710</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1701484337710</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -217,7 +229,9 @@
     <MESSAGE value="displays restaurant info" />
     <MESSAGE value="working restaurant URL hyperlink" />
     <MESSAGE value="fixed duplicate restaurant in database issue" />
-    <option name="LAST_COMMIT_MESSAGE" value="fixed duplicate restaurant in database issue" />
+    <MESSAGE value="updated BackEnd.py to web scrape correct cuisine name &#10;(previously would not get full cuisine name if it was multiple words)" />
+    <MESSAGE value="Added RememberedSelection.java to clean up code, adjusted RestaurantDetailsScreen.fxml, fixed names of class/variables, added more comments" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added RememberedSelection.java to clean up code, adjusted RestaurantDetailsScreen.fxml, fixed names of class/variables, added more comments" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
