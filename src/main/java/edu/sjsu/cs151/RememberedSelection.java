@@ -3,8 +3,6 @@ package edu.sjsu.cs151;
 import edu.sjsu.cs151.databaseDisplayControls.SelectionDisplay;
 import javafx.collections.ObservableList;
 
-import java.sql.SQLException;
-
 public class RememberedSelection {
 
     private SelectionDisplay categorySelectionDisplay;
@@ -13,12 +11,7 @@ public class RememberedSelection {
     private String restaurantSelection;
 
     public RememberedSelection(){
-        this.categorySelectionDisplay = new SelectionDisplay() {
-            @Override
-            public String displaySelection(ObservableList<String> items) {
-                return "";
-            }
-        };
+        this.categorySelectionDisplay = items -> "";
         this.categoryButton = "";
         this.categoryItemSelection = "";
         this.restaurantSelection = "";
