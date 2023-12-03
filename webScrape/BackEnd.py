@@ -1,13 +1,13 @@
-import urllib.request as ur
 import requests
 from bs4 import BeautifulSoup
 import collections
 import json
-import lxml
+
 
 class BackEnd:
     _WebLink = "https://guide.michelin.com"
     _dataFile = "LosAngelesData.json"
+
     def __init__(self):
         self.__resDict = collections.defaultdict(dict)
         self.__resList = []
@@ -16,12 +16,14 @@ class BackEnd:
 
         self.getAndSaveData(LA)
 
-
     def getAndSaveData(self, subLink):
         '''Get all restaurants' data from web and save into a json file'''
-        self.dataFromWeb(subLink)
-        # Update all restaurant if next page exist
-        nextPages = self.checkForNextPage(subLink)
+        # collect all the pages
+        nextPages = self.find_all_pages(subLink)
+
+        # print(nextPages)  #test
+
+        # get the data of all the restaurants on each page
         for page in nextPages:
             self.dataFromWeb(page)
         self.updateAddress()
@@ -33,7 +35,6 @@ class BackEnd:
             print("Can not open", self._dataFile, error)
     def updateAddress(self):
         '''Add the restaurant address to its info list'''
-
         for restaurant in self.__resList:
             link = restaurant['url']
             try:
@@ -67,18 +68,45 @@ class BackEnd:
                 cuisine = p[-1].strip()
             self.__resList.append({'name': resName, 'url':resURL,'location':city,'cost':price,'cuisine':cuisine})
 
-    def checkForNextPage(self, subLink):
-        '''Check if more than 1 page exist'''
-        pages = set()
-        link = self._WebLink + subLink
+    def find_all_pages(self, sub_link):
+        #check if initial page exists, then find other pages
+        pages = set()  # set to contain all the pages (no dupes)
+        link = self._WebLink + sub_link  # full link
+
+        # try to open the full link
+        try:
+            requests.get(link)
+            pages.add(sub_link)  # add to set if link is validdd
+        except requests.exceptions.RequestException as error:
+            print("Requests exception", error)
+            return sorted(pages)
+
+        # check for next available page
+        self.find_all_pages_helper(sub_link, pages, len(pages))  # should this go in the try?
+        return sorted(pages)
+
+    def find_all_pages_helper(self, sub_link, pages, size):
+        link = self._WebLink + sub_link
+        initialSize = size  # to keep track if an subLink was added to the set
+
+        # try to open the full link
         try:
             page = requests.get(link)
         except requests.exceptions.RequestException as error:
             print("Requests exception", error)
+            return sorted(pages)
+
+        # search the link for more links - finding the location
         soup = BeautifulSoup(page.content, "lxml")
-        for tag in soup.find('ul', class_="pagination"):
-            for link in tag.find_all('a'):
-                pages.add(link['href'])
+        tag = soup.find('ul', class_="pagination")
+
+        for link in tag.find_all('a'):
+            if not pages.__contains__(link['href']):
+                sub_link = link['href']
+                pages.add(sub_link)
+        if initialSize != len(pages):  # if no new links were added
+            self.find_all_pages_helper(sub_link, pages, len(pages))  # go to "the last" (new) subLink in pages
         return sorted(pages)
+
 
 obj = BackEnd()
