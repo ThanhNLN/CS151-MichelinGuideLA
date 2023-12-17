@@ -4,12 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="31e7b0d4-5bcb-4602-a3ab-bfbb2608b503" name="Changes" comment="remove &quot;in handle hyperlink&quot;">
+    <list default="true" id="31e7b0d4-5bcb-4602-a3ab-bfbb2608b503" name="Changes" comment="update README.md and cleaned code">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/edu/sjsu/cs151/databaseDisplayControls/PriceDisplay.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/edu/sjsu/cs151/databaseDisplayControls/PriceDisplay.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/edu/sjsu/cs151/databaseDisplayControls/RestaurantDisplay.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/edu/sjsu/cs151/databaseDisplayControls/RestaurantDisplay.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/webScrape/resData.json" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -31,6 +27,20 @@
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GitHubPullRequestSearchHistory"><![CDATA[{
+  "lastFilter": {
+    "state": "OPEN",
+    "assignee": "irenechen01"
+  }
+}]]></component>
+  <component name="GithubPullRequestsUISettings">
+    <option name="selectedUrlAndAccountId">
+      <UrlAndAccount>
+        <option name="accountId" value="c55c78a9-ceb1-4b83-bfa6-b27573013e88" />
+        <option name="url" value="https://github.com/ThanhNLN/CS151-MichelinGuideLA.git" />
+      </UrlAndAccount>
+    </option>
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
@@ -240,7 +250,15 @@
       <option name="project" value="LOCAL" />
       <updated>1702789942552</updated>
     </task>
-    <option name="localTasksCounter" value="16" />
+    <task id="LOCAL-00016" summary="update README.md and cleaned code">
+      <option name="closed" value="true" />
+      <created>1702795736105</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1702795736105</updated>
+    </task>
+    <option name="localTasksCounter" value="17" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -270,7 +288,8 @@
     <MESSAGE value="updated BackEnd.py to web scrape correct cuisine name &#10;(previously would not get full cuisine name if it was multiple words)" />
     <MESSAGE value="Added RememberedSelection.java to clean up code, adjusted RestaurantDetailsScreen.fxml, fixed names of class/variables, added more comments" />
     <MESSAGE value="remove &quot;in handle hyperlink&quot;" />
-    <option name="LAST_COMMIT_MESSAGE" value="remove &quot;in handle hyperlink&quot;" />
+    <MESSAGE value="update README.md and cleaned code" />
+    <option name="LAST_COMMIT_MESSAGE" value="update README.md and cleaned code" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
