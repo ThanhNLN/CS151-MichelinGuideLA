@@ -71,7 +71,7 @@ public class RestaurantDetailsController {
 
     @FXML
     private void handleHyperlinkClick() {
-        System.out.println("in handle hyperlink");
+        //System.out.println("in handle hyperlink");
         Desktop desktop = Desktop.getDesktop();
         if (desktop.isSupported(Desktop.Action.BROWSE)) {
             try {
