@@ -4,9 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="31e7b0d4-5bcb-4602-a3ab-bfbb2608b503" name="Changes" comment="add snapshots (from anniebluu)">
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-    </list>
+    <list default="true" id="31e7b0d4-5bcb-4602-a3ab-bfbb2608b503" name="Changes" comment="update README.md snapshot links" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -267,7 +265,23 @@
       <option name="project" value="LOCAL" />
       <updated>1702797176017</updated>
     </task>
-    <option name="localTasksCounter" value="18" />
+    <task id="LOCAL-00018" summary="update README.md snapshot links">
+      <option name="closed" value="true" />
+      <created>1702797521801</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1702797521801</updated>
+    </task>
+    <task id="LOCAL-00019" summary="update README.md snapshot links">
+      <option name="closed" value="true" />
+      <created>1702797628132</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1702797628132</updated>
+    </task>
+    <option name="localTasksCounter" value="20" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -299,7 +313,8 @@
     <MESSAGE value="remove &quot;in handle hyperlink&quot;" />
     <MESSAGE value="update README.md and cleaned code" />
     <MESSAGE value="add snapshots (from anniebluu)" />
-    <option name="LAST_COMMIT_MESSAGE" value="add snapshots (from anniebluu)" />
+    <MESSAGE value="update README.md snapshot links" />
+    <option name="LAST_COMMIT_MESSAGE" value="update README.md snapshot links" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

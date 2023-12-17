@@ -1,4 +1,4 @@
-*Class diagram is still work in progress \
-includes the State Diagram \
-includes the Use Case Diagram \
-includes the Sequence Diagram
+- [Class Diagram](https://github.com/ThanhNLN/CS151-MichelinGuideLA/blob/32d8ce6282dc87a5e8b076a5f9fdf6ce01546f01/diagrams/CS151_UML_Diagrams-Class.jpg)
+- [State Diagram](https://github.com/ThanhNLN/CS151-MichelinGuideLA/blob/e5fd8acc79a15f2d4d1a5118fc762f063d82789c/diagrams/CS151_UML_Diagrams-State.jpg)
+- [Use Case Diagram](https://github.com/ThanhNLN/CS151-MichelinGuideLA/blob/e5fd8acc79a15f2d4d1a5118fc762f063d82789c/diagrams/CS151_UML_Diagrams-Use_Case.jpg)
+- [Sequence Diagram](https://github.com/ThanhNLN/CS151-MichelinGuideLA/blob/32d8ce6282dc87a5e8b076a5f9fdf6ce01546f01/diagrams/CS151_UML_Diagrams-Sequence.jpg) 
