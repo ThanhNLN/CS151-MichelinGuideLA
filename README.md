@@ -109,7 +109,7 @@ __Steps to Run Code:__
 - Then, click on the buttons/selections that you want in order to filter and find your desired Michelin Restaurant
 ---
 __Snapshot of Running Program:__
-- [Snapshot 1: Initial screen when first run](https://github.com/ThanhNLN/CS151-MichelinGuideLA/blob/375194ad130bc9f63867bd1c77d609a12f13dbea/programSnapshots/snapshot_1.png) // fix this link!
+- [Snapshot 1: Initial screen when first run](https://github.com/ThanhNLN/CS151-MichelinGuideLA/blob/375194ad130bc9f63867bd1c77d609a12f13dbea/programSnapshots/snapshot_1.png)
 - [Snapshot 2: Selected a button (Location)](https://github.com/ThanhNLN/CS151-MichelinGuideLA/blob/375194ad130bc9f63867bd1c77d609a12f13dbea/programSnapshots/snapshot_2.png) 
 - [Snapshot 3: Selected a location (Alhambra)](https://github.com/ThanhNLN/CS151-MichelinGuideLA/blob/375194ad130bc9f63867bd1c77d609a12f13dbea/programSnapshots/snapshot_3.png) 
 - [Snapshot 4: Selected a restaurant (Henry's Cuisine)](https://github.com/ThanhNLN/CS151-MichelinGuideLA/blob/375194ad130bc9f63867bd1c77d609a12f13dbea/programSnapshots/snapshot_4.png) 
