@@ -105,6 +105,11 @@ __Operations: List operations for each intended user (in list format). Be precis
         - [restaurant link] - click on link to take you to the restaurant webpage for more information 
 ---
 __Steps to Run Code:__
+- May need to install MySQL and mysql-connector-j-8.2.0.jar
+- May need to create server using information in JDBC.java file
+  - database = "jdbc:mysql://localhost:3306/"
+  - user = "root"
+  - password = "password"
 - Run App.java
 - Then, click on the buttons/selections that you want in order to filter and find your desired Michelin Restaurant
 ---
