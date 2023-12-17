@@ -13,7 +13,7 @@ __Project Proposal Contributions:__
   - Problem/Issue
   - Functionality
   - Operations
-
+---
 __Project Presentation Contributions:__
 - Le Ngoc Thanh Nguyen: 
   - create all slides (problem, solution, potential)
@@ -32,7 +32,7 @@ __Project Presentation Contributions:__
 - Irene Chen: 
   - create all slides (problem, solution, design patterns/OOP ideas, UML diagrams)
   - assisted with code demo/operating computer during presentation
-
+---
 __Detailed Project Contributions:__
 - Le Ngoc Thanh Nguyen: 
   - Restaurant.java

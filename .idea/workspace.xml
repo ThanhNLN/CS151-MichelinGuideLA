@@ -4,7 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="31e7b0d4-5bcb-4602-a3ab-bfbb2608b503" name="Changes" comment="update README.md snapshot links" />
+    <list default="true" id="31e7b0d4-5bcb-4602-a3ab-bfbb2608b503" name="Changes" comment="edit README.md" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -282,7 +282,23 @@
       <option name="project" value="LOCAL" />
       <updated>1702797628132</updated>
     </task>
-    <option name="localTasksCounter" value="20" />
+    <task id="LOCAL-00020" summary="update README.md diagram links">
+      <option name="closed" value="true" />
+      <created>1702797818197</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1702797818197</updated>
+    </task>
+    <task id="LOCAL-00021" summary="edit README.md">
+      <option name="closed" value="true" />
+      <created>1702797961570</created>
+      <option name="number" value="00021" />
+      <option name="presentableId" value="LOCAL-00021" />
+      <option name="project" value="LOCAL" />
+      <updated>1702797961570</updated>
+    </task>
+    <option name="localTasksCounter" value="22" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -315,7 +331,9 @@
     <MESSAGE value="update README.md and cleaned code" />
     <MESSAGE value="add snapshots (from anniebluu)" />
     <MESSAGE value="update README.md snapshot links" />
-    <option name="LAST_COMMIT_MESSAGE" value="update README.md snapshot links" />
+    <MESSAGE value="update README.md diagram links" />
+    <MESSAGE value="edit README.md" />
+    <option name="LAST_COMMIT_MESSAGE" value="edit README.md" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
