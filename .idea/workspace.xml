@@ -4,7 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="31e7b0d4-5bcb-4602-a3ab-bfbb2608b503" name="Changes" comment="edit README.md" />
+    <list default="true" id="31e7b0d4-5bcb-4602-a3ab-bfbb2608b503" name="Changes" comment="formatting README.md">
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -298,7 +300,15 @@
       <option name="project" value="LOCAL" />
       <updated>1702797961570</updated>
     </task>
-    <option name="localTasksCounter" value="22" />
+    <task id="LOCAL-00022" summary="formatting README.md">
+      <option name="closed" value="true" />
+      <created>1702798126275</created>
+      <option name="number" value="00022" />
+      <option name="presentableId" value="LOCAL-00022" />
+      <option name="project" value="LOCAL" />
+      <updated>1702798126275</updated>
+    </task>
+    <option name="localTasksCounter" value="23" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -333,7 +343,8 @@
     <MESSAGE value="update README.md snapshot links" />
     <MESSAGE value="update README.md diagram links" />
     <MESSAGE value="edit README.md" />
-    <option name="LAST_COMMIT_MESSAGE" value="edit README.md" />
+    <MESSAGE value="formatting README.md" />
+    <option name="LAST_COMMIT_MESSAGE" value="formatting README.md" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
