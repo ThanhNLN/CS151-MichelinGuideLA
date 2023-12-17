@@ -22,8 +22,6 @@ public class RestaurantDisplay{
         //create a statement
         Statement statement = JDBC.conn.createStatement();
 
-
-        //TODO: fix ' problem
         ResultSet rs = statement.executeQuery("SELECT ladatabase.name, ladatabase.url, ladatabase.address, locations.location, costs.cost, cuisines.cuisine FROM (ladatabase " +
                 "JOIN locations ON ladatabase.LOCATION_ID=locations.LOCATION_ID " +
                 "JOIN costs ON ladatabase.COST_ID=costs.COST_ID " +
