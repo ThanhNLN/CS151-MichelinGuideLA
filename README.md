@@ -69,10 +69,10 @@ __If applicable, describe assumptions / operating environments / intended usage_
 - Intended usage: Simplify the way users searching for Michelin restaurants around the LA area can access information, both online and offline.  
 ---
 __Diagrams:__
-- [Class Diagram]() // fix link!!
+- [Class Diagram](https://github.com/ThanhNLN/CS151-MichelinGuideLA/blob/32d8ce6282dc87a5e8b076a5f9fdf6ce01546f01/diagrams/CS151_UML_Diagrams-Class.jpg) 
 - [State Diagram](https://github.com/ThanhNLN/CS151-MichelinGuideLA/blob/e5fd8acc79a15f2d4d1a5118fc762f063d82789c/diagrams/CS151_UML_Diagrams-State.jpg)
 - [Use Case Diagram](https://github.com/ThanhNLN/CS151-MichelinGuideLA/blob/e5fd8acc79a15f2d4d1a5118fc762f063d82789c/diagrams/CS151_UML_Diagrams-Use_Case.jpg)
-- [Sequence Diagram]() // fix link!!
+- [Sequence Diagram](https://github.com/ThanhNLN/CS151-MichelinGuideLA/blob/32d8ce6282dc87a5e8b076a5f9fdf6ce01546f01/diagrams/CS151_UML_Diagrams-Sequence.jpg) 
 ---
 __High-level description of your solution which may include (but is not limited to), your plan and approach. Be as specific as possible.__
 - We use Python Web Scrapping to get restaurant data around LA area from the Michelin Restaurant Guideline, save it as a .json file, and use it as our database. 
