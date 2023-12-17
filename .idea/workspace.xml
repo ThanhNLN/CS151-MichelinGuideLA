@@ -4,8 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="31e7b0d4-5bcb-4602-a3ab-bfbb2608b503" name="Changes" comment="update README.md and cleaned code">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    <list default="true" id="31e7b0d4-5bcb-4602-a3ab-bfbb2608b503" name="Changes" comment="add snapshots (from anniebluu)">
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -88,6 +88,7 @@
       <recent name="C:\Users\Irene Chen\OneDrive - sjsu.edu\CS151\CS151-MichelinGuideLA" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\SJ\OneDrive - sjsu.edu\Project\programSnapshots" />
       <recent name="C:\Users\SJ\OneDrive - sjsu.edu\CS151\CS151-MichelinGuideLA\diagrams" />
       <recent name="C:\Users\Irene Chen\OneDrive - sjsu.edu\CS151\CS151-MichelinGuideLA\src\main\java\edu.sjsu.cs151.appControls" />
     </key>
@@ -258,7 +259,15 @@
       <option name="project" value="LOCAL" />
       <updated>1702795736105</updated>
     </task>
-    <option name="localTasksCounter" value="17" />
+    <task id="LOCAL-00017" summary="add snapshots (from anniebluu)">
+      <option name="closed" value="true" />
+      <created>1702797176017</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1702797176017</updated>
+    </task>
+    <option name="localTasksCounter" value="18" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -289,7 +298,8 @@
     <MESSAGE value="Added RememberedSelection.java to clean up code, adjusted RestaurantDetailsScreen.fxml, fixed names of class/variables, added more comments" />
     <MESSAGE value="remove &quot;in handle hyperlink&quot;" />
     <MESSAGE value="update README.md and cleaned code" />
-    <option name="LAST_COMMIT_MESSAGE" value="update README.md and cleaned code" />
+    <MESSAGE value="add snapshots (from anniebluu)" />
+    <option name="LAST_COMMIT_MESSAGE" value="add snapshots (from anniebluu)" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
